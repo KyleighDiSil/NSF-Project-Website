@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="header" class="header">
+    <header class="header">
         <nav>
             <a href="index.html"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
             <div class="nav-links">
@@ -30,7 +30,28 @@
     </header>
 
     <main id="main">
-        <h1>Header 1</h1>
+        <div>
+            <form action="scripts/login.php" method="POST">
+                <label id="usernameLabel" for="username">Username:</label>
+                <input type="text" id="username" name="username" autocomplete="off">
+                <label id="passwordLabel" for="password">Password:</label>
+                <input type="password" id="password" name="password" autocomplete="off">
+                <div id="lower">
+                    <input type="checkbox" id="checkShowPass" onclick="showPass()">
+                    <label id="showPassLabel" for="checkShowPass">Show Password</label>
+                    <input type="submit" id="submit" value="Login">
+                </div>
+            </form>
+            <div class="rightpw" style="display: none;">
+                    <span onclick="this.parentElement.style.display='none';">&times;</span>
+                    Valid Username and Password!
+            </div>
+    
+            <div class="wrongpw">
+                    <span onclick="this.parentElement.style.display='none';">&times;</span>
+                    Incorrect Password or Username!
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -50,4 +71,35 @@
         <p id="Copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script></p>
     </footer>
 </body>
+
+<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        if(window.location.href.indexOf("#LoginFailure") > -1) {
+            $('.wrongpw').show();
+        } else {
+            $('.wrongpw').hide();
+        }
+    });
+
+    $(document).ready(function () {
+        if(window.location.href.indexOf("#LoginSuccess") > -1) {
+            $('.rightpw').show();
+        } else {
+            $('.rightpw').hide();
+        }
+    });
+
+    function showPass() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
 </html>
+
