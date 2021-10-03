@@ -1,0 +1,134 @@
+/*You can get cool fonts at fonts.google.com */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    position: relative;
+    /*Padding bottom needs to be the footers height so it is not hanging over the body*/
+    padding-bottom: 139px; 
+    /*I need to make a condition for padding bottom.
+      a @media condition for when the width of the page 
+      is more less than 462px padding-bottom needs to be
+      179.2*/
+    min-height: 100vh;
+}
+
+.header{
+    width: 100%;
+    padding: 20px;
+    background-color:rgb(12, 0, 46);
+    /*position: relative;*/
+}
+
+nav{
+    display: flex;
+    padding: 0% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    font-family: cursive;
+}
+
+.nav-links ul li a{
+    color:aliceblue;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #36def4;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+main{
+    margin: 0 auto;
+}
+
+.social-links{
+    display: flex;
+}
+
+.social-links ul{
+    display: flex;
+    margin: auto;
+}
+
+.social-items{
+    list-style: none;
+}
+
+.social-items a{
+    padding: 10px 20px;
+    font-size: 35px;
+    color: #36def4;
+}
+
+.navF-links{
+    flex: 1;
+    text-align: center;
+}
+
+.footer-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    font-family: cursive;
+}
+
+.footer-links ul li a{
+    color:aliceblue;
+}
+
+.footer-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #36def4;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.footer-links ul li:hover::after{
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color:rgb(12, 0, 46);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#Copyright{
+    color: aliceblue;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+}
