@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xfig</title>
     <link rel="icon" href="../images/NSF_logo.png">
-    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
     <link rel="stylesheet" href="../css/common.css"/>
     <!--Font Awesome is where you can get all kinds of different Fonts to use in websites and icons-->
     <script src="https://use.fontawesome.com/1c8abdfb6d.js"></script>
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="header" class="header">
         <nav>
             <a href="index.html"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
             <div class="nav-links">
@@ -33,14 +33,16 @@
 
     <main id="main">
         <div>
-            <form action="scripts/login.php" method="POST">
+            <form action="../scripts/login.php" method="POST">
                 <label id="usernameLabel" for="username">Username:</label>
                 <input type="text" id="username" name="username" autocomplete="off">
                 <label id="passwordLabel" for="password">Password:</label>
                 <input type="password" id="password" name="password" autocomplete="off">
                 <div id="lower">
-                    <input type="checkbox" id="checkShowPass" onclick="showPass()">
-                    <label id="showPassLabel" for="checkShowPass">Show Password</label>
+                    <div id="showPassbox">
+                        <input type="checkbox" id="checkShowPass" onclick="showPass()">
+                        <label id="showPassLabel" for="checkShowPass">Show Password</label>
+                    </div>
                     <input type="submit" id="submit" value="Login">
                 </div>
             </form>
