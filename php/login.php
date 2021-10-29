@@ -12,11 +12,11 @@ Description  : A php file to authenticate a user
   // Validate inputs
   if ($_POST['username'] == "")
   {
-    $UsernameAttempt = "NULL";
+    $EmailAttempt = "NULL";
   }
   else
   {
-    $UsernameAttempt = trim($_POST['username']);
+    $EmailAttempt = strtolower(trim($_POST['username']));
   }
 
   if ($_POST['password'] == "")
@@ -29,7 +29,7 @@ Description  : A php file to authenticate a user
   }
 
   // Construct Query
-  $sql = "SELECT (Email) FROM account WHERE Email LIKE '$UsernameAttempt' AND password = '$PasswordAttempt';";
+  $sql = "SELECT * FROM account WHERE Email = '$EmailAttempt';";
 
   // Execute Query and ensure no errors occurred
   if (!$result = mysqli_query($conn, $sql))
@@ -38,13 +38,21 @@ Description  : A php file to authenticate a user
   }
   else
   {
-    if ($result->num_rows > 0)
+    // Salt Password
+    while ($row = $result->fetch_assoc())
     {
-      header("Location: ../html/index.html#LoginSuccess");
-    }
-    else
-    {
-      header("Location: ../html/index.html#LoginFailure");
+      $Split = str_split($row['Salt'], 10);
+      $Salted = $Split[0] . $PasswordAttempt . $Split[1];
+      $Hashed = hash('sha256', $Salted);
+
+      if ($row['Password'] == $Hashed)
+      {
+        header("Location: ../html/index.html#LoginSuccess");
+      }
+      else
+      {
+        header("Location: ../html/index.html#LoginFailure");
+      }
     }
   }
 ?>
