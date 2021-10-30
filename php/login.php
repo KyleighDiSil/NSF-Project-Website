@@ -29,7 +29,7 @@ Description  : A php file to authenticate a user
   }
 
   // Construct Query
-  $sql = "SELECT * FROM account WHERE Email = '$EmailAttempt';";
+  $sql = "SELECT * FROM users WHERE Email = '$EmailAttempt';";
 
   // Execute Query and ensure no errors occurred
   if (!$result = mysqli_query($conn, $sql))
