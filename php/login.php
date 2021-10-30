@@ -47,11 +47,11 @@ Description  : A php file to authenticate a user
 
       if ($row['Password'] == $Hashed)
       {
-        header("Location: ../html/index.html#LoginSuccess");
+        header("Location: ../index.html#LoginSuccess");
       }
       else
       {
-        header("Location: ../html/index.html#LoginFailure");
+        header("Location: ../index.html#LoginFailure");
       }
     }
   }
