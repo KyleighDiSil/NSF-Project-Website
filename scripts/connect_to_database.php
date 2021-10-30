@@ -6,7 +6,7 @@ Description: A php file to connect to the SectorAptManager database
 -->
 
 <?php
-    $dbServerName = "localhost";
+    $dbServerName = "128.153.220.125:42068";
     $dbUsername = "root";
     $dbPassword = "";
     $dbName = "NSFDatabase";
