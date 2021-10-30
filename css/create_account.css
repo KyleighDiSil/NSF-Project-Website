@@ -1,0 +1,43 @@
+Label{
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+#showPassLabel{
+    font-size: small;
+    font-weight: normal;
+}
+
+#email{
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+#password{
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+#submit{
+    margin: 5px;
+    margin-top: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 5x00px;
+    margin: 20px auto;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: grey solid 2px;
+}
+
+#lower{
+    display: flex;
+    flex-direction: column;
+}
