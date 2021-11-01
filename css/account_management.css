@@ -1,0 +1,112 @@
+h1{
+    text-align: center;
+    margin: 20px;
+}
+#account-info{
+    display: flex;
+    margin: 10px;
+}
+@media  screen and (min-width:800px) {
+    #account-info{
+        margin: 10px 50px;
+    }
+}
+form{
+    flex: 1;
+    padding: 10px;
+}
+#personal-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+#update-pass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+    border:2px solid grey;
+}
+
+#update-pass h1{
+    font-size: medium;
+    margin: 0px;
+}
+
+#update-pass .form-input{
+    margin-top: 10px;
+}
+
+.form-input{
+    border: none;
+    padding: 5px;
+    width: 100%;
+    max-width: 600px;
+}
+.btn-input{
+    margin-top: 10px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#cancel:hover, #save:hover{
+    background-color: rgb(115, 115, 230);
+    cursor: pointer;
+}
+#change:hover{
+    background-color: #ffa87f;
+}
+
+label{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#userTable{
+    margin: 20px auto;
+}
+
+caption{
+    font-size: large;
+    font-family: Arial;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+th{
+    text-align: center;
+    padding: 5px;
+}
+
+td{
+    text-align: center;
+    padding: 5px;
+}
+
+#submit-container{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#approve, #delete{
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Arial;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#approve:hover{
+    background-color: rgb(138, 253, 138);
+    cursor: pointer;
+}
+
+#delete:hover{
+    background-color: red;
+    cursor: pointer;
+}
