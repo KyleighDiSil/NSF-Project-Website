@@ -77,6 +77,23 @@
                 <input name="save" class="btn-input" type="button" value="Save"> 
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
                 <input type="submit" name="sign-out" value="Sign Out"/>
+                <?php  
+                    if(isset($_POST['sign-out'])) {
+                        echo "Logging out";
+                        $_SESSION['loggedin'] = false;
+                        header("Location: ../index.php");
+                    }
+                    if(isset($_POST['save'])) {
+                        echo "Logging out";
+                        $_SESSION['loggedin'] = false;
+                        header("Location: ../index.php");
+                    }
+                    if(isset($_POST['cancel'])) {
+                        echo "Logging out";
+                        $_SESSION['loggedin'] = false;
+                        header("Location: ../index.php");
+                    }
+                ?>
 
             </form>
             <form id="update-pass">
@@ -165,23 +182,5 @@
         <p id="Copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script></p>
     </footer>
 </body>
-
-<?php  
-    if(isset($_POST['sign-out'])) {
-        echo "Logging out";
-        $_SESSION['loggedin'] = false;
-        header("Location: ../index.php");
-    }
-    if(isset($_POST['save'])) {
-        echo "Logging out";
-        $_SESSION['loggedin'] = false;
-        header("Location: ../index.php");
-    }
-    if(isset($_POST['cancel'])) {
-        echo "Logging out";
-        $_SESSION['loggedin'] = false;
-        header("Location: ../index.php");
-    }
-?>
 
 </html>
