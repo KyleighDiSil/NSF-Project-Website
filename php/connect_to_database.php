@@ -6,7 +6,7 @@ Description  : A php file to connect to the database for this website
 -->
 
 <?php
-  $dbServerName = "localhost:3307";
+  $dbServerName = "localhost";
   $dbUsername = "root";
   $dbPassword = "";
   $dbName = "NSFDatabase";

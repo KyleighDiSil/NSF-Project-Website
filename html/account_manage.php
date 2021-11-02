@@ -61,28 +61,23 @@
             <form id="personal-info" method="post">
                 <label for="first-name">First Name</label>
                 <input class="form-input" type="text" name="first-name" placeholder="current-fname"/>
-                
+
                 <label for="last-name">Last Name</label>
                 <input class="form-input" type="text" name="last-name" placeholder="current-lname"/>
-                
+
                 <label for="email">Email</label>
                 <input class="form-input" type="email" name="email" placeholder="current-email"/>
-                
+
                 <label for="university">University</label>
                 <input class="form-input" type="text" name="university" placeholder="current-univ"/>
-                
+
                 <label for="course">Course</label>
                 <input class="form-input" type="text" name="course" placeholder="current-course">
-                
-                <input name="save" class="btn-input" type="button" value="Save"> 
+
+                <input name="save" class="btn-input" type="button" value="Save">
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
-                <input type="submit" name="sign-out" value="Sign Out"/>
-                <?php  
-                    if(isset($_POST['sign-out'])) {
-                        echo "Logging out";
-                        $_SESSION['loggedin'] = false;
-                        header("Location: ../index.php");
-                    }
+                <a href="../php/logout.php"><p>Sign Out</p></a>
+                <?php
                     if(isset($_POST['save'])) {
                         echo "Logging out";
                         $_SESSION['loggedin'] = false;
