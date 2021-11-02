@@ -46,7 +46,7 @@ Description  : A php file to authenticate a user
   $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   $salt = '';
   for ($i = 0; $i < 20; $i++) {
-    $randstring = $characters[rand(0, strlen($characters))];
+    $salt = $characters[rand(0, strlen($characters))];
   }
 
   $Split = str_split($salt, 10);
