@@ -167,12 +167,19 @@
 
 <?php  
     if(isset($_POST['sign-out'])) {
+        echo "Logging out"
         $_SESSION['loggedin'] = false;
         header("Location: ../index.php");
     }
-    else
-    {
-        echo "Nothing";
+    if(isset($_POST['save'])) {
+        echo "Logging out"
+        $_SESSION['loggedin'] = false;
+        header("Location: ../index.php");
+    }
+    if(isset($_POST['cancel'])) {
+        echo "Logging out"
+        $_SESSION['loggedin'] = false;
+        header("Location: ../index.php");
     }
 ?>
 
