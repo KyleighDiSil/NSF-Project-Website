@@ -1,5 +1,16 @@
 <?php
+    include_once 'php/connect_to_database.php';
+
     session_start();
+    $STATUS = false;
+    $ACCESS = 0;
+    if ($_SESSION["loggedin"] == true)
+    {
+        $STATUS = true;
+        $result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['UserID']. ";");
+        $row = $result->fetch_assoc();
+        $ACCESS = $row["Access"];
+    }
 ?>
 
 <html lang="en">
@@ -28,7 +39,7 @@
                     <li><a href="html/projectList.html">Project List</a></li>
                     <li><a href="html/contact.html">Contact Us</a></li>
                     <li><a href="html/review.html">Reviews</a></li>
-                    <?php if (!$_SESSION["loggedin"]) {echo "<li><a href='html/account_manage.html'>Manage Account</a></li>";} else {echo "<li><a href='html/login.html'>Login</a></li>";} ?>
+                    <?php if (!$STATUS) {echo "<li><a href='html/account_manage.html'>Manage Account</a></li>";} else {echo "<li><a href='html/login.html'>Login</a></li>";} ?>
                 </ul>
             </div>
         </nav>
