@@ -7,10 +7,16 @@
     if ($_SESSION["loggedin"] == true)
     {
         $STATUS = true;
-        $result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['UserID']. ";");
-        while ($row = $result->fetch_assoc())
+        if (!$result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['UserID']. ";"))
         {
-           $ACCESS = $row["Access"];
+            echo "Error";
+        }
+        else
+        {
+            while ($row = $result->fetch_assoc())
+            {
+            $ACCESS = $row["Access"];
+            }
         }
     }
 ?>
