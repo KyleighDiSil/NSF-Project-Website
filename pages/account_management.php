@@ -1,58 +1,7 @@
-<?php
-    include_once '../php/connect_to_database.php';
+<!-- Variable for linking stylesheet -->
+<!-- <?php $PAGE_NAME = "account_management";?> -->
 
-    session_start();
-    $STATUS = false;
-    $ACCESS = 0;
-    if ($_SESSION["loggedin"])
-    {
-        $STATUS = true;
-        if (!$result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['userID']. ";"))
-        {
-            echo "Error";
-        }
-        else
-        {
-            while ($row = $result->fetch_assoc())
-            {
-            $ACCESS = $row["Access"];
-            }
-        }
-    }
-?>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xfig</title>
-    <link rel="icon" href="../images/NSF_logo.png">
-    <link rel="stylesheet" href="../css/account_management.css"/>
-    <link rel="stylesheet" href="../css/common.css"/>
-    <!--Font Awesome is where you can get all kinds of different Fonts to use in websites and icons-->
-    <script src="https://use.fontawesome.com/1c8abdfb6d.js"></script>
-    <script src="https://kit.fontawesome.com/3247a548fe.js" crossorigin="anonymous"></script>
-    <script src="../JS/main.js"></script>
-</head>
-
-<body>
-    <header id="header" class="header">
-        <nav>
-            <a href="../index.php"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
-            <div class="nav-links">
-                <ul>
-                    <!--We would make a html file for each href-->
-                    <li><a href="course.html">Course</a></li>
-                    <li><a href="projectList.html">Project List</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="review.html">Reviews</a></li>
-                    <?php if ($STATUS) {echo "<li><a href='html/account_manage.php'>Manage Account</a></li>";} else {echo "<li><a href='html/login.html'>Login</a></li>";} ?>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
+<?php require "../php-snippets/top_template.php"; ?>
     <main id="main">
         <h1>Manage Your Account</h1>
         <style>
@@ -76,7 +25,7 @@
 
                 <input name="save" class="btn-input" type="button" value="Save">
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
-                <a href="../php/logout.php"><p>Sign Out</p></a>
+                <a href="../php-scripts/logout.php"><p>Sign Out</p></a>
                 <?php
                     if(isset($_POST['save'])) {
                         echo "Logging out";
@@ -126,7 +75,7 @@
                 <td><input type="checkbox"/></td>
             </tr>
             <!-- Maybe how to create table
-                http://css.insttech.washington.edu/~lab/Support/HowtoUse/PHP/display_table.html-->
+                http://css.insttech.washington.edu/~lab/Support/HowtoUse/php-scripts/display_table.php-->
         </table>
 
         <div id="submit-container">
@@ -159,23 +108,4 @@
             cell6.append(chk);
         </script>
     </main>
-
-    <footer>
-        <div class="social-links">
-            <ul>
-                <li class="social-items"><a href="https://linkedin.com/in/kyleigh-disilvestro-8aa044191" style="color: #0072b1;"><i class="fab fa-linkedin"></i></a></li>
-                <li class="social-items"><a href="#" style="color: 	#1DB954;"><i class="fab fa-spotify"></i></a></li>
-            </ul>
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="#header">Return to Top</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-
-        <p id="Copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script></p>
-    </footer>
-</body>
-
-</html>
+<?php require "../php-snippets/bottom_template.php"; ?>
