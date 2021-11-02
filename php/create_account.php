@@ -53,7 +53,7 @@ Description  : A php file to authenticate a user
   $Salted = $Split[0] . $_POST["password"] . $Split[1];
   $Hashed = hash('sha256', $Salted);
 
-  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('$_POST["firstName"]' '$_POST["lastName"]' '$_POST["email"]' '$salt' '$Hashed' -1 '$_POST["university"]' '$_POST["course"]' );"
+  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ($_POST['firstName'] $_POST['lastName'] $_POST['email'] $salt $Hashed '-1' $_POST['university'] $_POST['course'] );"
 
   if (!$result = mysqli_query($conn, $SQL))
   {
