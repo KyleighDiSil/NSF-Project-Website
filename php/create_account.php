@@ -43,11 +43,7 @@ Description  : A php file to authenticate a user
     // Fail
   }
   
-  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  $salt = '';
-  for ($i = 0; $i < 20; $i++) {
-    $salt .= $characters[rand(0, strlen($characters))];
-  }
+  substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(20/strlen($x)) )),1,20);
 
   $Split = str_split($salt, 10);
   $Salted = $Split[0] . $_POST["password"] . $Split[1];
