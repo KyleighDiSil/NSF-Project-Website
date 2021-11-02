@@ -75,7 +75,7 @@
             }
         </style>
                 <div id="welcome-page">
-                    <h1 id="welcome">Welcome</h1>
+                    <?php echo "<h1 id='$STATUS $ACCESS'>Welcome</h1>"; ?>
                     <img id="clarkson-img" src="https://www.clarkson.edu/sites/default/files/media/image/2017-06/aerial2.jpg"/>
                 </div>
 
