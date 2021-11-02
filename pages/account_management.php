@@ -7,7 +7,7 @@
         <style>
         </style>
         <div id="account-info">
-            <form id="personal-info" method="post">
+            <form id="personal-info" action="../php-scripts/update_account.php" method="post">
                 <?php
                     include_once '../php-scripts/connect_to_database.php';
 
@@ -42,30 +42,19 @@
                 <label for="course">Course</label>
                 <input class="form-input" type="text" name="course" placeholder=<?php echo "'$course'"; ?>/>
 
-                <input name="save" class="btn-input" type="button" value="Save">
+                <input name="save" class="btn-input" type="submit" value="Save">
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
-                <a href="../php-scripts/logout.php"><p>Sign Out</p></a>
-                <?php
-                    if(isset($_POST['save'])) {
-                        echo "Logging out";
-                        $_SESSION['loggedin'] = false;
-                        header("Location: ../index.php");
-                    }
-                    if(isset($_POST['cancel'])) {
-                        echo "Logging out";
-                        $_SESSION['loggedin'] = false;
-                        header("Location: ../index.php");
-                    }
-                ?>
 
             </form>
-            <form id="update-pass">
+            <form id="update-pass" action="../php-scripts/update_password.php" method="post">
                 <h1>Change Password</h1>
                 <input class="form-input" type="password" name="old-pass" placeholder="Current Password"/>
                 <input class="form-input" type="password" name="new-pass" placeholder="New Password"/>
                 <input class="form-input" type="password" name="confirm-new-pass" placeholder="Confirm New Password"/>
-                <input id="change" class="btn-input" type="button" value="Change">
+                <input id="change" class="btn-input" type="submit" value="Change">
             </form>
+
+            <a href="../php-scripts/logout.php"><p>Sign Out</p></a>
         </div>
         <table id="userTable" border="1">
             <caption>Users</caption>

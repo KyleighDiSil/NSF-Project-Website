@@ -56,7 +56,7 @@ Description  : A php file to authenticate a user
   }
   else
   {
-    header("Location: ../index.html#AccountCreated");
+    header("Location: ../index.php#AccountCreated");
   }
 
 ?>
