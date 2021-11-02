@@ -6,6 +6,7 @@ Description  : A php file to authenticate a user
 -->
 
 <?php
+  session_start()
   // Connect to the database
   include_once 'connect_to_database.php';
 
@@ -58,6 +59,8 @@ Description  : A php file to authenticate a user
   else
   {
     header("Location: ../index.html#AccountCreated");
+    $_SESSION['loggedin'] = true;
+    $_SESSION['access'] = -1;
   }
 
 ?>

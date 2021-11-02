@@ -6,6 +6,7 @@ Description  : A php file to authenticate a user
 -->
 
 <?php
+  session_start()
   // Connect to the database
   include_once 'connect_to_database.php';
 
@@ -48,10 +49,12 @@ Description  : A php file to authenticate a user
       if ($row['Password'] == $Hashed)
       {
         header("Location: ../index.html#LoginSuccess");
+        $_SESSION['loggedin'] = true;
+        $_SESSION['access'] = $row['Access'];
       }
       else
       {
-        header("Location: ../index.html#LoginFailure");
+        header("Location: ../login.html#LoginFailure");
       }
     }
   }
