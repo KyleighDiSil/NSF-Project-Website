@@ -8,20 +8,39 @@
         </style>
         <div id="account-info">
             <form id="personal-info" method="post">
+                <?php
+                    include_once '../php-scripts/connect_to_database.php';
+
+                    if (!$result = mysqli_query($conn, "SELECT FirstName, LastName, Email, University, CourseTitle, UserID FROM Users WHERE UserID = ".$_SESSION['userID'].";"))
+                    {
+                        echo "Error"; # CDL=> Should handle errors better
+                    }
+                    else
+                    {
+                        while ($row = $result->fetch_assoc())
+                        {
+                            $first = $row["FirstName"];
+                            $last = $row["LastName"];
+                            $email = $row["Email"];
+                            $university = $row["University"];
+                            $course = $row["CourseTitle"];
+                        }
+                    }
+                ?>
                 <label for="first-name">First Name</label>
-                <input class="form-input" type="text" name="first-name" placeholder="current-fname"/>
+                <input class="form-input" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
 
                 <label for="last-name">Last Name</label>
-                <input class="form-input" type="text" name="last-name" placeholder="current-lname"/>
+                <input class="form-input" type="text" name="last-name" placeholder=<?php echo "'$last'"; ?>/>
 
                 <label for="email">Email</label>
-                <input class="form-input" type="email" name="email" placeholder="current-email"/>
+                <input class="form-input" type="email" name="email" placeholder=<?php echo "'$email'"; ?>/>
 
                 <label for="university">University</label>
-                <input class="form-input" type="text" name="university" placeholder="current-univ"/>
+                <input class="form-input" type="text" name="university" placeholder=<?php echo "'$university'"; ?>/>
 
                 <label for="course">Course</label>
-                <input class="form-input" type="text" name="course" placeholder="current-course">
+                <input class="form-input" type="text" name="course" placeholder=<?php echo "'$course'"; ?>/>
 
                 <input name="save" class="btn-input" type="button" value="Save">
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
