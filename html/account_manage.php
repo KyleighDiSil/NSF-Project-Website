@@ -1,5 +1,5 @@
 <?php
-    include_once 'php/connect_to_database.php';
+    include_once '../php/connect_to_database.php';
 
     session_start();
     $STATUS = false;
