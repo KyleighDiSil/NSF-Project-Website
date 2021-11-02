@@ -58,7 +58,7 @@
         <style>
         </style>
         <div id="account-info">
-            <form id="personal-info">
+            <form id="personal-info" method="post">
                 <label for="first-name">First Name</label>
                 <input class="form-input" type="text" name="first-name" placeholder="current-fname"/>
                 
@@ -76,7 +76,7 @@
                 
                 <input id="save" class="btn-input" type="button" value="Save"> 
                 <input id="cancel" class="btn-input" type="button" value="Cancel">
-                <button onclick="SignOut()"> Sign Out </button>
+                <input id="sing-out" class="btn-input" type="button" value="Sign Out">
             </form>
             <form id="update-pass">
                 <h1>Change Password</h1>
@@ -165,12 +165,9 @@
     </footer>
 </body>
 
-<?php
-    function SignOut()
-    {
+<?php  
+    if(isset($_POST['sign-out'])) {
         $_SESSION['loggedin'] = false;
-        $_SESSION['userID'] = "";
-        header("Location: ../index.php");
     }
 ?>
 
