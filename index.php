@@ -4,7 +4,7 @@
     session_start();
     $STATUS = false;
     $ACCESS = 0;
-    if ($_SESSION["loggedin"] == true)
+    if ($_SESSION["loggedin"])
     {
         $STATUS = true;
         if (!$result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['userID']. ";"))
