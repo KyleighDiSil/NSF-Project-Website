@@ -6,7 +6,6 @@ Description  : A php file to authenticate a user
 -->
 
 <?php
-  session_start()
   // Connect to the database
   include_once 'connect_to_database.php';
 
@@ -39,6 +38,7 @@ Description  : A php file to authenticate a user
   }
   else
   {
+    session_start();
     // Salt Password
     while ($row = $result->fetch_assoc())
     {

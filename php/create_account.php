@@ -6,7 +6,6 @@ Description  : A php file to authenticate a user
 -->
 
 <?php
-  session_start()
   // Connect to the database
   include_once 'connect_to_database.php';
 
@@ -51,7 +50,7 @@ Description  : A php file to authenticate a user
   $Hashed = hash('sha256', $Salted);
 
   $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', -1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
-  echo ($SQL);
+  session_start();
   if (!$result = mysqli_query($conn, $SQL))
   {
     echo (mysqli_error($conn));
