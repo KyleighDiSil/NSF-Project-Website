@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+<?php
+    include_once 'php/connect_to_database.php';
+
+    session_start();
+    $STATUS = false;
+    $ACCESS = 0;
+    if ($_SESSION["loggedin"])
+    {
+        $STATUS = true;
+        if (!$result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['userID']. ";"))
+        {
+            echo "Error";
+        }
+        else
+        {
+            while ($row = $result->fetch_assoc())
+            {
+            $ACCESS = $row["Access"];
+            }
+        }
+    }
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +39,7 @@
 <body>
     <header id="header" class="header">
         <nav>
-            <a href="../index.html"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
+            <a href="../index.php"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
             <div class="nav-links">
                 <ul>
                     <!--We would make a html file for each href-->
@@ -25,7 +47,7 @@
                     <li><a href="projectList.html">Project List</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="review.html">Reviews</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <?php if ($STATUS) {echo "<li><a href='html/account_manage.php'>Manage Account</a></li>";} else {echo "<li><a href='html/login.html'>Login</a></li>";} ?>
                 </ul>
             </div>
         </nav>
@@ -54,6 +76,7 @@
                 
                 <input id="save" class="btn-input" type="button" value="Save"> 
                 <input id="cancel" class="btn-input" type="button" value="Cancel">
+                <input id="sign-out" class="btn-input" type="button" value="Sign Out" onclick="SignOut()">
             </form>
             <form id="update-pass">
                 <h1>Change Password</h1>
@@ -141,4 +164,12 @@
         <p id="Copyright">Copyright &copy; <script>document.write(new Date().getFullYear());</script></p>
     </footer>
 </body>
+
+<?php
+    function SignOut()
+    {
+        $_SESSION['loggedin'] = false;
+    }
+?>
+
 </html>

@@ -47,7 +47,7 @@
                     <li><a href="html/projectList.html">Project List</a></li>
                     <li><a href="html/contact.html">Contact Us</a></li>
                     <li><a href="html/review.html">Reviews</a></li>
-                    <?php if ($STATUS) {echo "<li><a href='html/account_manage.html'>Manage Account</a></li>";} else {echo "<li><a href='html/login.html'>Login</a></li>";} ?>
+                    <?php if ($STATUS) {echo "<li><a href='html/account_manage.php'>Manage Account</a></li>";} else {echo "<li><a href='html/login.html'>Login</a></li>";} ?>
                 </ul>
             </div>
         </nav>
