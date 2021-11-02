@@ -74,9 +74,10 @@
                 <label for="course">Course</label>
                 <input class="form-input" type="text" name="course" placeholder="current-course">
                 
-                <input id="save" class="btn-input" type="button" value="Save"> 
-                <input id="cancel" class="btn-input" type="button" value="Cancel">
-                <input name="sign-out" class="btn-input" type="button" value="Sign Out">
+                <input name="save" class="btn-input" type="button" value="Save"> 
+                <input name="cancel" class="btn-input" type="button" value="Cancel">
+                <input type="submit" name="sign-out" value="Sign Out"/>
+
             </form>
             <form id="update-pass">
                 <h1>Change Password</h1>
