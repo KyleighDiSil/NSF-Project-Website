@@ -170,6 +170,10 @@
         $_SESSION['loggedin'] = false;
         header("Location: ../index.php");
     }
+    else
+    {
+        echo "Nothing";
+    }
 ?>
 
 </html>
