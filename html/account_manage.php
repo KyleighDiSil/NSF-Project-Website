@@ -76,7 +76,7 @@
                 
                 <input id="save" class="btn-input" type="button" value="Save"> 
                 <input id="cancel" class="btn-input" type="button" value="Cancel">
-                <input id="sing-out" class="btn-input" type="button" value="Sign Out">
+                <input id="sign-out" class="btn-input" type="button" value="Sign Out">
             </form>
             <form id="update-pass">
                 <h1>Change Password</h1>
@@ -168,6 +168,7 @@
 <?php  
     if(isset($_POST['sign-out'])) {
         $_SESSION['loggedin'] = false;
+        header("Location: ../index.php");
     }
 ?>
 
