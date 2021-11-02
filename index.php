@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +20,7 @@
 <body>
     <header id="header" class="header">
         <nav>
-            <a href="index.html"><img id="logo" src="images/NSF_logo.png" alt="logo"></a>
+            <a href="index.php"><img id="logo" src="images/NSF_logo.png" alt="logo"></a>
             <div class="nav-links">
                 <ul>
                     <!--We would make a html file for each href-->
@@ -24,7 +28,7 @@
                     <li><a href="html/projectList.html">Project List</a></li>
                     <li><a href="html/contact.html">Contact Us</a></li>
                     <li><a href="html/review.html">Reviews</a></li>
-                    <li><a href="html/login.html">Login</a></li>
+                    <?php if ($_SESSION["loggedin"] == true) {echo "<li><a href="html/account_manage.html">Manage Account</a></li>"} else {echo "<li><a href="html/login.html">Login</a></li>"} ?>
                 </ul>
             </div>
         </nav>
