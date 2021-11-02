@@ -56,20 +56,49 @@
 
             <a href="../php-scripts/logout.php"><p>Sign Out</p></a>
         </div>
-        <table id="userTable" border="1">
-            <caption>Users</caption>
-            <!-- <tr> makes a new row-->
-            <tr>
-                <!-- <th> is the title of the column-->
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Access</th>
-                <th>Select</th>
-            </tr>
-            <tr>
-                <!-- <td> is the table data -->
+            <?php
+                if ($ACCESS > 2)
+                {
+                    echo "<table id='userTable' border='1'>";
+                    echo "<caption>User Management</caption>";
+                    echo "<tr>";
+                    echo "    <th>First Name</th>";
+                    echo "    <th>Last Name</th>";
+                    echo "    <th>Email Address</th>";
+                    echo "    <th>University</</th>";
+                    echo "    <th>Course Title</th>";
+                    echo "    <th>Access Level</th>";
+                    echo "</tr>";
+
+                    // Connect to the database
+                    include_once '../php-scripts/connect_to_database.php';
+
+                    $sql = "SELECT FirstName, LastName, Email, University, CourseTitle, Access FROM Users WHERE Access < $ACCESS;";
+
+                    // Execute Query and error check
+                    if (!$result = mysqli_query($conn, $sql))
+                        {echo (mysqli_error($conn));}
+                    else
+                    {
+                        if ($result->num_rows > 0)
+                        {
+                            while ($row = mysqli_fetch_assoc($result))
+                            {
+                                echo "<tr>";
+                                echo "<td>".$row['FirstName']."</td>";
+                                echo "<td>".$row['LastName']."</td>";
+                                echo "<td>".$row['Email']."</td>";
+                                echo "<td>".$row['University']."</td>";
+                                echo "<td>".$row['CourseTitle']."</td>";
+                                echo "<td>".$row['Access']."</td>";
+                                echo "</tr>";
+                            }
+                            echo "</table><br>";
+                        }
+                    }
+                }
+            ?>
+            <!-- <tr>
                 <td>Kyleigh</td>
                 <td>DiSilvestro</td>
                 <td>disilvkj@clarkson.edu</td>
@@ -81,39 +110,13 @@
                     </select>
                 </td>
                 <td><input type="checkbox"/></td>
-            </tr>
+            </tr> -->
             <!-- Maybe how to create table
                 http://css.insttech.washington.edu/~lab/Support/HowtoUse/php-scripts/display_table.php-->
-        </table>
 
         <div id="submit-container">
             <input id="approve" type="button" name="approve" value="Approve"/>
             <input id="delete" type="button" name="delete" value="Delete"/>
         </div>
-        <script>
-            var accountTable = document.getElementById('userTable');
-            var row = accountTable.insertRow(2);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            var cell5 = row.insertCell(4);
-            var cell6 = row.insertCell(5);
-            cell1.innerHTML = "New Cell";
-            cell2.innerHTML = "New Cell 2";
-            cell3.innerHTML = "New Cell 3";
-            cell4.innerHTML = "New Cell 4";
-            var access = document.createElement("select");
-            var option1 = document.createElement("option");
-            option1.innerHTML = "User";
-            access.append(option1);
-            var option2 = document.createElement("option");
-            option2.innerHTML = "Team Member";
-            access.append(option2);
-            cell5.append(access);
-            var chk = document.createElement('input');
-            chk.setAttribute('type', 'checkbox');
-            cell6.append(chk);
-        </script>
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>
