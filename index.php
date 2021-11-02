@@ -7,7 +7,7 @@
     if ($_SESSION["loggedin"] == true)
     {
         $STATUS = true;
-        if (!$result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['UserID']. ";"))
+        if (!$result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['userID']. ";"))
         {
             echo "Error";
         }
