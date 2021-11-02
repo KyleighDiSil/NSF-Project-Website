@@ -8,8 +8,10 @@
     {
         $STATUS = true;
         $result = mysqli_query($conn, "SELECT Access from Users where UserID = " .$_SESSION['UserID']. ";");
-        $row = $result->fetch_assoc();
-        $ACCESS = $row["Access"];
+        while ($row = $result->fetch_assoc())
+        {
+           $ACCESS = $row["Access"];
+        }
     }
 ?>
 
