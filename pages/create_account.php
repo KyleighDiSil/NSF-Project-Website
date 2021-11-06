@@ -2,7 +2,6 @@
 <?php $PAGE_NAME = "create_account"?>
 
 <?php require "../php-snippets/top_template.php"; ?>
-<?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
     <main id="main">
         <div>
             <form action="../php-scripts/create_account.php" method="POST">

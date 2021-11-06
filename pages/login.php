@@ -15,7 +15,7 @@
                         <label id="showPassLabel" for="checkShowPass">Show Password</label>
                     </div>
                     <input type="submit" id="submit" value="Login">
-                    <a href="./create_account.php">Create Account</a>
+                    <a href="./create_account.php"><p>Create Account</p></a>
                 </div>
             </form>
         </div>
