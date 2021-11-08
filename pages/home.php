@@ -3,23 +3,15 @@
 
 <?php require "../php-snippets/top_template.php"; ?>
     <main id="main">
-        <style>
-            #summary{
-                width: 500px;
-                margin: 10px auto;
-            }
-            #home-image{
-                width: 500px;
-                height: 300px;
-                display: flex;
-                margin: 10px auto;
-            }
-            #welcome{
-                position: absolute;
-            }
-        </style>
                 <div id="welcome-page">
                     <?php echo "<h1 id='welcome'>$STATUS $ACCESS</h1>"; ?>
+                </div>
+
+                <div id="announcement-bar">
+                    <a href="announcements.php" id="bar-title-link"><div id="bar-title">Announcements</div></a>
+                    <a href="announcements.php" id="title-link"><div id="title">This is a very long title called title no i do not want to add a whole bunch of text</div></a>
+                    <!-- <a href="announcements.php"><p id="bar-title">Announcements</p></a>
+                    <p id="title">This is a very long title called title no i do not want to add a whole bunch of text</p> -->
                 </div>
 
         <img id="home-image" src="../images/summary.PNG"/>
