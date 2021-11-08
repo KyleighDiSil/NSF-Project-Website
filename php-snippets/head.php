@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSF Project Website</title>
     <link rel="icon" href="../images/NSF_logo.png">
-    <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../css/common.css"/>
     <?php echo "<link rel='stylesheet' href='../css/$PAGE_NAME.css'/>"; ?>
     <!--Font Awesome is where you can get all kinds of different Fonts to use in websites and icons-->

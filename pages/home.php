@@ -17,15 +17,9 @@
             #welcome{
                 position: absolute;
             }
-            #clarkson-img{
-                width: 100vw;
-                max-height: 400px;
-                margin: 0 auto;
-            }
         </style>
                 <div id="welcome-page">
                     <?php echo "<h1 id='welcome'>$STATUS $ACCESS</h1>"; ?>
-                    <img id="clarkson-img" src="https://www.clarkson.edu/sites/default/files/media/image/2017-06/aerial2.jpg"/>
                 </div>
 
         <img id="home-image" src="../images/summary.PNG"/>
