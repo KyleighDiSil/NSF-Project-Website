@@ -6,7 +6,7 @@
     <main id="main">
         <h1>Project List</h1>
 
-        <table id="project_list_table">
+        <table id="project_list_table" >
             <tr>
                 <th>Project Name</th>
                 <th>Summary</th>
