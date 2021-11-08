@@ -5,6 +5,18 @@
   include_once 'connect_to_database.php';
 
   // Validate inputs
+  if ($_POST['old-pass'] == "")
+  {
+    // Empty
+  }
+  if ($_POST['new-pass'] == "")
+  {
+    // Emptpy
+  }
+  if ($_POST['new-pass'] == $_POST['confirm-new-pass'])
+  {
+    
+  }
 
   // CDL=> Handle SALT
   if (!$result = mysqli_query($conn, "UPDATE Users SET FirstName = '$first', LastName = '$last', Email = '$email', University = '$university', CourseTitle = '$course'
