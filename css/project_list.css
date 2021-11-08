@@ -43,6 +43,9 @@
     height: 30px;
     line-height: 30px;
     width: 100px;
+    float: left;
+    clear: none;
     background-color: rgb(8, 167, 42);
-    border-radius: 30px;
+    border-radius: 15px;
   }
+

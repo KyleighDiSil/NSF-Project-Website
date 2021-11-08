@@ -12,12 +12,17 @@
                 <th>Summary</th>
                 <th>Availability</th>
                 <th>Rating</th>
-                <th>More Details</th>
             </tr>
             <tr>
-                <td>Xfig</td>
+                <td><a href="project_page.php">Xfig</a></td>
+
                 <td>Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS. </td>
-                <td><div class="tag"><p>Available</p></div></td>
+                <td>
+                    <div class="tag">
+                        <i class="far fa-check-circle" style="padding-left: 5px;"></i>
+                        Available
+                    </div>
+                </td>
                 <td style="width: 125px">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -25,7 +30,6 @@
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </td>
-                <td>IDK what to put here lmao</td>
             </tr>
         </table>
     </main>
