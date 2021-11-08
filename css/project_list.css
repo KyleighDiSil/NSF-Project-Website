@@ -1,0 +1,48 @@
+/* Report Page Styling */
+
+#project_list_table
+{
+    padding: 0 18px;
+    overflow: hidden;
+    width: 800px;
+}
+
+#project_list_table table
+{
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#project_list_table td, #project_list_table th
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#project_list_table tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+#project_list_table th
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF4B2B;
+    color: white;
+}
+
+.checked
+{
+    color: orange;
+}
+
+.tag {
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    background-color: rgb(8, 167, 42);
+    border-radius: 30px;
+  }
