@@ -29,12 +29,12 @@ Description  : A php file to authenticate a user
   }
 
   // Construct Query
-  $sql = "SELECT * FROM users WHERE (Email = '$EmailAttempt');"; // CDL=> and Access > 0
+  $sql = "SELECT * FROM users WHERE (Email = '$EmailAttempt' and Access > 0);";
 
   // Execute Query and ensure no errors occurred
   if (!$result = mysqli_query($conn, $sql))
   {
-    echo "Error";
+    echo (mysqli_error($conn));
   }
   else
   {
@@ -48,15 +48,14 @@ Description  : A php file to authenticate a user
 
       if ($row['Password'] == $Hashed)
       {
+        header("Location: ../index.php");
         $_SESSION['loggedin'] = true;
         $_SESSION['userID'] = $row['UserID'];
-        header("Location: ../index.php");
       }
       else
       {
-        header("Location: login.php#Login Failure");
+        header("Location: ../login.php#LoginFailure");
       }
     }
-    exit;
   }
 ?>
