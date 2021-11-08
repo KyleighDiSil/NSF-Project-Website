@@ -51,11 +51,7 @@ CREATE TABLE Files (
   FileID      INT NOT NULL AUTO_INCREMENT,
   Location    varchar(128) NOT NULL,
   Clicks			int DEFAULT 0,
-  CourseID    INT NULL,
-  ProjectID   INT NULL,
-  PRIMARY KEY (FileID),
-  FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
-  FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+  PRIMARY KEY (FileID)
 );
 /*************************************************************
 * Name:         Reviews
@@ -68,13 +64,7 @@ CREATE TABLE Reviews (
   Content     VARCHAR(265) NOT NULL,
   Rating      INT NOT NULL,
   Date        DATE NOT NULL,
-  FileID      INT NULL,
-  CourseID    INT NULL,
-  ProjectID   INT NULL,
-  PRIMARY KEY (ReviewID),
-  FOREIGN KEY (FileID) REFERENCES Files(FileID),
-  FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
-  FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+  PRIMARY KEY (ReviewID)
 );
 /*************************************************************
 * Name:         MailList
@@ -108,6 +98,71 @@ CREATE TABLE Users (
   University  VARCHAR(60) NOT NULL,
   CourseTitle VARCHAR(30) NOT NULL,
   PRIMARY KEY (UserID)
+);
+/*************************************************************
+* Name:         CourseFiles
+* Database:     NSFDatabase
+* Description:  A table to link Course with Files
+*************************************************************/
+CREATE TABLE CourseFiles (
+  ID          INT NOT NULL AUTO_INCREMENT,
+  CourseID    INT NOT NULL,
+  FileID      INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
+  FOREIGN KEY (FileID) REFERENCES Files(FileID)
+);
+/*************************************************************
+* Name:         Users
+* Database:     NSFDatabase
+* Description:  A table to link Projects with Files
+*************************************************************/
+CREATE TABLE ProjectFiles (
+  ID          INT NOT NULL AUTO_INCREMENT,
+  ProjectID    INT NOT NULL,
+  FileID      INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID),
+  FOREIGN KEY (FileID) REFERENCES Files(FileID)
+);
+/*************************************************************
+* Name:         Users
+* Database:     NSFDatabase
+* Description:  A table to link Course with Reviews
+*************************************************************/
+CREATE TABLE CourseReviews (
+  ID          INT NOT NULL AUTO_INCREMENT,
+  CourseID    INT NOT NULL,
+  ReviewID    INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ReviewID) REFERENCES Reviews(ReviewID),
+  FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);
+/*************************************************************
+* Name:         Users
+* Database:     NSFDatabase
+* Description:  A table to link Projects with Reviews
+*************************************************************/
+CREATE TABLE ProjectReviews (
+  ID          INT NOT NULL AUTO_INCREMENT,
+  ProjectID   INT NOT NULL,
+  ReviewID    INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID),
+  FOREIGN KEY (ReviewID) REFERENCES Reviews(ReviewID)
+);
+/*************************************************************
+* Name:         Users
+* Database:     NSFDatabase
+* Description:  A table to like Files with Reviews
+*************************************************************/
+CREATE TABLE FileReviews (
+  ID          INT NOT NULL AUTO_INCREMENT,
+  ReviewID    INT NOT NULL,
+  FileID      INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ReviewID) REFERENCES Reviews(ReviewID),
+  FOREIGN KEY (FileID) REFERENCES Files(FileID)
 );
 
 
