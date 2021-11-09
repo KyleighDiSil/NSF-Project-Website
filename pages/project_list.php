@@ -14,11 +14,11 @@
                 <th>Rating</th>
             </tr>
             <tr>
-                <td><a href="project_page.php">Xfig</a></td>
+                <td><a href="">Xfig</a></td>
 
                 <td>Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS. </td>
                 <td>
-                    <div class="tag">
+                    <div class="available_tag">
                         <i class="far fa-check-circle" style="padding-left: 5px;"></i>
                         Available
                     </div>
@@ -27,6 +27,24 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="">Mango</a></td>
+
+                <td>Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.</td>
+                <td>
+                    <div class="pending_tag">
+                        <i class="far fa-question-circle" style="padding-left: 5px;"></i>
+                        Under Review
+                    </div>
+                </td>
+                <td style="width: 125px">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                     <span class="fa fa-star"></span>
                 </td>
