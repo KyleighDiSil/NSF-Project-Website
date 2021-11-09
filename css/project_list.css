@@ -1,8 +1,24 @@
-/* Report Page Styling */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+#project_list_contents
+{
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    padding: 20px;
+}
+
+h1
+{
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+}
 
 #project_list_table
 {
-    padding: 0 18px;
+    /* padding: 0 18px; */
     overflow: hidden;
     width: 800px;
 }
@@ -43,7 +59,7 @@
 {
     height: 30px;
     line-height: 30px;
-    width: 140px;
+    width: 100px;
     float: left;
     clear: none;
     background-color: #08a72a;
@@ -54,9 +70,32 @@
 {
     height: 30px;
     line-height: 30px;
-    width: 140px;
+    width: 130px;
     float: left;
     clear: none;
     background-color: #e6be0c;
     border-radius: 15px;
 }
+
+.development_tag
+{
+    height: 30px;
+    line-height: 30px;
+    width: 170px;
+    float: left;
+    clear: none;
+    background-color: #4c76cf;
+    border-radius: 15px;
+}
+
+.unavailable_tag
+{
+    height: 30px;
+    line-height: 30px;
+    width: 130px;
+    float: left;
+    clear: none;
+    background-color: #9c9c9c;
+    border-radius: 15px;
+}
+
