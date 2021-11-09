@@ -1,44 +1,44 @@
 /* Report Page Styling */
 
-#project_list_table
+#contact_us_table
 {
     padding: 0 18px;
     overflow: hidden;
     width: 800px;
 }
 
-#project_list_table table
+#contact_us_table table
 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#project_list_table td, #project_list_table th
+#contact_us_table td, #contact_us_table th
 {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#project_list_table tr:nth-child(even)
+#contact_us_table tr:nth-child(even)
 {
     background-color: #f2f2f2;
 }
 
-#instructor-image{
-    width: 50px;
-    height: 30px;
-    display: flex;
-    margin: 10px auto;
-}
-
-#project_list_table th
+#contact_us_table th
 {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #FF4B2B;
     color: white;
+}
+
+#instructor-image{
+    width: 75px;
+    height: 100px;
+    display: flex;
+    margin: 10px auto;
 }
 
 .checked
