@@ -59,7 +59,7 @@ h2{
     font-size: 20px;
 }
 
-#aboutUs{
+#aboutUs, #volunteers{
     background-color: aliceblue;
     border: 3px dotted rgb(0, 0, 0);
     padding: 10px;
@@ -67,7 +67,7 @@ h2{
     margin: 10px auto;
 }
 
-#ourGoal{
+#ourGoal, #advisory, #project-management{
     padding: 10px;
     width: 75%;
     margin: 10px auto;
@@ -86,26 +86,27 @@ h2{
     margin: 10px auto;
 }
 
-#project-table {
+#project-table, #advisory-table {
     font-family: Arial;
     border-collapse: collapse;
     width: 100%;
 }
 
-#project-table td, #project-table th {
+#project-table td, #project-table th, #advisory-table td,
+#advisory-table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#project-table tr:nth-child(even){
+#project-table tr:nth-child(even), #advisory-table tr:nth-child(even){
     background-color: #f2f2f2;
 }
 
-#project-table tr:hover {
+#project-table tr:hover, #advisory-table tr:hover {
     background-color: #ddd;
 }
 
-#project-table th {
+#project-table th, #advisory-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;

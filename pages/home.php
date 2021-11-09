@@ -159,5 +159,27 @@
                         </tr>
                     </table>
                 </div>
+
+                <div id="advisory">
+                    <h2 style="padding-bottom: 10px;">Project Advisory Board</h2>
+                    <table id="advisory-table" border="1">
+                        <tr><th>Name, Title, Affiliation</th></tr>
+                        <tr><td>Dr.Lori Pollock, Professor, University of Delaware, USA</td></tr>
+                        <tr><td>Dr.Rainer Koschke, Professor, Breman University, Germany</td></tr>
+                        <tr><td>Dr.Jonathan Maletic, Professor, Kent State University, USA</td></tr>
+                        <tr><td>Dr.Ahmed Hassan, Professor, NSERC/RIM Industrial Research Chair in Software Engineering, Queen's University, Canada</td></tr>
+                        <tr><td>Dr.Timothy Lethbridge, Professor, University of Ottawa, Canada</td></tr>
+                        <tr><td>Dr.Chanchal Roy, Professor, University of Saskatchewan, Canada</td></tr>
+                        <tr><td>Dr.Keith Gallagher, Associate Professor, Florida Institute of Technology, USA</td></tr>
+                        <tr><td>Dr.Andria Marcus, Professor, University of Texas at Dallas, USA</td></tr>
+                    </table>
+                </div>
+
+                <div id="volunteers">
+                    <h2 style="padding-bottom: 10px;">Volunteer Instructors</h2>
+                </div>
+                <div id="project-management">
+                    <h2 style="padding-bottom: 10px;">Project Management Plan</h2>
+                </div>
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>
