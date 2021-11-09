@@ -15,6 +15,9 @@
 #welcome{
     position: absolute;
 }
+h1{
+    margin: 10px;
+}
 
 #announcement-bar{
     display: flex;
@@ -52,9 +55,60 @@ h2{
 }
 
 #summary{
-    width: 500px;
     margin: 10px auto;
+    font-size: 20px;
+}
+
+#aboutUs{
     background-color: aliceblue;
     border: 3px dotted rgb(0, 0, 0);
     padding: 10px;
+    width: 75%;
+    margin: 10px auto;
+}
+
+#ourGoal{
+    padding: 10px;
+    width: 75%;
+    margin: 10px auto;
+}
+
+#goal-sum{
+    margin: 10px;
+    font-size: 20px;
+}
+
+#canidate-projects{
+    background-color: aliceblue;
+    border: 3px dotted rgb(0, 0, 0);
+    padding: 10px;
+    width: 75%;
+    margin: 10px auto;
+}
+
+#project-table {
+    font-family: Arial;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#project-table td, #project-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#project-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#project-table tr:hover {
+    background-color: #ddd;
+}
+
+#project-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF4B2B;
+    color: white;
 }
