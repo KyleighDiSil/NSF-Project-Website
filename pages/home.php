@@ -177,9 +177,103 @@
 
                 <div id="volunteers">
                     <h2 style="padding-bottom: 10px;">Volunteer Instructors</h2>
+                    <table id="volunteer-table" border="1">
+                        <tr>
+                            <th>Name, Title, Affiliation</th>
+                            <th>Course ID/Title, Semester, Enrollment, #TA</th>
+                        </tr>
+                        <tr>
+                            <td>Dr.Jonathan Maletic, Professor, Kent State University, USA</td>
+                            <td>CS 33901- Software Engineering, Spring and Fall semesters, 50 students, 1/2 grader</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Jinghui Cheng, Assistant Professor, Polytechnique Montreal</td>
+                            <td>LOG3000- Software Engineering Process, Winter and Fall, 100 students, 2 TA's</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Hui Zhang, Assistant Professor, University of Louisville, USA</td>
+                            <td>CECS 550- Software Engineering, Spring and Fall, 30 students</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Kostadin Damevski, Dr. David Shepherd, Ms. Debera Duke, VCU</td>
+                            <td>CMSC 355- Software Engineering: Specification and Design, Spring and Fall, 90 students, two TA's</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Hakam Alomari, Assistant Professor, Miami University, USA</td>
+                            <td>CSE 211- Software Construction, Spring, 70 students in two sections</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Andrian Marcus, Professor, University of Texas at Dallas, USA</td>
+                            <td>CS/SE3354- Software Engineering, Spring and Fall, several sections, 60 students and one TA per section <br> 
+                                CS/SE6356- Software Maintenance, Evolution and Reengineering, Fall, 35 students, one TA
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Chanchal Roy, Professor, University of Saskatchewan, Canada</td>
+                            <td>CMPT 470/816- Advanced Software Engineering, Fall, 40 students, one TA</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Yu Liu, Assistant Professor, CU</td>
+                            <td>EE 368- Introduction to Software Engineering, Fall, 40 students, one TA</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Mohamed Mkaouer, Assistant Professor, RIT, USA</td>
+                            <td>SWEN 777 - Software Quality Insurance, Spring, 20 students</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Marios-Eleftherios Fokaefs, Assistant Professor, Polytechnique Montreal, Canada</td>
+                            <td>LOG8430- Software Architecture and Advanced Design, Winter and Fall, 30-90 students, 1-3 TA's
+                                <br> LOG8371- Software Quality Engineering, Winter and Fall, 140-170 students, 3-4 TA's
+                            </td>
+                        </tr>
+                    </table>
                 </div>
                 <div id="project-management">
                     <h2 style="padding-bottom: 10px;">Project Management Plan</h2>
+                    <table id="projectMange-table" border="1">
+                        <tr>
+                            <th>Person/Affiliation</th>
+                            <th>Role & Expertise</th>
+                            <th>Responsibilities</th>
+                        </tr>
+                        <tr>
+                            <td>Daqing Hou, Electrical & Comp. Engrg., CU</td>
+                            <td>PI; software engineering education & research</td>
+                            <td>General project management and oversight, coordination with
+                                VCU, lead on development of course projects and reference 
+                                course, and dissemination
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Yu Liu, Electrical & Comp. Engrg., CU</td>
+                            <td>co-PI; software engineering education</td>
+                            <td>Development of course projects and reference course, 
+                                teaching with developed materials
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jan E. DeWaters, Institute for STEM Education and Coulter School of Engineering, CU</td>
+                            <td>co-PI; engineering education research</td>
+                            <td>Design and development of assessment tools, data analysis
+                                and interpretation, liaison to external evaluator
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mary Margaret Small, Ed.D. Office of Educ. Partnerships, CU</td>
+                            <td>External Evaluator; STEM education</td>
+                            <td>Organization and implementation of all assessment
+                                components; evaluation of overall program outcomes 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>David Shepherd, PhD Computer Science, VCU</td>
+                            <td>PI; SE education & research, a decade of industrial research</td>
+                            <td>Project management, coordination with CU, development
+                                of course projects and reference course, teaching with developed 
+                                materials, lead on workshops
+                            </td>
+                        </tr>
+                    </table>
                 </div>
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>

@@ -86,27 +86,31 @@ h2{
     margin: 10px auto;
 }
 
-#project-table, #advisory-table {
+#project-table, #advisory-table, #volunteer-table, #projectMange-table {
     font-family: Arial;
     border-collapse: collapse;
     width: 100%;
 }
 
 #project-table td, #project-table th, #advisory-table td,
-#advisory-table th {
+#advisory-table th, #volunteer-table th, #volunteer-table td,
+#projectMange-table th, #projectMange-table td {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#project-table tr:nth-child(even), #advisory-table tr:nth-child(even){
+#project-table tr:nth-child(even), #advisory-table tr:nth-child(even),
+#volunteer-table tr:nth-child(even), #projectMange-table tr:nth-child(even){
     background-color: #f2f2f2;
 }
 
-#project-table tr:hover, #advisory-table tr:hover {
+#project-table tr:hover, #advisory-table tr:hover,
+#volunteer-table tr:hover, #projectMange-table tr:hover {
     background-color: #ddd;
 }
 
-#project-table th, #advisory-table th {
+#project-table th, #advisory-table th, #volunteer-table th,
+#projectMange-table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
