@@ -41,6 +41,13 @@ h1
     background-color: #f2f2f2;
 }
 
+#instructor-image{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    margin: 10px auto;
+}
+
 #project_list_table th
 {
     padding-top: 12px;

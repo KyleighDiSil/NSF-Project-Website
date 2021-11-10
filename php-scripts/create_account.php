@@ -48,8 +48,8 @@ Description  : A php file to authenticate a user
   $Split = str_split($salt, 10);
   $Salted = $Split[0] . $_POST["password"] . $Split[1];
   $Hashed = hash('sha256', $Salted);
-
-  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', -1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
+  // CDL=> Change 1 to -1 for access status later
+  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', 1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
   if (!$result = mysqli_query($conn, $SQL))
   {
     echo (mysqli_error($conn));
