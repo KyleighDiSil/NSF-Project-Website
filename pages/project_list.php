@@ -44,7 +44,7 @@
                             echo "<td>".$project_row["Summary"]."</td>";
 
                             // Project Availability
-                            echo "<td>";
+                            echo "<td><div id='tags'>";
                             switch ($project_row["Availability"])
                             {
                                 case 0:
@@ -72,7 +72,7 @@
                                     echo "</div>";
                                     break;
                             }
-                            echo "</td>";
+                            echo "</div></td>";
 
                             // Project Rating
                             echo "<td style='width: 125px'>";

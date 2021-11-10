@@ -55,6 +55,11 @@ h1
     color: orange;
 }
 
+#tags{
+    display: flex;
+    justify-content: center;
+}
+
 .available_tag
 {
     height: 30px;
