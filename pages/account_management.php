@@ -5,7 +5,8 @@
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
 
     <main id="main">
-        <h1>Manage Your Account</h1>
+        <h1>My Account<hr></h1>
+        <p id="sign-out"><a href="../php-scripts/logout.php">Sign Out</a></p>
         <style>
         </style>
         <div id="account-info">
@@ -48,15 +49,14 @@
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
 
             </form>
+            <h2>Change Password<hr></h2>
             <form id="update-pass" action="../php-scripts/update_password.php" method="post">
-                <h1>Change Password</h1>
                 <input class="form-input" type="password" name="old-pass" placeholder="Current Password"/>
                 <input class="form-input" type="password" name="new-pass" placeholder="New Password"/>
                 <input class="form-input" type="password" name="confirm-new-pass" placeholder="Confirm New Password"/>
                 <input id="change" class="btn-input" type="submit" value="Change">
             </form>
 
-            <a href="../php-scripts/logout.php"><p>Sign Out</p></a>
         </div>
             <?php
                 if ($ACCESS > 2)

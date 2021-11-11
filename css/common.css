@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: sans-serif;
 }
 
 body{
@@ -41,7 +42,6 @@ nav{
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    font-family: cursive;
 }
 
 .nav-links ul li a{
@@ -95,7 +95,6 @@ main{
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    font-family: cursive;
 }
 
 .footer-links ul li a{

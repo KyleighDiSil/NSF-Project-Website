@@ -1,9 +1,9 @@
 h1{
-    text-align: center;
     margin: 20px;
 }
 #account-info{
     display: flex;
+    flex-direction: column;
     margin: 10px;
 }
 @media  screen and (min-width:800px) {
@@ -19,14 +19,14 @@ form{
 #personal-info{
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: whitesmoke;
 }
+
 #update-pass{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aquamarine;
+    background-color: whitesmoke;
     border:2px solid grey;
 }
 
@@ -50,7 +50,6 @@ form{
     width: 300px;
     padding: 5px;
     border-radius: 5px;
-    font-family: Arial;
     font-weight: bold;
 }
 
@@ -74,7 +73,6 @@ label{
 
 caption{
     font-size: large;
-    font-family: Arial;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -97,7 +95,6 @@ td{
 #approve, #delete{
     padding: 5px;
     border-radius: 5px;
-    font-family: Arial;
     font-weight: bold;
     margin-bottom: 20px;
 }

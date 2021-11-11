@@ -35,7 +35,6 @@ h1{
     width: 50%; 
     padding: 5px;
     border: 2px solid #800020;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #bar-title-link{
@@ -47,11 +46,6 @@ h1{
 
 h1{
     text-align: center;
-    font-family: cursive;
-}
-
-h2{
-    font-family: cursive;
 }
 
 #summary{
@@ -87,7 +81,6 @@ h2{
 }
 
 #project-table, #advisory-table, #volunteer-table, #projectMange-table {
-    font-family: Arial;
     border-collapse: collapse;
     width: 100%;
 }
