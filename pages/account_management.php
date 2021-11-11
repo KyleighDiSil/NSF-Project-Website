@@ -92,7 +92,35 @@
                                 echo "<td>".$row['Email']."</td>";
                                 echo "<td>".$row['University']."</td>";
                                 echo "<td>".$row['CourseTitle']."</td>";
-                                echo "<td>".$row['Access']."</td>";
+
+                                echo "<td>";
+                                echo "<select name='access' id='access'>";
+
+                                if ($ACCESS == 4)      // Admin
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                    echo "<option value='2'".(($row['Access'] != 2)  ?: 'Selected').">Team Member</option>";
+                                    echo "<option value='3'".(($row['Access'] != 3)  ?: 'Selected').">Webmaster</option>";
+                                }
+                                elseif ($ACCESS == 3)  // Webmaster
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                    echo "<option value='2'".(($row['Access'] != 2)  ?: 'Selected').">Team Member</option>";
+                                }
+                                elseif ($ACCESS == 2)  // Team Member
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                }
+                                else                   // Instructor
+                                {
+
+                                }
+
+                                echo "</select>";
+                                echo "</td>";
                                 echo "</tr>";
                             }
                             echo "</table><br>";
