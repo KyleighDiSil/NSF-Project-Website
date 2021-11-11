@@ -1,9 +1,17 @@
 h1{
     margin: 20px;
 }
+
+#sign-out{
+    padding: 5px;
+    background-color: whitesmoke;
+    color: black;
+    width: fit-content;
+    border-radius: 5px;
+}
+
 #account-info{
     display: flex;
-    flex-direction: column;
     margin: 10px;
 }
 @media  screen and (min-width:800px) {

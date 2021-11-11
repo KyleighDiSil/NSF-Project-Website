@@ -49,8 +49,9 @@
                 <input name="cancel" class="btn-input" type="button" value="Cancel">
 
             </form>
-            <h2>Change Password<hr></h2>
+            
             <form id="update-pass" action="../php-scripts/update_password.php" method="post">
+                <h2>Change Password<hr></h2>
                 <input class="form-input" type="password" name="old-pass" placeholder="Current Password"/>
                 <input class="form-input" type="password" name="new-pass" placeholder="New Password"/>
                 <input class="form-input" type="password" name="confirm-new-pass" placeholder="Confirm New Password"/>
