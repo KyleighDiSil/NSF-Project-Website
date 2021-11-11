@@ -12,8 +12,7 @@
 
 h1
 {
-    font-family: 'Montserrat', sans-serif;
-    padding-bottom: 10px;
+   padding-bottom: 10px;
 }
 
 #project_list_table
@@ -25,7 +24,6 @@ h1
 
 #project_list_table table
 {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
