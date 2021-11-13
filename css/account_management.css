@@ -5,9 +5,11 @@ h1{
 #sign-out{
     padding: 5px;
     background-color: whitesmoke;
+    border: 3px solid black;
     color: black;
     width: fit-content;
     border-radius: 5px;
+    margin-left: 20px;
 }
 
 #account-info{
@@ -67,6 +69,7 @@ form{
 }
 #change:hover{
     background-color: #ffa87f;
+    cursor: pointer;
 }
 
 label{
@@ -88,7 +91,7 @@ caption{
 th{
     text-align: center;
     padding: 5px;
-}
+} 
 
 td{
     text-align: center;
