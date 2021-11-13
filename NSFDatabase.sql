@@ -20,16 +20,12 @@ CREATE TABLE Announcements (
 * Name:         Projects
 * Database:     NSFDatabase
 * Description:  A table to store the project information
-* Availablity:  0 -> Available
-*               1 -> Under Review
-*               2 -> Under Development
-*               3 -> Not Started
 *************************************************************/
 CREATE TABLE Projects (
   ProjectID     INT NOT NULL AUTO_INCREMENT,
   Name          VARCHAR(20) NULL UNIQUE,
-  Summary       VARCHAR(512) NOT NULL,
-  Availability  INT NOT NULL,
+  Summary       VARCHAR(256) NOT NULL,
+  Availability  VARCHAR(20) NOT NULL,
   Rating        int NOT NULL,
   Clicks        int DEFAULT 0,
   PRIMARY KEY   (ProjectID)
@@ -89,7 +85,7 @@ CREATE TABLE MailList (
 *                                         Guest     = 0
                                           Auth User = 1
                                           Team      = 2
-                                          Webmaster = 3
+                                          Webmaster = 3 
 *************************************************************/
 CREATE TABLE Users (
   UserID      INT NOT NULL AUTO_INCREMENT,
@@ -173,17 +169,11 @@ CREATE TABLE FileReviews (
 -- Insert Statements
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('Chris', 'Lloyd', 'lloydcd@clarkson.edu', 'aNK5PfG3xMeKZLZSxVL7','6b24cc0e60b1629d5cf1b52f3d920cdba97ccf5215a8b7b8fa44c8a9e1da1990', 3, 'Clarkson University', 'EE418 Senior Design');
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('admin', 'user', 'admin', 'YWOJoT7TYnPXv5UqyNsB','ff96223f33f5ef21704cc44b4fc604341f08a7960836a91958030005001a3479', 4, 'Clarkson University', 'EE418');
-
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Xfig", "Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS.", 0, 4, 69420);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mango", "Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.", 1, 3, 42069);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WordPress", "Open-source software for creating website, blog, or app.", 2, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("MuseScore", "Music notation and writing software.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("VSCode", "Microsoft's open-source code editor.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Hunt", "Virtual scavenger hunt mobile app where players can join a game, select a team and solve hints to acquire treasure. The team with the most points wins.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("iTrust", "Electronic medical records web application that supports patients and medical staff in securely managing healthcare workflows.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Qt", "Cross-platform application and UI framework, active developer community.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("SuperTuxKart", "3D open-source arcade racer with a variety characters, tracks, and modes to play.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mozilla", "Well-known web browser with strong support for software engineering education.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WinMerge", "Text file merging and comparison tool for Windows used in software course.", 3, 0, 0);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Moodle", "Platform for educators/learners to create personalized learning environments.", 3, 0, 0);
-
+INSERT INTO COURSE(Name, Clicks) VALUES ("Discrete Math", 40);
+INSERT INTO COURSE(Name, Clicks) VALUES ("Intro To CS", 100);
+INSERT INTO Reviews(Title, Content, Rating, Date) 
+VALUES ("Physics", "This is so much fun", 4, 0001-01-01);
+INSERT INTO Reviews(Title, Content, Rating, Date) 
+VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(2, 2);
