@@ -10,10 +10,6 @@
                     <p id="title">This is a very long title called title no i do not want to add a whole bunch of text</p> -->
                 </div>
 
-                <div id="welcome-page">
-                    <?php echo "<h1 id='welcome'>$STATUS $ACCESS</h1>"; ?>
-                </div>
-
                 <h1>Welcome</h1>
 
                 <div id="AboutUs">
