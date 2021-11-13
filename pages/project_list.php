@@ -75,7 +75,7 @@
                             echo "</div></td>";
 
                             // Project Rating
-                            echo "<td style='width: 125px'>";
+                            echo "<td style='width: 125px'><a id='link' href='review.php'>";
                             $i = 0;
                             while ($i < $project_row["Rating"])
                             {
@@ -87,7 +87,7 @@
                                 echo "<span class='fa fa-star'></span>";
                                 ++$i;
                             }
-                            echo "</td>";
+                            echo "</a></td>";
 
                             // Project Clicks
                             echo "<td>".thousandsCurrencyFormat($project_row["Clicks"])."</td>";
