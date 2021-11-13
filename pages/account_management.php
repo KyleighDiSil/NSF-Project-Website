@@ -30,6 +30,7 @@
                         }
                     }
                 ?>
+                <h2 style="text-align: center;">Personal Information</h2>
                 <label for="first-name">First Name</label>
                 <input class="form-input" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
 
@@ -45,12 +46,13 @@
                 <label for="course">Course</label>
                 <input class="form-input" type="text" name="course" placeholder=<?php echo "'$course'"; ?>/>
 
-                <input name="save" class="btn-input" type="submit" value="Save">
-                <input name="cancel" class="btn-input" type="button" value="Cancel">
+                <input id="save" name="save" class="btn-input" type="submit" value="Save">
+                <input id="cancel" name="cancel" class="btn-input" type="button" value="Cancel">
 
             </form>
-            <h2>Change Password<hr></h2>
+            
             <form id="update-pass" action="../php-scripts/update_password.php" method="post">
+                <h2>Change Password</h2>
                 <input class="form-input" type="password" name="old-pass" placeholder="Current Password"/>
                 <input class="form-input" type="password" name="new-pass" placeholder="New Password"/>
                 <input class="form-input" type="password" name="confirm-new-pass" placeholder="Confirm New Password"/>
@@ -92,7 +94,35 @@
                                 echo "<td>".$row['Email']."</td>";
                                 echo "<td>".$row['University']."</td>";
                                 echo "<td>".$row['CourseTitle']."</td>";
-                                echo "<td>".$row['Access']."</td>";
+
+                                echo "<td>";
+                                echo "<select name='access' id='access'>";
+
+                                if ($ACCESS == 4)      // Admin
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                    echo "<option value='2'".(($row['Access'] != 2)  ?: 'Selected').">Team Member</option>";
+                                    echo "<option value='3'".(($row['Access'] != 3)  ?: 'Selected').">Webmaster</option>";
+                                }
+                                elseif ($ACCESS == 3)  // Webmaster
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                    echo "<option value='2'".(($row['Access'] != 2)  ?: 'Selected').">Team Member</option>";
+                                }
+                                elseif ($ACCESS == 2)  // Team Member
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                }
+                                else                   // Instructor
+                                {
+
+                                }
+
+                                echo "</select>";
+                                echo "</td>";
                                 echo "</tr>";
                             }
                             echo "</table><br>";
