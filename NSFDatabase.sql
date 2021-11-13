@@ -176,4 +176,4 @@ VALUES ("Physics", "This is so much fun", 4, 0001-01-01);
 INSERT INTO Reviews(Title, Content, Rating, Date) 
 VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
 INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
-INSERT INTO CourseReviews(ID, CourseID, ReviewID) VALUES(2, 2);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(2, 2);
