@@ -169,3 +169,11 @@ CREATE TABLE FileReviews (
 -- Insert Statements
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('Chris', 'Lloyd', 'lloydcd@clarkson.edu', 'aNK5PfG3xMeKZLZSxVL7','6b24cc0e60b1629d5cf1b52f3d920cdba97ccf5215a8b7b8fa44c8a9e1da1990', 3, 'Clarkson University', 'EE418 Senior Design');
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('admin', 'user', 'admin', 'YWOJoT7TYnPXv5UqyNsB','ff96223f33f5ef21704cc44b4fc604341f08a7960836a91958030005001a3479', 4, 'Clarkson University', 'EE418');
+INSERT INTO COURSE(Name, Clicks) VALUES ("Discrete Math", 40);
+INSERT INTO COURSE(Name, Clicks) VALUES ("Intro To CS", 100);
+INSERT INTO Reviews(Title, Content, Rating, Date) 
+VALUES ("Physics", "This is so much fun", 4, 0001-01-01);
+INSERT INTO Reviews(Title, Content, Rating, Date) 
+VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
+INSERT INTO CourseReviews(ID, CourseID, ReviewID) VALUES(2, 2);
