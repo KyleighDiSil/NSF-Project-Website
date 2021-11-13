@@ -177,3 +177,17 @@ INSERT INTO Reviews(Title, Content, Rating, Date)
 VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
 INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
 INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(2, 2);
+
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Xfig", "Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS.", 0, 4, 69420);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mango", "Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.", 1, 3, 42069);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WordPress", "Open-source software for creating website, blog, or app.", 2, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("MuseScore", "Music notation and writing software.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("VSCode", "Microsoft's open-source code editor.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Hunt", "Virtual scavenger hunt mobile app where players can join a game, select a team and solve hints to acquire treasure. The team with the most points wins.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("iTrust", "Electronic medical records web application that supports patients and medical staff in securely managing healthcare workflows.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Qt", "Cross-platform application and UI framework, active developer community.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("SuperTuxKart", "3D open-source arcade racer with a variety characters, tracks, and modes to play.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mozilla", "Well-known web browser with strong support for software engineering education.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WinMerge", "Text file merging and comparison tool for Windows used in software course.", 3, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Moodle", "Platform for educators/learners to create personalized learning environments.", 3, 0, 0);
+
