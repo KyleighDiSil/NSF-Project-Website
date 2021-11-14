@@ -50,7 +50,7 @@
                 <input id="cancel" name="cancel" class="btn-input" type="button" value="Cancel">
 
             </form>
-            
+
             <form id="update-pass" action="../php-scripts/update_password.php" method="post">
                 <h2>Change Password</h2>
                 <input class="form-input" type="password" name="old-pass" placeholder="Current Password"/>
@@ -72,6 +72,7 @@
                     echo "    <th>University</</th>";
                     echo "    <th>Course Title</th>";
                     echo "    <th>Access Level</th>";
+                    echo "    <th>Select</th>";
                     echo "</tr>";
 
                     // Connect to the database
@@ -123,6 +124,9 @@
 
                                 echo "</select>";
                                 echo "</td>";
+
+                                echo "<td><input type='checkbox'/></td>";
+
                                 echo "</tr>";
                             }
                             echo "</table><br>";
@@ -130,21 +134,6 @@
                     }
                 }
             ?>
-            <!-- <tr>
-                <td>Kyleigh</td>
-                <td>DiSilvestro</td>
-                <td>disilvkj@clarkson.edu</td>
-                <td>Pending</td>
-                <td>
-                    <select name="access" id="access">
-                        <option value="User">User</option>
-                        <option value="team-member">Team Member</option>
-                    </select>
-                </td>
-                <td><input type="checkbox"/></td>
-            </tr> -->
-            <!-- Maybe how to create table
-                http://css.insttech.washington.edu/~lab/Support/HowtoUse/php-scripts/display_table.php-->
 
         <div id="submit-container">
             <input id="approve" type="button" name="approve" value="Approve"/>
