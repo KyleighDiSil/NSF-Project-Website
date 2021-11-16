@@ -5,8 +5,7 @@
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
 
     <main id="main">
-        <h1>My Account<hr></h1>
-        <p id="sign-out"><a href="../php-scripts/logout.php">Sign Out</a></p>
+        <h1>My Account | <a href="../php-scripts/logout.php"><span id="sign-out">sign out</span></a><hr></h1>
         <style>
         </style>
         <div id="account-info">
@@ -31,6 +30,7 @@
                     }
                 ?>
                 <h2 style="text-align: center;">Personal Information</h2>
+                
                 <label for="first-name">First Name</label>
                 <input class="form-input" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
 

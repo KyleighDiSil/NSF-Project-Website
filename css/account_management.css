@@ -1,15 +1,14 @@
 h1{
-    margin: 20px;
+    margin: 20px 0 0 50px;
+}
+hr{margin-top: 5px;
+    margin-right: 50px;
 }
 
 #sign-out{
-    padding: 5px;
-    background-color: whitesmoke;
-    border: 3px solid black;
-    color: black;
-    width: fit-content;
-    border-radius: 5px;
-    margin-left: 20px;
+    font-style: italic;
+    color: purple;
+    font-size: 25px;
 }
 
 #account-info{
@@ -78,24 +77,36 @@ label{
     font-weight: bold;
 }
 
-#userTable{
-    margin: 20px auto;
-}
-
 caption{
     font-size: large;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-th{
-    text-align: center;
-    padding: 5px;
-} 
+#userTable{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 75%;
+}
 
-td{
-    text-align: center;
-    padding: 5px;
+#userTable th, #userTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+} 
+#userTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF4B2B;
+    color: white;
+}
+
+#userTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#userTable tr:hover{
+    background-color: #ddd;
 }
 
 #submit-container{
