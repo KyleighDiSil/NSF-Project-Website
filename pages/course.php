@@ -40,12 +40,12 @@
                     </p>
                     <h2>Labs & Homeworks</h2>
                     <p id="labHomework">
-                        &ensp; Homework 1 - <a href="http://localhost/pages/review.php">Review</a> <br>
-                        &ensp; Lab 1 - <a href="http://localhost/pages/review.php">Review</a> <br>
-                        &ensp; Homework 2 - <a href="http://localhost/pages/review.php">Review</a> <br>
-                        &ensp; Lab 2 - <a href="http://localhost/pages/review.php">Review</a> <br>
-                        &ensp; Homework 3 - <a href="http://localhost/pages/review.php">Review</a> <br>
-                        &ensp; Lab 3 - <a href="http://localhost/pages/review.php">Review</a> <br>
+                        &ensp; Homework 1 - <a href="pages/review.php">Review</a> <br>
+                        &ensp; Lab 1 - <a href="pages/review.php">Review</a> <br>
+                        &ensp; Homework 2 - <a href="pages/review.php">Review</a> <br>
+                        &ensp; Lab 2 - <a href="pages/review.php">Review</a> <br>
+                        &ensp; Homework 3 - <a href="pages/review.php">Review</a> <br>
+                        &ensp; Lab 3 - <a href="pages/review.php">Review</a> <br>
                     </p>
                 </div>
 
