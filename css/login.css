@@ -81,7 +81,7 @@ form {
 	text-align: center;
 }
 
-#makeAccount, .forgotPass, a{
+#makeAccount, .forgotPass, a, #invalidLogin{
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
@@ -92,6 +92,20 @@ form {
 	color: blue;
 }
 
+/*  
+	When the user enters wrong email or password 
+	set the inputs, username and password, class 
+	to .wrongInfo for a red border and make 
+	#invalidLogin display = normal;
+*/
+.wrongInfo{
+	border: 1px solid red;
+}
+
+#invalidLogin{
+	padding-bottom: 5px;
+	color: red;
+}
 
 #makeAccount a{
 	color: blue;

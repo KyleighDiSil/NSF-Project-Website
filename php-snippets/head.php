@@ -9,4 +9,5 @@
     <!--Font Awesome is where you can get all kinds of different Fonts to use in websites and icons-->
     <script src="https://use.fontawesome.com/1c8abdfb6d.js"></script>
     <script src="https://kit.fontawesome.com/3247a548fe.js" crossorigin="anonymous"></script>
+    <script src="../js-scripts/main.js"></script>
 </head>
