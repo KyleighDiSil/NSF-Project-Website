@@ -81,19 +81,17 @@ form {
 	text-align: center;
 }
 
-form #forgotPass{
-	text-align: right;
-	color: blue;
-}
-#forgot{
-	text-align: right;
-}
-
-#makeAccount, #forgot, a{
+#makeAccount, .forgotPass, a{
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 }
+
+.forgotPass{
+	text-align: right;
+	color: blue;
+}
+
 
 #makeAccount a{
 	color: blue;
