@@ -9,10 +9,11 @@
 
 body{
     position: relative;
+    background: #f6f5f7;
     /*Padding bottom needs to be the footers height so it is not hanging over the body*/
-    padding-bottom: 139px; 
+    padding-bottom: 139px;
     /*I need to make a condition for padding bottom.
-      a @media condition for when the width of the page 
+      a @media condition for when the width of the page
       is more less than 462px padding-bottom needs to be
       179.2*/
     min-height: 100vh;

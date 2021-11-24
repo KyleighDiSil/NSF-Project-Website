@@ -3,17 +3,17 @@
 
 <?php require "../php-snippets/top_template.php"; ?>
     <main id="main">
-        <div>
+        <div id="login_box">
             <form action="../php-scripts/login.php" method="POST">
-                <h1>Sign in</h1>
+                <h1>Sign In</h1>
                 <input type="text" id="username" name="username" placeholder="Email" >
                 <div id="password-stuff">
                     <input type="password" id="password" name="password" autocomplete="off" placeholder="Password" >
                     <i class="fas fa-eye-slash" id="togglePassword" onclick="showPassword()"></i>
                 </div>
-                <a href=""><p>Forgot Password</p></a>
+                <a href="" id="links"><p>Forgot Password</p></a>
                 <input type="submit" id="submit" value="Login" >
-                <a href="./create_account.php"><p>Create Account</p></a>
+                <a href="./create_account.php" id="links"><p>Create Account</p></a>
             </form>
         </div>
     </main>
