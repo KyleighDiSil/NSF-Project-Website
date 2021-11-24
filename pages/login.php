@@ -11,9 +11,9 @@
                     <input type="password" id="password" name="password" autocomplete="off" placeholder="Password" >
                     <i class="fas fa-eye-slash" id="togglePassword" onclick="showPassword()"></i>
                 </div>
-                <a href=""><p>Forgot Password</p></a>
+                <p id="forgot">Forgot <a href="" id="forgotPass">Password?</a></p>
                 <input type="submit" id="submit" value="Login" >
-                <a href="./create_account.php"><p>Create Account</p></a>
+                <p id="makeAccount">Or Create <a href="./create_account.php">Account</a></p>
             </form>
         </div>
     </main>

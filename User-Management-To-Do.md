@@ -1,7 +1,7 @@
 # Login Page:
-- (Style) Layout of forgot password and create account button
-- (Style) Add hover effects on the submit button
-- (Style) Can we make it so there is no scrolling (fill whole page)? This way we can see the header, content, and footer without scrolling.
+- ~~(Style) Layout of forgot password and create account button~~
+- ~~(Style) Add hover effects on the submit button~~
+- ~~(Style) Can we make it so there is no scrolling (fill whole page)? This way we can see the header, content, and footer without scrolling.~~
 - (Style) How do we indicated invalid account details? (Pop up msg, error banner, red outlines, other?)
 - (Style) Show/hide password icons not loading when internet is disconnected. Can we cache the icon library or have another default icon when there is no internet?
 - (javascript) Move showPassword to a javascript file for reuse in the create account page

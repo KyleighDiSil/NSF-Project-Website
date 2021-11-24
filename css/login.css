@@ -51,12 +51,6 @@ h1 {
 	margin-bottom: 15px;
 }
 
-a {
-	color: #333;
-	font-size: 14px;
-	text-decoration: none;
-}
-
 #submit {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
@@ -70,17 +64,39 @@ a {
 	transition: transform 80ms ease-in;
 }
 
+#submit:hover{
+	background-color: #ff2600;
+	border: 1px solid rgb(255, 255, 255);
+	cursor: pointer;
+}
+
 
 form {
 	background-color: #FFFFFF;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	padding: 40px 50px;
 	height: 100%;
     width: 350px;
 	text-align: center;
+}
+
+form #forgotPass{
+	text-align: right;
+	color: blue;
+}
+#forgot{
+	text-align: right;
+}
+
+#makeAccount, #forgot, a{
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+#makeAccount a{
+	color: blue;
 }
 
 #password-stuff {
