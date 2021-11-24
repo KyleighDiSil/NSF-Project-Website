@@ -3,7 +3,7 @@
 
 <?php require "../php-snippets/top_template.php"; ?>
     <main id="main">
-        <div>
+        <div id="signInForm">
             <form action="../php-scripts/login.php" method="POST">
                 <h1>Sign in</h1>
                 <input type="text" id="username" name="username" placeholder="Email" >
