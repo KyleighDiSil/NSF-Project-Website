@@ -48,6 +48,11 @@
                         &ensp; Lab 3 - <a href="http://localhost/pages/review.php">Review</a> <br>
                     </p>
                 </div>
-
+                <div class="sidenav">
+                    <a href="#courseTitle">Course Title</a>
+                    <a href="#courseDescription">Course Description</a>
+                    <a href="#syllabus">Syllabus</a>
+                    <a href="#labHomework">Labs & Homeworks</a>
+                </div>
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>
