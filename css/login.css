@@ -34,6 +34,11 @@ h1 {
 	width: 200px;
 }
 
+#submit:hover{
+    background-color: #ff2600;
+	border: 1px solid rgb(255, 255, 255);
+	cursor: pointer;
+}
 
 form {
 	border-radius: 10px;

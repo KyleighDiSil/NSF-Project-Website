@@ -29,7 +29,10 @@
                     <p id="length" class="invalid">Minimum <b>8 characters</b></p>
                 </div>
 
-                <input type="password" id="passwordConfirmation" name="passwordConfirmation" autocomplete="off" placeholder="Password">
+                <div id="password-stuff">
+                    <input type="password" id="passwordConfirmation" name="passwordConfirmation" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  autocomplete="off" placeholder="Password Confirmation">
+                    <i class="fas fa-eye-slash" id="togglePasswordConfirmation" onclick="showPasswordConfirmation()"></i>
+                </div>
 
                 <input type="submit" id="submit" value="Create Account">
             </form>
@@ -40,6 +43,22 @@
         function showPassword() {
             const togglePassword = document.querySelector('#togglePassword');
             const password = document.querySelector('#password');
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            if (togglePassword.getAttribute("class") == "fas fa-eye-slash")
+            {
+                togglePassword.setAttribute("class", "fas fa-eye");
+            }
+            else
+            {
+                togglePassword.setAttribute("class", "fas fa-eye-slash");
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function showPasswordConfirmation() {
+            const togglePassword = document.querySelector('#togglePasswordConfirmation');
+            const password = document.querySelector('#passwordConfirmation');
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
             if (togglePassword.getAttribute("class") == "fas fa-eye-slash")
