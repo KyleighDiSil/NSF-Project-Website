@@ -22,7 +22,7 @@ define("GITEA_API_TOKEN", "token d357a17e044e5c7ca41ae818f0f937eff205c4ad");
 /**
  * The URL of the Gitea server (should include port and ending '/').
  */
-define("GITEA_URL", "http://192.168.0.118:3000/");
+define("GITEA_URL", "http://192.168.0.86:3000/");
 
 /**
  * The Organization used by the Gitea server.
@@ -46,6 +46,8 @@ define("INSTRUCTOR_TEAM", "2");
 
 /**
  * A function to call the Gitea API using HTTP/Restful command structure.
+ *
+ * https://weichie.com/blog/curl-api-calls-with-php/
  *
  * @global string $GITEA_API_TOKEN The API token to authenticate API calls.
  * @global type   $GITEA_URL       The URL of the Gitea server
