@@ -27,6 +27,7 @@
   {
     $row = $result->fetch_assoc();
     $Salt = $row['Salt'];
+    $Split = str_split($Salt, 10);
     $Salted = $Split[0] . $_POST["new-pass"] . $Split[1];
     $Hashed = hash('sha256', $Salted);
 
