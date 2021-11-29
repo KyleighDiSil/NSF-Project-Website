@@ -129,6 +129,23 @@ CREATE TABLE ProjectFiles (
   FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID),
   FOREIGN KEY (FileID) REFERENCES Files(FileID)
 );
+
+/*************************************************************
+* Name:         Feature
+* Database:     NSFDatabase
+* Description:  Features for each project
+*************************************************************/
+CREATE TABLE Feature (
+  ID          INT NOT NULL AUTO_INCREMENT,
+  ProjectID   INT NOT NULL,
+  FileID      INT NOT NULL,
+  Name        VARCHAR(20) NULL UNIQUE,
+  Summary     VARCHAR(256) NOT NULL,
+  GitLink     VARCHAR(128) NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID),
+  FOREIGN KEY (FileID) REFERENCES Files(FileID)
+);
 /*************************************************************
 * Name:         Users
 * Database:     NSFDatabase
@@ -173,6 +190,14 @@ CREATE TABLE FileReviews (
 -- Insert Statements
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('Chris', 'Lloyd', 'lloydcd@clarkson.edu', 'aNK5PfG3xMeKZLZSxVL7','6b24cc0e60b1629d5cf1b52f3d920cdba97ccf5215a8b7b8fa44c8a9e1da1990', 3, 'Clarkson University', 'EE418 Senior Design');
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('admin', 'user', 'admin', 'YWOJoT7TYnPXv5UqyNsB','ff96223f33f5ef21704cc44b4fc604341f08a7960836a91958030005001a3479', 4, 'Clarkson University', 'EE418');
+INSERT INTO COURSE(Name, Clicks) VALUES ("Discrete Math", 40);
+INSERT INTO COURSE(Name, Clicks) VALUES ("Intro To CS", 100);
+INSERT INTO Reviews(Title, Content, Rating, Date)
+VALUES ("Physics", "This is so much fun", 4, 0001-01-01);
+INSERT INTO Reviews(Title, Content, Rating, Date)
+VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(2, 2);
 
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Xfig", "Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS.", 0, 4, 69420);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mango", "Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.", 1, 3, 42069);
@@ -187,3 +212,15 @@ INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mozi
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WinMerge", "Text file merging and comparison tool for Windows used in software course.", 3, 0, 0);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Moodle", "Platform for educators/learners to create personalized learning environments.", 3, 0, 0);
 
+INSERT INTO FILES (Location, Clicks) VALUES ("Location/XD/You Thought/I'd/give/An/Actual/File/Imagine.lol", 420);
+
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Undo Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Undo/Redo", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Toggle Units Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Send to Back", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Rotation Control", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Quick Coloring", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Free Selection", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Default Depth Value", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Advanced Features", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");
