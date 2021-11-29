@@ -30,7 +30,7 @@
     $Salted = $Split[0] . $_POST["new-pass"] . $Split[1];
     $Hashed = hash('sha256', $Salted);
 
-    $update_pass = "UPDATE User SET Password = $Hashed WHERE ID = $_SESSION['userID'];";
+    $update_pass = "UPDATE Users SET Password = $Hashed WHERE ID = $_SESSION['userID'];";
     mysqli_query($conn, $update_pass);
     
     header("Location: ../pages/account_management.php#PasswordUpdated");
