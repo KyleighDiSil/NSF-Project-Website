@@ -14,7 +14,7 @@
                 <p id="invalidLogin" style="display: none;">Wrong Email or Password</p>
                 <p class="forgotPass"><a href="" class="forgotPass">Forgot Password?</a></p>
                 <input type="submit" id="submit" value="Login" >
-                <p id="makeAccount">Or Create <a href="./create_account.php">Account</a></p>
+                <p id="makeAccount">Or <a href="./create_account.php">Create Account</a></p>
             </form>
         </div>
     </main>
