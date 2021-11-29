@@ -30,7 +30,7 @@
                     }
                 ?>
                 <h2 style="text-align: center;">Personal Information</h2>
-                
+
                 <label for="first-name">First Name</label>
                 <input class="form-input" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
 
@@ -132,12 +132,12 @@
                             echo "</table><br>";
                         }
                     }
+
+                    echo "<div id='submit-container'>";
+                    echo "<input id='approve' type='button' name='approve' value='Approve'/>";
+                    echo "<input id='delete' type='button' name='delete' value='Delete'/>";
+                    echo "</div>";
                 }
             ?>
-
-        <div id="submit-container">
-            <input id="approve" type="button" name="approve" value="Approve"/>
-            <input id="delete" type="button" name="delete" value="Delete"/>
-        </div>
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>
