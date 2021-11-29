@@ -9,7 +9,7 @@ h1
 #review_list_table
 {
     overflow: hidden;
-    width: fit-content;
+    width: 1000px;
 }
 
 #review_list_table table
@@ -29,52 +29,28 @@ h1
     background-color: #f2f2f2;
 }
 
-#review_list_table th{
+#review_list_table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: whitesmoke;
-    color: black;
+    background-color: #FF4B2B;
+    color: white;
+}
+
+.date_th
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: fit-content;
 }
 
 .table-wrap{
-    padding-left: 10px;
-    width: 100%;
-}
-
-.wrap {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    padding-left: 10px;    
-}
-
-.search {
-    width: 100%;
-    position: relative;
-    display: flex;
-}
-
-.searchTerm {
-    width: 13%;
-    border: 1px solid ;
-    border-right: none;
-    padding: 5px;
-    height: 33px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: black;
-  }
-  
-.searchButton {
-    width: 40px;
-    height: 33px;
-    border: 1px solid black;
-    background: whitesmoke;
-    text-align: center;
-    color: black;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
+    background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    padding: 20px;
 }
 
 .checked
@@ -112,4 +88,15 @@ h1
     background-color: white;
     color: blue;
 }
+
+.reset-input {
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FF4B2B;
+}
+
+
+
 

@@ -4,7 +4,7 @@ label{
     font-weight: bold;
 }
 
-.post-input {
+.confirm-input {
     margin-top: 10px;
     width: 150px;
     padding: 5px;
@@ -12,7 +12,7 @@ label{
     text-align: center;
 }
 
-.post-input:hover {
+.confirm-input:hover {
     background-color: rgb(138, 253, 138);
 }
 
@@ -31,7 +31,7 @@ label{
     background-color: whitesmoke;
     border: 1px black solid;
     width: 35%;
-    height: 60%;
+    height: 80%;
     margin: auto;
     padding: 10px;
 }
@@ -43,6 +43,7 @@ label{
 }
 
 .title-input {
+    resize: none;
     width: 100%;
     height: 10%;
 	background: #fff;
@@ -75,11 +76,7 @@ label{
     padding: 11px 18px;
 }
 
-.ddm-wrap{
-    background-color: whitesmoke;
-    border: 1px black solid;
-    width: 35%;
-    height: 10%;
-    margin: auto;
-    padding: 10px;
+.checked
+{
+    color: orange;
 }
