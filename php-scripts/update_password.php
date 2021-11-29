@@ -11,21 +11,28 @@
   }
   if ($_POST['new-pass'] == "")
   {
-    // Emptpy
+    // Empty
   }
-  if ($_POST['new-pass'] == $_POST['confirm-new-pass'])
+  if ($_POST['new-pass'] != $_POST['confirm-new-pass'])
   {
-    
+    // Not matching passwords
   }
 
-  // CDL=> Handle SALT
-  if (!$result = mysqli_query($conn, "UPDATE Users SET FirstName = '$first', LastName = '$last', Email = '$email', University = '$university', CourseTitle = '$course'
-  WHERE UserID = ".$_SESSION['userID'].";"))
+  $get_salt = "SELECT Salt from users where ID = $_SESSION['userID'];"
+  if (!$result = mysqli_query($conn, $get_salt))
   {
-    echo "Error"; # CDL=> Should handle errors better
+    echo "Error"; //Need better errors
   }
   else
   {
+    $row = $result->fetch_assoc();
+    $Salt = $row['Salt'];
+    $Salted = $Split[0] . $_POST["new-pass"] . $Split[1];
+    $Hashed = hash('sha256', $Salted);
+
+    $update_pass = "UPDATE User SET password = $Hashed WHERE ID = $_SESSION['userID'];"
+    mysqli_query($conn, $update_pass);
+    
     header("Location: ../pages/account_management.php#PasswordUpdated");
   }
 
