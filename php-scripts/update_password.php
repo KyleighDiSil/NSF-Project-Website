@@ -17,8 +17,8 @@
   {
     // Not matching passwords
   }
-  $uid = $_SESSION['userID']
-  $get_salt = "SELECT Salt from users where ID = $uid;";
+  $uid = $_SESSION['userID'];
+  $get_salt = "SELECT Salt FROM Users WHERE UserID = $uid;";
   if (!$result = mysqli_query($conn, $get_salt))
   {
     echo "Error"; //Need better errors
@@ -30,7 +30,7 @@
     $Salted = $Split[0] . $_POST["new-pass"] . $Split[1];
     $Hashed = hash('sha256', $Salted);
 
-    $update_pass = "UPDATE Users SET Password = $Hashed WHERE ID = $uid;";
+    $update_pass = "UPDATE Users SET Password = $Hashed WHERE UserID = $uid;";
     mysqli_query($conn, $update_pass);
     
     header("Location: ../pages/account_management.php#PasswordUpdated");
