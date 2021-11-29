@@ -9,6 +9,9 @@ Description  : A php file to authenticate a user
   // Connect to the database
   include_once 'connect_to_database.php';
 
+  // Import Gitea wrapper
+  include_once 'gitea_api_wrapper.php';
+
   // Validate inputs
   if ($_POST["firstName"] == "")
   {
@@ -56,6 +59,7 @@ Description  : A php file to authenticate a user
   }
   else
   {
+    addGiteaUser($_POST['firstName'], $_POST['lastName'], $_POST['email'], false);
     header("Location: ../index.php#AccountCreated");
   }
 
