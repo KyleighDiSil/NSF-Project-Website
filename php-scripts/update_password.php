@@ -18,7 +18,7 @@
     // Not matching passwords
   }
 
-  $get_salt = "SELECT Salt from users where ID = $_SESSION['userID'];"
+  $get_salt = "SELECT Salt from users where ID = $_SESSION['userID'];";
   if (!$result = mysqli_query($conn, $get_salt))
   {
     echo "Error"; //Need better errors
