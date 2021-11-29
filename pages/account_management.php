@@ -5,7 +5,7 @@
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
 
     <main id="main">
-        <h1>Manage Your Account</h1>
+        <h1>My Account | <a href="../php-scripts/logout.php"><span id="sign-out">sign out</span></a><hr></h1>
         <style>
         </style>
         <div id="account-info">
@@ -29,6 +29,8 @@
                         }
                     }
                 ?>
+                <h2 style="text-align: center;">Personal Information</h2>
+
                 <label for="first-name">First Name</label>
                 <input class="form-input" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
 
@@ -44,19 +46,19 @@
                 <label for="course">Course</label>
                 <input class="form-input" type="text" name="course" placeholder=<?php echo "'$course'"; ?>/>
 
-                <input name="save" class="btn-input" type="submit" value="Save">
-                <input name="cancel" class="btn-input" type="button" value="Cancel">
+                <input id="save" name="save" class="btn-input" type="submit" value="Save">
+                <input id="cancel" name="cancel" class="btn-input" type="button" value="Cancel">
 
             </form>
+
             <form id="update-pass" action="../php-scripts/update_password.php" method="post">
-                <h1>Change Password</h1>
+                <h2>Change Password</h2>
                 <input class="form-input" type="password" name="old-pass" placeholder="Current Password"/>
                 <input class="form-input" type="password" name="new-pass" placeholder="New Password"/>
                 <input class="form-input" type="password" name="confirm-new-pass" placeholder="Confirm New Password"/>
                 <input id="change" class="btn-input" type="submit" value="Change">
             </form>
 
-            <a href="../php-scripts/logout.php"><p>Sign Out</p></a>
         </div>
             <?php
                 if ($ACCESS > 2)
@@ -70,6 +72,7 @@
                     echo "    <th>University</</th>";
                     echo "    <th>Course Title</th>";
                     echo "    <th>Access Level</th>";
+                    echo "    <th>Select</th>";
                     echo "</tr>";
 
                     // Connect to the database
@@ -92,33 +95,49 @@
                                 echo "<td>".$row['Email']."</td>";
                                 echo "<td>".$row['University']."</td>";
                                 echo "<td>".$row['CourseTitle']."</td>";
-                                echo "<td>".$row['Access']."</td>";
+
+                                echo "<td>";
+                                echo "<select name='access' id='access'>";
+
+                                if ($ACCESS == 4)      // Admin
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                    echo "<option value='2'".(($row['Access'] != 2)  ?: 'Selected').">Team Member</option>";
+                                    echo "<option value='3'".(($row['Access'] != 3)  ?: 'Selected').">Webmaster</option>";
+                                }
+                                elseif ($ACCESS == 3)  // Webmaster
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                    echo "<option value='2'".(($row['Access'] != 2)  ?: 'Selected').">Team Member</option>";
+                                }
+                                elseif ($ACCESS == 2)  // Team Member
+                                {
+                                    echo "<option value='-1'".(($row['Access'] != -1) ?: 'Selected').">Pending User</option>";
+                                    echo "<option value='1'".(($row['Access'] != 1)  ?: 'Selected').">Authorized User</option>";
+                                }
+                                else                   // Instructor
+                                {
+
+                                }
+
+                                echo "</select>";
+                                echo "</td>";
+
+                                echo "<td><input type='checkbox'/></td>";
+
                                 echo "</tr>";
                             }
                             echo "</table><br>";
                         }
                     }
+
+                    echo "<div id='submit-container'>";
+                    echo "<input id='approve' type='button' name='approve' value='Approve'/>";
+                    echo "<input id='delete' type='button' name='delete' value='Delete'/>";
+                    echo "</div>";
                 }
             ?>
-            <!-- <tr>
-                <td>Kyleigh</td>
-                <td>DiSilvestro</td>
-                <td>disilvkj@clarkson.edu</td>
-                <td>Pending</td>
-                <td>
-                    <select name="access" id="access">
-                        <option value="User">User</option>
-                        <option value="team-member">Team Member</option>
-                    </select>
-                </td>
-                <td><input type="checkbox"/></td>
-            </tr> -->
-            <!-- Maybe how to create table
-                http://css.insttech.washington.edu/~lab/Support/HowtoUse/php-scripts/display_table.php-->
-
-        <div id="submit-container">
-            <input id="approve" type="button" name="approve" value="Approve"/>
-            <input id="delete" type="button" name="delete" value="Delete"/>
-        </div>
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>

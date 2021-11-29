@@ -20,16 +20,12 @@ CREATE TABLE Announcements (
 * Name:         Projects
 * Database:     NSFDatabase
 * Description:  A table to store the project information
-* Availablity:  0 -> Available
-*               1 -> Under Review
-*               2 -> Under Development
-*               3 -> Not Started
 *************************************************************/
 CREATE TABLE Projects (
   ProjectID     INT NOT NULL AUTO_INCREMENT,
   Name          VARCHAR(20) NULL UNIQUE,
-  Summary       VARCHAR(512) NOT NULL,
-  Availability  INT NOT NULL,
+  Summary       VARCHAR(256) NOT NULL,
+  Availability  VARCHAR(20) NOT NULL,
   Rating        int NOT NULL,
   Clicks        int DEFAULT 0,
   PRIMARY KEY   (ProjectID)

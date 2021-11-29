@@ -1,7 +1,16 @@
 h1{
-    text-align: center;
-    margin: 20px;
+    margin: 20px 0 0 50px;
 }
+hr{margin-top: 5px;
+    margin-right: 50px;
+}
+
+#sign-out{
+    font-style: italic;
+    color: purple;
+    font-size: 25px;
+}
+
 #account-info{
     display: flex;
     margin: 10px;
@@ -19,14 +28,14 @@ form{
 #personal-info{
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: whitesmoke;
 }
+
 #update-pass{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aquamarine;
+    background-color: whitesmoke;
     border:2px solid grey;
 }
 
@@ -50,7 +59,6 @@ form{
     width: 300px;
     padding: 5px;
     border-radius: 5px;
-    font-family: Arial;
     font-weight: bold;
 }
 
@@ -60,6 +68,7 @@ form{
 }
 #change:hover{
     background-color: #ffa87f;
+    cursor: pointer;
 }
 
 label{
@@ -68,25 +77,36 @@ label{
     font-weight: bold;
 }
 
-#userTable{
-    margin: 20px auto;
-}
-
 caption{
     font-size: large;
-    font-family: Arial;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-th{
-    text-align: center;
-    padding: 5px;
+#userTable{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 75%;
 }
 
-td{
-    text-align: center;
-    padding: 5px;
+#userTable th, #userTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+} 
+#userTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF4B2B;
+    color: white;
+}
+
+#userTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#userTable tr:hover{
+    background-color: #ddd;
 }
 
 #submit-container{
@@ -97,7 +117,6 @@ td{
 #approve, #delete{
     padding: 5px;
     border-radius: 5px;
-    font-family: Arial;
     font-weight: bold;
     margin-bottom: 20px;
 }

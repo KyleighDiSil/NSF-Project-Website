@@ -57,6 +57,5 @@ Description  : A php file to authenticate a user
         header("Location: ../pages/login.php#LoginFailure");
       }
     }
-    header("Location: ../pages/login.php#LoginFailure");
   }
 ?>

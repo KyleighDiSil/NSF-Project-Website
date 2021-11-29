@@ -1,0 +1,32 @@
+#courseTitle{
+    text-align: center;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+#courseDescription{
+    margin: 10px auto;
+    width: 80%;
+}
+
+#syllabus{
+    margin: 10px auto;
+    width: 80%;
+}
+
+#lecture{
+    margin: 10px auto;
+    width: 80%;
+}
+
+#labHomework{
+    margin: 10px auto;
+    width: 80%;
+}
+
+#rating{
+    text-align: center;
+    margin: 10px;
+}

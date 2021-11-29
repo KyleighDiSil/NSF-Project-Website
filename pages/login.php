@@ -3,17 +3,18 @@
 
 <?php require "../php-snippets/top_template.php"; ?>
     <main id="main">
-        <div>
+        <div id="signInForm">
             <form action="../php-scripts/login.php" method="POST">
                 <h1>Sign in</h1>
-                <input type="text" id="username" name="username" placeholder="Email" >
+                <input type="text" class="" id="username" name="username" placeholder="Email" >
                 <div id="password-stuff">
-                    <input type="password" id="password" name="password" autocomplete="off" placeholder="Password" >
+                    <input type="password" class="" id="password" name="password" autocomplete="off" placeholder="Password" >
                     <i class="fas fa-eye-slash" id="togglePassword" onclick="showPassword()"></i>
                 </div>
-                <a href=""><p>Forgot Password</p></a>
+                <p id="invalidLogin" style="display: none;">Wrong Email or Password</p>
+                <p class="forgotPass"><a href="" class="forgotPass">Forgot Password?</a></p>
                 <input type="submit" id="submit" value="Login" >
-                <a href="./create_account.php"><p>Create Account</p></a>
+                <p id="makeAccount">Or Create <a href="./create_account.php">Account</a></p>
             </form>
         </div>
     </main>

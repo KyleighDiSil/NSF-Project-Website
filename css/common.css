@@ -4,14 +4,16 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: sans-serif;
 }
 
 body{
     position: relative;
+    background: #f6f5f7;
     /*Padding bottom needs to be the footers height so it is not hanging over the body*/
-    padding-bottom: 139px; 
+    padding-bottom: 139px;
     /*I need to make a condition for padding bottom.
-      a @media condition for when the width of the page 
+      a @media condition for when the width of the page
       is more less than 462px padding-bottom needs to be
       179.2*/
     min-height: 100vh;
@@ -41,7 +43,6 @@ nav{
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    font-family: cursive;
 }
 
 .nav-links ul li a{
@@ -95,7 +96,6 @@ main{
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-    font-family: cursive;
 }
 
 .footer-links ul li a{
