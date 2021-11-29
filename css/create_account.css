@@ -1,3 +1,6 @@
+body{
+	background: #f6f5f7;
+}
 
 main {
 	display: flex;
