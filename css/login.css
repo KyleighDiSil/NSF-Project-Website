@@ -1,12 +1,15 @@
 
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); */
 
-main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
+body{
+	background: #f6f5f7;
+}
+
+#signInForm{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -35,22 +38,51 @@ h1 {
 }
 
 #submit:hover{
-    background-color: #ff2600;
+	background-color: #ff2600;
 	border: 1px solid rgb(255, 255, 255);
 	cursor: pointer;
 }
+
 
 form {
 	border-radius: 10px;
 	background-color: #FFFFFF;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	padding: 40px 50px;
 	height: 100%;
     width: 350px;
 	text-align: center;
+}
+
+#makeAccount, .forgotPass, a, #invalidLogin{
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.forgotPass{
+	text-align: right;
+	color: blue;
+}
+
+/*
+	When the user enters wrong email or password
+	set the inputs, username and password, class
+	to .wrongInfo for a red border and make
+	#invalidLogin display = normal;
+*/
+.wrongInfo{
+	border: 1px solid red;
+}
+
+#invalidLogin{
+	padding-bottom: 5px;
+	color: red;
+}
+
+#makeAccount a{
+	color: blue;
 }
 
 #password-stuff {
