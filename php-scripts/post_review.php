@@ -12,7 +12,7 @@
     $rating = $_POST['rating-num'];
 
     if($title == "" || $content == "" || $item=="" || $name == "" || $rating == "0") {
-        header("Location: http://localhost/pages/create_review.php?title=".$title."&content=".$content."&item=".$item."&name=".$name."&rating=".$rating);
+        header("Location: ../pages/create_review.php?title=".$title."&content=".$content."&item=".$item."&name=".$name."&rating=".$rating);
     } else {
         $today = date("Y-m-d");
         $query = "INSERT INTO Reviews (Title, Content, Rating, Date) VALUES(\"".$title."\", \"".$content."\", ".$rating.", ".$today.");";
@@ -21,8 +21,8 @@
             echo "Error";
         } else {
             if($item == "Projects") {
-                
-                $project_query = "SELECT ProjectID FROM Projects WHERE Name=\"".$name."\";"; 
+
+                $project_query = "SELECT ProjectID FROM Projects WHERE Name=\"".$name."\";";
                 $review_query = "SELECT ReviewID FROM Reviews WHERE Title=\"".$title."\" AND Content=\"".$content."\" AND Rating=".$rating." AND Date=".$today.";";
 
                 if ((!$project_result = mysqli_query($conn, $project_query)) || (!$review_result = mysqli_query($conn, $review_query))) {
@@ -38,11 +38,11 @@
                     if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
-                        header("Location: http://localhost/pages/review.php?item=".$item."&name=".$name);
+                        header("Location: ../pages/review.php?item=".$item."&name=".$name);
                     }
                 }
             } else {
-                $course_query = "SELECT CourseID FROM Course WHERE Name=\"".$name."\";"; 
+                $course_query = "SELECT CourseID FROM Course WHERE Name=\"".$name."\";";
                 $review_query = "SELECT ReviewID FROM Reviews WHERE Title=\"".$title."\" AND Content=\"".$content."\" AND Rating=".$rating." AND Date=".$today.";";
 
                 if ((!$course_result = mysqli_query($conn, $course_query)) || (!$review_result = mysqli_query($conn, $review_query))) {
@@ -58,7 +58,7 @@
                     if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
-                        header("Location: http://localhost/pages/review.php?item=".$item."&name=".$name);
+                        header("Location: ../pages/review.php?item=".$item."&name=".$name);
                     }
                 }
             }

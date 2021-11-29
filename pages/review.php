@@ -38,22 +38,22 @@
                     <th>Date</th>
                 </tr>
                 <?php
-                    
+
                     if($item != "" && $item != "Course") {
                         //do not display course reviews
                         $query_DB = false;
                     } else if($item == "Course") {
-                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date 
-                            FROM (CourseReviews INNER JOIN Course ON CourseReviews.CourseID = Course.CourseID 
+                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date
+                            FROM (CourseReviews INNER JOIN Course ON CourseReviews.CourseID = Course.CourseID
                             INNER JOIN Reviews ON CourseReviews.ReviewID = Reviews.ReviewID) WHERE Name = \"".$name."\";";
                         $query_DB = true;
                     } else {
-                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date 
-                            FROM CourseReviews INNER JOIN Course ON CourseReviews.CourseID = Course.CourseID 
+                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date
+                            FROM CourseReviews INNER JOIN Course ON CourseReviews.CourseID = Course.CourseID
                             INNER JOIN Reviews ON CourseReviews.ReviewID = Reviews.ReviewID;";
                         $query_DB = true;
                     }
-                    
+
                     if(!$query_DB) {
                         //do not display course reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
@@ -86,19 +86,19 @@
                     if($item != "" && $item != "Projects") {
                         $query_DB = false;
                     } else if($item == "Projects") {
-                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date 
-                        FROM (ProjectReviews INNER JOIN Projects ON ProjectReviews.ProjectID = Projects.ProjectID 
+                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date
+                        FROM (ProjectReviews INNER JOIN Projects ON ProjectReviews.ProjectID = Projects.ProjectID
                         INNER JOIN Reviews ON ProjectReviews.ReviewID = Reviews.ReviewID) WHERE Name = \"".$name."\";";
                         $query_DB = true;
                     } else {
-                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date 
-                        FROM ProjectReviews INNER JOIN Projects ON ProjectReviews.ProjectID = Projects.ProjectID 
+                        $query = "SELECT Name, Title, Content, Reviews.Rating, Date
+                        FROM ProjectReviews INNER JOIN Projects ON ProjectReviews.ProjectID = Projects.ProjectID
                         INNER JOIN Reviews ON ProjectReviews.ReviewID = Reviews.ReviewID;";
                         $query_DB = true;
                     }
-                    
+
                     if(!$query_DB) {
-                        //do not display project reviews 
+                        //do not display project reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
@@ -128,17 +128,17 @@
                     if($item != "" && $item != "Files") {
                         $query_DB = false;
                     } else if ($item == "Files") {
-                        $query = "SELECT ID, Title, Content, Reviews.Rating, Date 
-                                FROM (FileReviews INNER JOIN Files ON FileReviews.FileID = Files.FileID 
+                        $query = "SELECT ID, Title, Content, Reviews.Rating, Date
+                                FROM (FileReviews INNER JOIN Files ON FileReviews.FileID = Files.FileID
                                 INNER JOIN Reviews ON FileReviews.ReviewID = Reviews.ReviewID) WHERE ID = \"".$name."\";";
                         $query_DB = true;
                     } else {
-                        $query = "SELECT ID, Title, Content, Reviews.Rating, Date 
-                                FROM FileReviews INNER JOIN Files ON FileReviews.FileID = Files.FileID 
+                        $query = "SELECT ID, Title, Content, Reviews.Rating, Date
+                                FROM FileReviews INNER JOIN Files ON FileReviews.FileID = Files.FileID
                                 INNER JOIN Reviews ON FileReviews.ReviewID = Reviews.ReviewID;";
                         $query_DB = true;
                     }
-                    
+
                     if(!$query_DB) {
                         //do not display file reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
@@ -172,10 +172,10 @@
     </main>
     <script>
         function createNewReview() {
-            window.location.href = "http://localhost/pages/create_review.php?title=&content=&item=&name=&rating=";
+            window.location.href = "../pages/create_review.php?title=&content=&item=&name=&rating=";
         }
         function resetTable() {
-            window.location.href = "http://localhost/pages/review.php?item=&name=";
+            window.location.href = "../pages/review.php?item=&name=";
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

@@ -105,11 +105,11 @@
             const title = document.getElementById("title").value;
             const content = document.getElementById("content").value;
             const rating = urlParams.get('rating');
-            window.location.href = "http://localhost/pages/create_review.php?title="+title+"&content="+content+"&item="+val+"&name=&rating="+rating;
+            window.location.href = "../pages/create_review.php?title="+title+"&content="+content+"&item="+val+"&name=&rating="+rating;
         }
 
         function cancelPost() {
-            window.location.href = "http://localhost/pages/review.php?item=&name=";
+            window.location.href = "../pages/review.php?item=&name=";
         }
 
         function addRating(val) {
@@ -119,7 +119,7 @@
             const item = urlParams.get('item');
             const name = document.getElementById("item-name").value;
 
-            window.location.href = "http://localhost/pages/create_review.php?title="+title+"&content="+content+"&item="+item+"&name="+name+"&rating="+val;
+            window.location.href = "../pages/create_review.php?title="+title+"&content="+content+"&item="+item+"&name="+name+"&rating="+val;
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>
