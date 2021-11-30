@@ -208,15 +208,24 @@ INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mozi
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WinMerge", "Text file merging and comparison tool for Windows used in software course.", 3, 0, 0);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Moodle", "Platform for educators/learners to create personalized learning environments.", 3, 0, 0);
 
-INSERT INTO FILES (Location, Clicks) VALUES ("Location/XD/You Thought/I'd/give/An/Actual/File/Imagine.lol", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-vdx.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Undo-Shortcut-Button.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Undo_redo.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Toggle-Unit-Shortcut-Button.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-send-to-back.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-rotation.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-quick-coloring.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-free-selection.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Default-depth-value.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Advanced.docx", 420);
 
 INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Undo Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Undo/Redo", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Toggle Units Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Send to Back", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Rotation Control", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Quick Coloring", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Free Selection", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Default Depth Value", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Advanced Features", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,2,"Undo Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,3,"Undo/Redo", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,4,"Toggle Units Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,5,"Send to Back", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,6,"Rotation Control", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,7,"Quick Coloring", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,8,"Free Selection", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,9,"Default Depth Value", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,10,"Advanced Features", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");

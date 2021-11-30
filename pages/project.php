@@ -11,12 +11,13 @@
     }
 ?>
     <main id="main">
+        <div id='card'>
         <?php
 
             include_once '../php-scripts/connect_to_database.php';
             include_once '../php-scripts/numberConverter.php';
 
-            $query = "SELECT Name, Summary, Availability, Rating, Clicks FROM Projects".$where." LIMIT 1;";
+            $query = "SELECT ProjectID, Name, Summary, Availability, Rating, Clicks FROM Projects".$where." LIMIT 1;";
 
             if (!$result = mysqli_query($conn, $query))
             {
@@ -25,8 +26,8 @@
             else
             {
                 $project_row = $result->fetch_assoc();
+                $projectID = $project_row["ProjectID"];
 
-                echo "<div id='card'>";
                 echo "<h1 id='title'>".$project_row["Name"]."</h1>";
 
                 echo "<div id='project-info'>";
@@ -80,11 +81,69 @@
                 echo "</div>";
 
                 echo "<p id='summary'>".$project_row["Summary"]."</p>";
-
-                echo "</div>";
             }
-
-            
         ?>
+        <table id="project_feature_table" >
+            <tr>
+                <th>Feature Name</th>
+                <th>Summary</th>
+                <th>Specification</th>
+                <th>Git Link</th>
+                <th>Rating</th>
+                <th>Views</th>
+            </tr>
+            <?php
+                include_once '../php-scripts/connect_to_database.php';
+                include_once '../php-scripts/numberConverter.php';
+
+                $query = "SELECT Name, Summary, GitLink, Location, Clicks FROM Feature JOIN Files ON Files.FileID = Feature.FileID WHERE ProjectID = $projectID;";
+
+                if (!$result = mysqli_query($conn, $query))
+                {
+                    echo "Error"; # CDL=> Should handle errors better
+                }
+                else
+                {
+                    while ($feature_row = $result->fetch_assoc())
+                    {
+                        echo "<tr>";
+
+                        // Feature Name
+                        echo "<td>".$feature_row["Name"]."</td>";
+
+                        // Feature Summary
+                        echo "<td>".$feature_row["Summary"]."</td>";
+
+                        // Feature Specification File
+                        echo "<td><a href='".$feature_row["Location"]."'>Specification File</a></td>";
+
+                        // Feature GitLink
+                        echo "<td><a href='".$feature_row["GitLink"]."'>Git Branch Link</a></td>";
+
+                        // Feature Rating
+                        echo "<td style='width: 140px'><a id='link' href='review.php'>";
+                        $i = 0;
+                        while ($i < 3)
+                        {
+                            echo "<span class='fa fa-star checked'></span>";
+                            ++$i;
+                        }
+                        while ($i < 5)
+                        {
+                            echo "<span class='fa fa-star'></span>";
+                            ++$i;
+                        }
+                        echo "</a></td>";
+
+                        // Feature Clicks
+                        echo "<td>".thousandsCurrencyFormat($feature_row["Clicks"])."</td>";
+
+                        echo "</tr>";
+                    }
+                }
+            ?>
+        </table>
+        </div>
+
     </main>
 <?php require "../php-snippets/bottom_template.php"; ?>
