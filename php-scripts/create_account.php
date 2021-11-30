@@ -52,14 +52,14 @@ Description  : A php file to authenticate a user
   $Salted = $Split[0] . $_POST["password"] . $Split[1];
   $Hashed = hash('sha256', $Salted);
   // CDL=> Change 1 to -1 for access status later
-  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', 1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
+  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', -1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
   if (!$result = mysqli_query($conn, $SQL))
   {
     echo (mysqli_error($conn));
   }
   else
   {
-    addGiteaUser($_POST['firstName'], $_POST['lastName'], $_POST['email'], false);
+    #addGiteaUser($_POST['firstName'], $_POST['lastName'], $_POST['email'], false);
     header("Location: ../index.php#AccountCreated");
   }
 

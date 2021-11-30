@@ -63,6 +63,7 @@
             <?php
                 if ($ACCESS > 2)
                 {
+                    echo "<form action='../php-scripts/update_users.php' id='user-table' method='POST'>";
                     echo "<table id='userTable' border='1'>";
                     echo "<caption>User Management</caption>";
                     echo "<tr>";
@@ -92,12 +93,12 @@
                                 echo "<tr>";
                                 echo "<td>".$row['FirstName']."</td>";
                                 echo "<td>".$row['LastName']."</td>";
-                                echo "<td>".$row['Email']."</td>";
+                                echo "<td>".$row['Email']."<input id='email' type='hidden' name='email[]' value='".$row['Email']."'/></td>";
                                 echo "<td>".$row['University']."</td>";
                                 echo "<td>".$row['CourseTitle']."</td>";
 
                                 echo "<td>";
-                                echo "<select name='access' id='access'>";
+                                echo "<select name='access[]' id='access'>";
 
                                 if ($ACCESS == 4)      // Admin
                                 {
@@ -125,7 +126,7 @@
                                 echo "</select>";
                                 echo "</td>";
 
-                                echo "<td><input type='checkbox'/></td>";
+                                echo "<td><input type='hidden' name='checkbox[]' value='no'><input type='checkbox' id='checkbox' name='checkbox[]' value='Yes'></td>";
 
                                 echo "</tr>";
                             }
@@ -134,9 +135,10 @@
                     }
 
                     echo "<div id='submit-container'>";
-                    echo "<input id='approve' type='button' name='approve' value='Approve'/>";
-                    echo "<input id='delete' type='button' name='delete' value='Delete'/>";
+                    echo "<input id='approve' type='submit' name='approve' value='Approve'/>";
+                    echo "<input id='delete' type='submit' name='delete' value='Delete'/>";
                     echo "</div>";
+                    echo "</form>";
                 }
             ?>
     </main>
