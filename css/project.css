@@ -84,4 +84,37 @@
     padding: 4px;
     margin: 20px auto;
     width: 50%;
+	background: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    padding: 20px;
+    min-width: 600;
+}
+
+#project_feature_table table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#project_feature_table td, #project_feature_table th
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#project_feature_table tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+#project_feature_table th
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FF4B2B;
+    color: white;
 }
