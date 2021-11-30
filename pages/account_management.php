@@ -32,19 +32,19 @@
                 <h2 style="text-align: center;">Personal Information</h2>
 
                 <label for="first-name">First Name</label>
-                <input class="form-input" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
+                <input class="form-input" id="first-name" type="text" name="first-name" placeholder=<?php echo "'$first'"; ?>/>
 
                 <label for="last-name">Last Name</label>
-                <input class="form-input" type="text" name="last-name" placeholder=<?php echo "'$last'"; ?>/>
+                <input class="form-input" id="last-name" type="text" name="last-name" placeholder=<?php echo "'$last'"; ?>/>
 
                 <label for="email">Email</label>
-                <input class="form-input" type="email" name="email" placeholder=<?php echo "'$email'"; ?>/>
+                <input class="form-input" id="email" type="email" name="email" placeholder=<?php echo "'$email'"; ?>/>
 
                 <label for="university">University</label>
-                <input class="form-input" type="text" name="university" placeholder=<?php echo "'$university'"; ?>/>
+                <input class="form-input" id="university" type="text" name="university" placeholder=<?php echo "'$university'"; ?>/>
 
                 <label for="course">Course</label>
-                <input class="form-input" type="text" name="course" placeholder=<?php echo "'$course'"; ?>/>
+                <input class="form-input" id="course" type="text" name="course" placeholder=<?php echo "'$course'"; ?>/>
 
                 <input id="save" name="save" class="btn-input" type="submit" value="Save">
                 <input id="cancel" name="cancel" class="btn-input" type="button" value="Cancel">
