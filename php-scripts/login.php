@@ -48,9 +48,9 @@ Description  : A php file to authenticate a user
 
       if ($row['Password'] == $Hashed)
       {
-        header("Location: ../index.php");
         $_SESSION['loggedin'] = true;
         $_SESSION['userID'] = $row['UserID'];
+        header("Location: ../index.php");
       }
       else
       {
