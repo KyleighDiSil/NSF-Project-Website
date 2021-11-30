@@ -7,15 +7,15 @@
   // Validate inputs
   if ($_POST['old-pass'] == "")
   {
-    // Empty
+    header("Location: ../pages/account_management.php#UpdateFailed");
   }
   if ($_POST['new-pass'] == "")
   {
-    // Empty
+    header("Location: ../pages/account_management.php#UpdateFailed");
   }
   if ($_POST['new-pass'] != $_POST['confirm-new-pass'])
   {
-    // Not matching passwords
+    header("Location: ../pages/account_management.php#UpdateFailed");
   }
   $uid = $_SESSION['userID'];
   $get_salt = "SELECT Salt FROM Users WHERE UserID = $uid;";
@@ -30,11 +30,9 @@
     $Split = str_split($Salt, 10);
     $Salted = $Split[0] . $_POST["new-pass"] . $Split[1];
     $Hashed = hash('sha256', $Salted);
-
-    $update_pass = "UPDATE Users SET Password = $Hashed WHERE UserID = $uid;";
+    $update_pass = "UPDATE Users SET Password= '$Hashed' WHERE UserID = $uid;";
     mysqli_query($conn, $update_pass);
     
     header("Location: ../pages/account_management.php#PasswordUpdated");
   }
-
 ?>
