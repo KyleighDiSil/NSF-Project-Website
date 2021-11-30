@@ -75,7 +75,7 @@
                             echo "</div></td>";
 
                             // Project Rating
-                            echo "<td style='width: 125px'><a id='link' href='review.php'>";
+                            echo "<td style='width: 125px'><a id='link' href='review.php?item=Projects&name=".$project_row["Name"]."'>";
                             $i = 0;
                             while ($i < $project_row["Rating"])
                             {

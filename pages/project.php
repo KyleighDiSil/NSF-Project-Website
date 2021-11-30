@@ -32,7 +32,7 @@
 
                 echo "<div id='project-info'>";
                 # Stars!
-                echo "<a id='link' href='review.php'>";
+                echo "<a id='link' href='review.php?item=Projects&name=".$project_row["Name"]."'>";
                 $i = 0;
                 while ($i < $project_row["Rating"])
                 {
