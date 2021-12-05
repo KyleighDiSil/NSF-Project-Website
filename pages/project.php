@@ -96,7 +96,7 @@
                 include_once '../php-scripts/connect_to_database.php';
                 include_once '../php-scripts/numberConverter.php';
 
-                $query = "SELECT Name, Summary, GitLink, Location, Clicks FROM Feature JOIN Files ON Files.FileID = Feature.FileID WHERE ProjectID = $projectID;";
+                $query = "SELECT Name, Summary, GitLink, Location, Clicks, Feature.FileID FROM Feature JOIN Files ON Files.FileID = Feature.FileID WHERE ProjectID = $projectID;";
 
                 if (!$result = mysqli_query($conn, $query))
                 {
@@ -118,7 +118,7 @@
                         echo "<td><a href='".$feature_row["Location"]."'>Specification File</a></td>";
 
                         // Feature GitLink
-                        echo "<td><a href='".$feature_row["GitLink"]."'>Git Branch Link</a></td>";
+                        echo "<td><a href='".$feature_row["GitLink"]."' target='_blank' onclick=trackClick(".$feature_row["FileID"].")>Git Branch Link</a></td>";
 
                         // Feature Rating
                         echo "<td style='width: 140px'><a id='link' href='review.php'>";
@@ -144,6 +144,12 @@
             ?>
         </table>
         </div>
-
     </main>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script>
+        function trackClick(fileID)
+        {
+            $.post("../php-scripts/track_clicks.php", {fileID: fileID});
+        }
+    </script>
 <?php require "../php-snippets/bottom_template.php"; ?>
