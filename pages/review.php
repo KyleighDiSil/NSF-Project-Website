@@ -9,36 +9,14 @@
         </div>
         <div class="table-wrap">
             <input name="reset" class="reset-input" type="button" value="RESET TABLE" onclick="resetTable()">
-            <table id="review_list_table">
-                <tr>
-                    <?php
-                        if(empty($_GET)) {
-                            echo "<th>Name</th>";
-                            $item = "";
-                            $name = "";
-                        } else {
-                            $item = $_GET['item'];
-                            $name = $_GET['name'];
-                            if($item == "") {
-                                echo "<th>Name</th>";
-                            } else if ($item == "Projects") {
-                                echo "<th>Project Name</th>";
-                            } else if ($item == "Course") {
-                                echo "<th>Course Name</th>";
-                            } else if ($item == "Files") {
-                                echo "<th>File Name</th>";
-                            } else {
-                                echo "<th>Name</th>";
-                            }
-                        }
-                    ?>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>Rating</th>
-                    <th>Date</th>
-                </tr>
                 <?php
-
+                    if(empty($_GET)){
+                        $item = "";
+                        $name = "";
+                    }else{
+                        $item = $_GET['item'];
+                        $name = $_GET['name'];
+                    }
                     if($item != "" && $item != "Course") {
                         //do not display course reviews
                         $query_DB = false;
@@ -231,7 +209,6 @@
                             }
                     }
                 ?>
-            </table>
         </div>
     </main>
     <script>
