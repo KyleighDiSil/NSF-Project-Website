@@ -8,7 +8,7 @@
 
         <div id="search-bar">
             <i class="fas fa-search" id="search-icon"></i>
-            <input type="text" id="search-input" onkeyup="updateSearch()" placeholder="Search for announcements..">
+            <input type="text" id="search-input" onkeyup="updateSearch()" placeholder="Search for announcements.."></input>
         </div>
 
         <?php
