@@ -160,7 +160,7 @@
     <script>
         function trackProjectClicks(projectID)
         {
-            $.post("../php-scripts/track_clicks.php", {projectID: projectID});
+            $.post("../php-scripts/track_clicks.php", {projectID: projectID}, function(response){location.reload();});
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

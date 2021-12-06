@@ -149,7 +149,7 @@
     <script>
         function trackFileClicks(fileID)
         {
-            $.post("../php-scripts/track_clicks.php", {fileID: fileID});
+            $.post("../php-scripts/track_clicks.php", {fileID: fileID}, function(response){location.reload();});
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

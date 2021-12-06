@@ -221,13 +221,13 @@ INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-free-
 INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Default-depth-value.docx", 420);
 INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Advanced.docx", 420);
 
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,2,"Undo Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,3,"Undo/Redo", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,4,"Toggle Units Shortcut", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,5,"Send to Back", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,6,"Rotation Control", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,7,"Quick Coloring", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,8,"Free Selection", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,9,"Default Depth Value", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,10,"Advanced Features", "A summary here ;)", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "Exporting to VDX Format", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,2,"Undo Shortcut", "Shortcut Button for Undo", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,3,"Undo/Redo", "Enhanced Undo/Redo", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,4,"Toggle Units Shortcut", "Shortcut Button for Toggling Unit of Length", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,5,"Send to Back", "Send to Back & Bring to Front", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,6,"Rotation Control", "Enhanced Rotation", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,8,"Free Selection", "Free Selection", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,7,"Quick Coloring", "Quick Coloring", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,9,"Default Depth Value", "Auto Increment Default Depth Value", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,10,"Advanced Features", "Advanced Features as extra challanges", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");

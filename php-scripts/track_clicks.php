@@ -19,6 +19,7 @@
 
 		// Update the clicks for this item
 		$ret = mysqli_query($conn, $query);
+		echo "success";
 	}
 	elseif (isset($_POST["projectID"])) // Projects
 	{
@@ -27,5 +28,7 @@
 
 		// Update the clicks for this item
 		$ret = mysqli_query($conn, $query);
+		echo "success";
 	}
+	else{}
 ?>
