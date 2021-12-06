@@ -6,8 +6,6 @@
                 <div id="announcement-bar">
                     <a href="announcements.php" id="bar-title-link"><div id="bar-title">Announcements</div></a>
                     <a href="announcements.php" id="title-link"><div id="title">This is a very very very very very very very very very very very long title</div></a>
-                    <!-- <a href="announcements.php"><p id="bar-title">Announcements</p></a>
-                    <p id="title">This is a very long title called title no i do not want to add a whole bunch of text</p> -->
                 </div>
 
                 <h1>Welcome</h1>
@@ -32,7 +30,7 @@
                     <h2>Our Goal</h2>
                     <p id="goal-sum"> &ensp;To enable professors around the world with projects and project guidance
                         we hope to lead software engineering in classrooms to a more Project Based
-                        Learning method. Provided with the right projects and guidance students will be 
+                        Learning method. Provided with the right projects and guidance students will be
                         able to enter a higher level of learning and Rigor.
                     </p>
                     <img id="home-image" src="../images/summary.PNG"/>
@@ -93,7 +91,7 @@
                         <tr>
                             <td>Qt [56]</td>
                             <td>Cross-platform application and UI framework, active
-                                developer community. 
+                                developer community.
                             </td>
                             <td>C</td>
                             <td>Developer</td>
@@ -146,7 +144,7 @@
                         </tr>
                         <tr>
                             <td>Moodle [62]</td>
-                            <td>Platform for educations/learners to create personalized 
+                            <td>Platform for educations/learners to create personalized
                                 learning enviroments.
                             </td>
                             <td>PHP JavaScript</td>
@@ -200,7 +198,7 @@
                         </tr>
                         <tr>
                             <td>Dr. Andrian Marcus, Professor, University of Texas at Dallas, USA</td>
-                            <td>CS/SE3354- Software Engineering, Spring and Fall, several sections, 60 students and one TA per section <br> 
+                            <td>CS/SE3354- Software Engineering, Spring and Fall, several sections, 60 students and one TA per section <br>
                                 CS/SE6356- Software Maintenance, Evolution and Reengineering, Fall, 35 students, one TA
                             </td>
                         </tr>
@@ -236,14 +234,14 @@
                             <td>Daqing Hou, Electrical & Comp. Engrg., CU</td>
                             <td>PI; software engineering education & research</td>
                             <td>General project management and oversight, coordination with
-                                VCU, lead on development of course projects and reference 
+                                VCU, lead on development of course projects and reference
                                 course, and dissemination
                             </td>
                         </tr>
                         <tr>
                             <td>Yu Liu, Electrical & Comp. Engrg., CU</td>
                             <td>co-PI; software engineering education</td>
-                            <td>Development of course projects and reference course, 
+                            <td>Development of course projects and reference course,
                                 teaching with developed materials
                             </td>
                         </tr>
@@ -258,14 +256,14 @@
                             <td>Mary Margaret Small, Ed.D. Office of Educ. Partnerships, CU</td>
                             <td>External Evaluator; STEM education</td>
                             <td>Organization and implementation of all assessment
-                                components; evaluation of overall program outcomes 
+                                components; evaluation of overall program outcomes
                             </td>
                         </tr>
                         <tr>
                             <td>David Shepherd, PhD Computer Science, VCU</td>
                             <td>PI; SE education & research, a decade of industrial research</td>
                             <td>Project management, coordination with CU, development
-                                of course projects and reference course, teaching with developed 
+                                of course projects and reference course, teaching with developed
                                 materials, lead on workshops
                             </td>
                         </tr>

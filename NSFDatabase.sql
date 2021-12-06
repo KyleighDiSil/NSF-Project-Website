@@ -11,7 +11,7 @@ USE NSFDatabase;
 CREATE TABLE Announcements (
   ID              INT NOT NULL AUTO_INCREMENT,
   Title           varchar(128) NOT NULL,
-  Date_announced	varchar(128) NOT NULL,
+  Date_announced	DATE NOT NULL,
   Contents        varchar(128) NOT NULL,
   PRIMARY KEY     (ID)
 );
@@ -231,3 +231,11 @@ INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,8,"Fre
 INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,7,"Quick Coloring", "Quick Coloring", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
 INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,9,"Default Depth Value", "Auto Increment Default Depth Value", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
 INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,10,"Advanced Features", "Advanced Features as extra challanges", "http://192.168.0.86:3000/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");
+
+INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2015-03-14", "Title of announcement", "Here is the content of the actual announcement. As you can see it's a larger sentence to test wrapping and elipses. That should have two s's I think. Like Elipsses. Nope that's also wrong. Either way this is a useful announcement as you can see. I hope you feel informed. The rest of these will be randomly generated using Mockaroo ;)");
+
+INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2021-05-24", "Speech Pathologist", "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.");
+INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2020-12-19", "Software Test Engineer III", "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.");
+INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2021-04-08", "Director of Sales", "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.");
+INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2021-05-06", "Structural Engineer", "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.");
+INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2021-09-22", "Chief Design Engineer", "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.");
