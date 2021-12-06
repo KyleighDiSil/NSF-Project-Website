@@ -58,7 +58,7 @@
                         //do not display course reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
-                    } else {
+                    } else {/*
                         while($review_row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$review_row["Name"]."</td>";
@@ -79,7 +79,28 @@
 
                             echo "<td>".$review_row["Date"]."</td>";
                             echo "</tr>";
-                        }
+                        }*/
+                            while($review_row = $result->fetch_assoc()) {
+                                echo "<div id='container'>";
+                                echo "<h1>".$review_row["Title"]."</h1>";
+                                echo "<div id='inside-container'>";
+                                echo "<p id='name'>".$review_row["Name"]."</p>";
+                                echo "<div id='stars'>";
+                                $i = 0;
+                                while ($i < $review_row["Rating"]) {
+                                    echo "<span class='fa fa-star checked'></span>";
+                                    ++$i;
+                                }
+                                while ($i < 5) {
+                                    echo "<span class='fa fa-star'></span>";
+                                    ++$i;
+                                }
+                                echo "</div>";
+                                echo "<p id='date'>".$review_row["Date"]."</p>";
+                                echo "</div>";
+                                echo "<p id='content'>".$review_row["Content"]."</p>";
+                                echo "</div>";
+                            }
                     }
 
 
@@ -101,7 +122,7 @@
                         //do not display project reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
-                    } else {
+                    } else {/*
                         while($review_row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$review_row["Name"]."</td>";
@@ -122,6 +143,28 @@
 
                             echo "<td>".$review_row["Date"]."</td>";
                             echo "</tr>";
+                        }*/
+                        /////////
+                        while($review_row = $result->fetch_assoc()) {
+                            echo "<div id='container'>";
+                            echo "<h1>".$review_row["Title"]."</h1>";
+                            echo "<div id='inside-container'>";
+                            echo "<p id='name'>".$review_row["Name"]."</p>";
+                            echo "<div id='stars'>";
+                            $i = 0;
+                            while ($i < $review_row["Rating"]) {
+                                echo "<span class='fa fa-star checked'></span>";
+                                ++$i;
+                            }
+                            while ($i < 5) {
+                                echo "<span class='fa fa-star'></span>";
+                                ++$i;
+                            }
+                            echo "</div>";
+                            echo "<p id='date'>".$review_row["Date"]."</p>";
+                            echo "</div>";
+                            echo "<p id='content'>".$review_row["Content"]."</p>";
+                            echo "</div>";
                         }
                     }
 
@@ -143,7 +186,7 @@
                         //do not display file reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
-                    } else {
+                    } else {/*
                         while($review_row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$review_row["Name"]."</td>";
@@ -164,6 +207,27 @@
 
                             echo "<td>".$review_row["Date"]."</td>";
                             echo "</tr>";
+                            }*/
+                            while($review_row = $result->fetch_assoc()) {
+                                echo "<div id='container'>";
+                                echo "<h1>".$review_row["Title"]."</h1>";
+                                echo "<div id='inside-container'>";
+                                echo "<p id='name'>".$review_row["Name"]."</p>";
+                                echo "<div id='stars'>";
+                                $i = 0;
+                                while ($i < $review_row["Rating"]) {
+                                    echo "<span class='fa fa-star checked'></span>";
+                                    ++$i;
+                                }
+                                while ($i < 5) {
+                                    echo "<span class='fa fa-star'></span>";
+                                    ++$i;
+                                }
+                                echo "</div>";
+                                echo "<p id='date'>".$review_row["Date"]."</p>";
+                                echo "</div>";
+                                echo "<p id='content'>".$review_row["Content"]."</p>";
+                                echo "</div>";
                             }
                     }
                 ?>
