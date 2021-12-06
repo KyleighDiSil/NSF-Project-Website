@@ -4,7 +4,8 @@
 {
     padding: 0 18px;
     overflow: hidden;
-    width: 800px;
+    table-layout: auto;
+    width: 100px;
 }
 
 #contact_us_table table
