@@ -18,7 +18,7 @@
                     include_once '../php-scripts/connect_to_database.php';
                     include_once '../php-scripts/numberConverter.php';
 
-                    $query = "SELECT Name, Summary, Availability, Rating, Clicks FROM Projects;";
+                    $query = "SELECT Name, Summary, Availability, Rating, Clicks, ProjectID FROM Projects;";
 
                     if (!$result = mysqli_query($conn, $query))
                     {
@@ -33,7 +33,7 @@
                             // Project Name
                             if ($ACCESS > 1 || $project_row["Availability"] < 2)
                             {
-                                echo "<td><a href='project.php?project=".$project_row["Name"]."'>".$project_row["Name"]."</a></td>";
+                                echo "<td><a href='project.php?project=".$project_row["Name"]."' onclick=trackProjectClicks(".$project_row["ProjectID"].")>".$project_row["Name"]."</a></td>";
                             }
                             else
                             {
@@ -154,6 +154,13 @@
             }
             }
         }
+        }
+    </script>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script>
+        function trackProjectClicks(projectID)
+        {
+            $.post("../php-scripts/track_clicks.php", {projectID: projectID});
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

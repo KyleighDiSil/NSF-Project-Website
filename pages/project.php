@@ -115,10 +115,10 @@
                         echo "<td>".$feature_row["Summary"]."</td>";
 
                         // Feature Specification File
-                        echo "<td><a href='".$feature_row["Location"]."'>Specification File</a></td>";
+                        echo "<td><a href='".$feature_row["Location"]."' onclick=trackFileClicks(".$feature_row["FileID"].")>Specification File</a></td>";
 
                         // Feature GitLink
-                        echo "<td><a href='".$feature_row["GitLink"]."' target='_blank' onclick=trackClick(".$feature_row["FileID"].")>Git Branch Link</a></td>";
+                        echo "<td><a href='".$feature_row["GitLink"]."'>Git Branch Link</a></td>";
 
                         // Feature Rating
                         echo "<td style='width: 140px'><a id='link' href='review.php'>";
@@ -147,7 +147,7 @@
     </main>
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
     <script>
-        function trackClick(fileID)
+        function trackFileClicks(fileID)
         {
             $.post("../php-scripts/track_clicks.php", {fileID: fileID});
         }
