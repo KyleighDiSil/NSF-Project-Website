@@ -23,3 +23,7 @@ function invalidLogin(){
     document.getElementById('username').setAttribute("class", "wrongInfo");
     document.getElementById('invalidLogin').style.display = "";
 }
+
+function successful_save(){
+    alert('Account changes were updated.');
+}
