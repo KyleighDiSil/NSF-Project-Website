@@ -5,7 +5,22 @@
     <main id="main">
                 <div id="announcement-bar">
                     <a href="announcements.php" id="bar-title-link"><div id="bar-title">Announcements</div></a>
-                    <a href="announcements.php" id="title-link"><div id="title">This is a very very very very very very very very very very very long title</div></a>
+                    <?php
+                        // Connect to the database
+                        include_once '../php-scripts/connect_to_database.php';
+
+                        $sql = "SELECT Title FROM Announcements ORDER BY Date_announced DESC LIMIT 1";
+
+                        // Execute Query and error check
+                        if (!$result = mysqli_query($conn, $sql))
+                            {echo (mysqli_error($conn));}
+                        else
+                        {
+                            $row = mysqli_fetch_assoc($result);
+                            echo "<a href='announcements.php' id='title-link'>".$row["Title"]."<div id='title'></div></a>";
+                        }
+                    ?>
+                    <!-- <a href="announcements.php" id="title-link"><div id="title">This is a very very very very very very very very very very very long title</div></a> -->
                 </div>
 
                 <h1>Welcome</h1>

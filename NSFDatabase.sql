@@ -12,7 +12,7 @@ CREATE TABLE Announcements (
   ID              INT NOT NULL AUTO_INCREMENT,
   Title           varchar(128) NOT NULL,
   Date_announced	DATE NOT NULL,
-  Contents        varchar(128) NOT NULL,
+  Contents        varchar(2500) NOT NULL,
   PRIMARY KEY     (ID)
 );
 

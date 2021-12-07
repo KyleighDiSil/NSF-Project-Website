@@ -5,10 +5,21 @@
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
     <main id="main">
         <h1 id="page-title">Announcements</h1>
-
+        <?php
+        if ($ACCESS > 2)
+        {
+            echo "<div id='create-account'>";
+            echo "    <form action='../php-scripts/create_announcement.php' method='POST'>";
+            echo "        <input type='text' id='title' name='title' placeholder='Announcement title'>";
+            echo "        <input type='text' id='content' name='content' placeholder='Announcement content'>";
+            echo "        <input type='submit' id='submit' value='Create Announcement'>";
+            echo "    </form>";
+            echo "</div>";
+        }
+        ?>
         <div id="search-bar">
             <i class="fas fa-search" id="search-icon"></i>
-            <input type="text" id="search-input" onkeyup="updateSearch()" placeholder="Search for announcements.."></input>
+            <input type="text" id="search-input" onkeyup="updateSearch()" placeholder="Search for announcements"></input>
         </div>
 
         <?php
