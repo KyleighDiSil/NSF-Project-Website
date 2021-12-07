@@ -221,16 +221,16 @@ INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-free-
 INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Default-depth-value.docx", 420);
 INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Advanced.docx", 420);
 
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "Exporting to VDX Format", "http://128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,2,"Undo Shortcut", "Shortcut Button for Undo", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,3,"Undo/Redo", "Enhanced Undo/Redo", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,4,"Toggle Units Shortcut", "Shortcut Button for Toggling Unit of Length", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,5,"Send to Back", "Send to Back & Bring to Front", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,6,"Rotation Control", "Enhanced Rotation", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,8,"Free Selection", "Free Selection", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,7,"Quick Coloring", "Quick Coloring", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,9,"Default Depth Value", "Auto Increment Default Depth Value", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
-INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,10,"Advanced Features", "Advanced Features as extra challanges", "http:// 128.153.220.125:42068/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "Exporting to VDX Format", "http://128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,2,"Undo Shortcut", "Shortcut Button for Undo", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,3,"Undo/Redo", "Enhanced Undo/Redo", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Undo/Redo");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,4,"Toggle Units Shortcut", "Shortcut Button for Toggling Unit of Length", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Toggle-Units-Shortcut");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,5,"Send to Back", "Send to Back & Bring to Front", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Send-to-Back");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,6,"Rotation Control", "Enhanced Rotation", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Rotation-Control");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,8,"Free Selection", "Free Selection", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Free-Selection");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,7,"Quick Coloring", "Quick Coloring", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Quick-Coloring");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,9,"Default Depth Value", "Auto Increment Default Depth Value", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Default-Depth-Value");
+INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,10,"Advanced Features", "Advanced Features as extra challanges", "http:// 128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Advanced-Features");
 
 INSERT INTO Announcements (Date_announced, Title, Contents) VALUES ("2015-03-14", "Title of announcement", "Here is the content of the actual announcement. As you can see it's a larger sentence to test wrapping and elipses. That should have two s's I think. Like Elipsses. Nope that's also wrong. Either way this is a useful announcement as you can see. I hope you feel informed. The rest of these will be randomly generated using Mockaroo ;)");
 
