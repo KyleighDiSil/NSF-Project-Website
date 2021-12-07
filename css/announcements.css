@@ -52,12 +52,12 @@
 }
 
 #date{
-    margin: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 #content{
     margin: 10px;
-    text-align: center;
 }
 
 #thumbnail {
@@ -70,3 +70,62 @@
     margin: 10px 5px;
     padding: 4px;
   }
+
+  #create-account{
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	padding: 40px 50px;
+	height: fit-content;
+    width: 85%;
+	text-align: center;
+    margin: 10px auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  h2{
+    font-weight: bold;
+	margin-bottom: 15px;
+  }
+
+#content-input, #title-input, textarea {
+	border-radius: 5px;
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+textarea{
+    max-width: 100%;
+    height: 100px;
+    /*If we want the create announcement content to resize as we 
+    type get rid of resize: none;*/
+    resize: none;
+}
+
+#submit {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#submit:hover{
+	background-color: #ff2600;
+	border: 1px solid rgb(255, 255, 255);
+	cursor: pointer;
+}
+
+hr{
+    margin: 0px 10px;
+    padding: 0px;
+}
