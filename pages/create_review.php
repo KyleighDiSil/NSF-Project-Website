@@ -54,8 +54,8 @@
                     </div>
                         <textarea class="title-input" id="title" name="title" cols="40" rows="2" placeholder="Title"><?php echo $review_title?></textarea>
                         <textarea class="content-input" id="content" name="content" cols="40" rows="8" placeholder="Text Here"><?php echo $review_content?></textarea>
-                        <label for="rating">Rating: </label>
                     <div id="stars">    
+                        <label for="rating">Rate: </label>
                         <?php
                             if($rating == "") {
                                 $i = 0;

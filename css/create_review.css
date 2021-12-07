@@ -94,3 +94,19 @@ form {
 textarea, #selections, #stars{
     margin: 5px;
 }
+
+label{
+	font-weight: bold;
+}
+
+#items, #item-name{
+	width: 100px;
+	border: 2px solid rgb(12, 0, 46);
+	background-color: #eee;
+	padding: 2px;
+	border-radius: 5px;
+}
+
+#stars{
+	margin: 10px 0px;
+}
