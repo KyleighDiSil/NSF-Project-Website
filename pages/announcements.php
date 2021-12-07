@@ -26,7 +26,7 @@
                 // Connect to the database
                 include_once '../php-scripts/connect_to_database.php';
 
-                $sql = "SELECT Date_announced, Title, Contents FROM Announcements ORDER BY Date_announced DESC";
+                $sql = "SELECT ID, Date_announced, Title, Contents FROM Announcements ORDER BY Date_announced DESC";
 
                 // Execute Query and error check
                 if (!$result = mysqli_query($conn, $sql))
@@ -41,6 +41,10 @@
                             echo "    <h2 id='title'>".$row['Title']."</h2>";
                             echo "    <p id='date'>".$row['Date_announced']."</p>";
                             echo "    <p id='content'>".$row['Contents']."</p>";
+                            if ($ACCESS > 2)
+                            {
+                                echo "<i class='fas fa-times fa-lg' id='delete-icon' onclick=deleteAnnouncement(".$row['ID'].")></i>";
+                            }
                             echo "</div>";
                         }
                     }
@@ -71,6 +75,12 @@
                     $(this).hide();
                 }
             });
+        }
+    </script>
+    <script>
+        function deleteAnnouncement(id)
+        {
+            $.post("../php-scripts/delete_announcement.php", {id: id}, function(response){location.reload();});
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

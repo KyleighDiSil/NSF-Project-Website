@@ -31,7 +31,7 @@
 		}
 		else
 		{
-			header("Location: ../pages/announcements.php#good");
+			header("Location: ../pages/announcements.php");
 		}
 	}
 ?>

@@ -36,6 +36,16 @@
     position: absolute;
 }
 
+#delete-icon {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #FF4B2B;
+}
+
+#delete-icon:hover {
+    color: #ff2600;
+}
+
 #title{
     margin: 10px;
     text-align: center;
