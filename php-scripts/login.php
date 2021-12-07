@@ -12,19 +12,23 @@ Description  : A php file to authenticate a user
   // Validate inputs
   if ($_POST['username'] == "")
   {
-    $EmailAttempt = "NULL";
+    // Invalid login
+    header("Location: ../pages/login.php#LoginFailure");
   }
   else
   {
+    // Sets email attempt to all lowercase + no whitespace
     $EmailAttempt = strtolower(trim($_POST['username']));
   }
 
   if ($_POST['password'] == "")
   {
-    $PasswordAttempt = "NULL";
+    // Invalid login
+    header("Location: ../pages/login.php#LoginFailure");
   }
   else
   {
+    // Stores password without whitespace
     $PasswordAttempt = trim($_POST['password']);
   }
 
@@ -39,15 +43,21 @@ Description  : A php file to authenticate a user
   else
   {
     session_start();
-    // Salt Password
     while ($row = $result->fetch_assoc())
     {
+      // Gets salt from database and cuts it in half
       $Split = str_split($row['Salt'], 10);
+
+      // Adds salt to front and back of password
       $Salted = $Split[0] . $PasswordAttempt . $Split[1];
+      
+      // Hash password for security
       $Hashed = hash('sha256', $Salted);
 
+      // Checks password is same as database
       if ($row['Password'] == $Hashed)
       {
+        // Sets session property to show user is logged in with userID
         $_SESSION['loggedin'] = true;
         $_SESSION['userID'] = $row['UserID'];
         header("Location: ../index.php");

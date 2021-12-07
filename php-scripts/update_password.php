@@ -41,8 +41,13 @@
     }
     else
     {
+      // Get salt from sql query and put the salt around it
       $Salted = $Split[0] . $_POST["new-pass"] . $Split[1];
+      
+      // Hash password to store in the database
       $Hashed =a hash('sha256', $Salted);
+
+      // SQL query to update the users passwords
       $update_pass = "UPDATE Users SET Password= '$Hashed' WHERE UserID = $uid;";
       mysqli_query($conn, $update_pass);
       
