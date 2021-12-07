@@ -16,42 +16,55 @@ Description  : A php file to authenticate a user
   if ($_POST["firstName"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["lastName"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["email"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["university"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["course"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["password"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["passwordConfirmation"] == "")
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
   elseif ($_POST["password"] != $_POST["passwordConfirmation"])
   {
     // Fail
+    header("Location: ../pages/create_account.php#CreationFailure");
   }
 
+  // Random string generation to augement the password complexity
   $salt = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(20/strlen($x)) )),1,20);
 
+  // Take half of the string to put in front of password and the other for behind the password
   $Split = str_split($salt, 10);
   $Salted = $Split[0] . $_POST["password"] . $Split[1];
+
+  // Hashing the password + salt for secure password storage
   $Hashed = hash('sha256', $Salted);
-  // CDL=> Change 1 to -1 for access status later
+  
+  // SQL Query to insert new user into database with pending statud
   $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', -1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
   if (!$result = mysqli_query($conn, $SQL))
   {

@@ -2,7 +2,7 @@
 <?php $PAGE_NAME = "contact"?>
 
 <?php require "../php-snippets/top_template.php"; ?>
-<?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
+<?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/login.php");} ?>
     <main id="main">
         <h1>Contact Us</h1>
 
