@@ -21,32 +21,34 @@
             <i class="fas fa-search" id="search-icon"></i>
             <input type="text" id="search-input" onkeyup="updateSearch()" placeholder="Search for announcements"></input>
         </div>
+        <div id="cards">
+            <?php
+                // Connect to the database
+                include_once '../php-scripts/connect_to_database.php';
 
-        <?php
-            // Connect to the database
-            include_once '../php-scripts/connect_to_database.php';
+                $sql = "SELECT Date_announced, Title, Contents FROM Announcements ORDER BY Date_announced DESC";
 
-            $sql = "SELECT Date_announced, Title, Contents FROM Announcements ORDER BY Date_announced DESC";
-
-            // Execute Query and error check
-            if (!$result = mysqli_query($conn, $sql))
-                {echo (mysqli_error($conn));}
-            else
-            {
-                if ($result->num_rows > 0)
+                // Execute Query and error check
+                if (!$result = mysqli_query($conn, $sql))
+                    {echo (mysqli_error($conn));}
+                else
                 {
-                    while ($row = mysqli_fetch_assoc($result))
+                    if ($result->num_rows > 0)
                     {
-                        echo "<div id='announcement-container'>";
-                        echo "    <h2 id='title'>".$row['Title']."</h2>";
-                        echo "    <p id='date'>".$row['Date_announced']."</p>";
-                        echo "    <p id='content'>".$row['Contents']."</p>";
-                        echo "</div>";
+                        while ($row = mysqli_fetch_assoc($result))
+                        {
+                            echo "<div class='announcement-container'>";
+                            echo "    <h2 id='title'>".$row['Title']."</h2>";
+                            echo "    <p id='date'>".$row['Date_announced']."</p>";
+                            echo "    <p id='content'>".$row['Contents']."</p>";
+                            echo "</div>";
+                        }
                     }
                 }
-            }
-        ?>
+            ?>
+        </div>
     </main>
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
     <script>
         function updateSearch()
         {
@@ -54,21 +56,21 @@
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById("search-input");
             filter = input.value.toUpperCase();
-            // CDL=> Loop through all cards and selectively show/hide cards depending on search criteria
-            // ul = document.getElementById("myUL");
-            // li = ul.getElementsByTagName('li');
 
-            // Loop through all list items, and hide those who don't match the search query
-            // for (i = 0; i < li.length; i++)
-            // {
-            //     a = li[i].getElementsByTagName("a")[0];
-            //     txtValue = a.textContent || a.innerText;
-            //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            //     li[i].style.display = "";
-            //     } else {
-            //     li[i].style.display = "none";
-            //     }
-            // }
+            $(".announcement-container").each(function(i) {
+
+                console.log($(this).find('#title').text());
+
+                txtValue = $(this).find('#title').text() + $(this).find('#content').text();
+                if (txtValue.toUpperCase().indexOf(filter) > -1)
+                {
+                    $(this).show();
+                }
+                else
+                {
+                    $(this).hide();
+                }
+            });
         }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

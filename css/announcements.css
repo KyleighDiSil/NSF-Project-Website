@@ -3,7 +3,7 @@
     margin: 20px;
 }
 
-#announcement-container{
+.announcement-container{
     display: flex;
     flex-direction: column;
     margin: 20 auto;
