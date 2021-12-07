@@ -8,7 +8,7 @@
             <input type="text" onclick="createNewReview()" class="post-review" placeholder="Create Review">
         </div>
         <div class="table-wrap">
-            <input name="reset" class="reset-input" type="button" value="RESET TABLE" onclick="resetTable()">
+            <input name="reset" class="reset-input" type="button" value="REFRESH REVIEWS" onclick="resetTable()">
                 <?php
                     if(empty($_GET)){
                         $item = "";
