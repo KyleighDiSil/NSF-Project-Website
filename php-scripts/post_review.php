@@ -38,7 +38,7 @@
                     if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
-                        header("Location: ../pages/review.php?item=".$item."&name=".$name);
+                        header("Location: ../pages/review.php?item=&name=");
                     }
                 }
             } else {
@@ -58,7 +58,7 @@
                     if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
-                        header("Location: ../pages/review.php?item=".$item."&name=".$name);
+                        header("Location: ../pages/review.php?item=&name=");
                     }
                 }
             }

@@ -4,41 +4,19 @@
 <?php require "../php-snippets/top_template.php"; ?>
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
     <main id="main">
-        <div class="post-wrap">
-            <input type="text" onclick="createNewReview()" class="post-review" placeholder="Create Review">
-        </div>
         <div class="table-wrap">
-            <input name="reset" class="reset-input" type="button" value="RESET TABLE" onclick="resetTable()">
-            <table id="review_list_table">
-                <tr>
-                    <?php
-                        if(empty($_GET)) {
-                            echo "<th>Name</th>";
-                            $item = "";
-                            $name = "";
-                        } else {
-                            $item = $_GET['item'];
-                            $name = $_GET['name'];
-                            if($item == "") {
-                                echo "<th>Name</th>";
-                            } else if ($item == "Projects") {
-                                echo "<th>Project Name</th>";
-                            } else if ($item == "Course") {
-                                echo "<th>Course Name</th>";
-                            } else if ($item == "Files") {
-                                echo "<th>File Name</th>";
-                            } else {
-                                echo "<th>Name</th>";
-                            }
-                        }
-                    ?>
-                    <th>Title</th>
-                    <th>Content</th>
-                    <th>Rating</th>
-                    <th>Date</th>
-                </tr>
+        <div id="buttons">
+            <input type="button" onclick="createNewReview()" id="post-review" value="Create Review">
+            <input name="reset" class="reset-input" type="button" value="REFRESH REVIEWS" onclick="resetTable()">
+        </div>
                 <?php
-
+                    if(empty($_GET)){
+                        $item = "";
+                        $name = "";
+                    }else{
+                        $item = $_GET['item'];
+                        $name = $_GET['name'];
+                    }
                     if($item != "" && $item != "Course") {
                         //do not display course reviews
                         $query_DB = false;
@@ -58,7 +36,7 @@
                         //do not display course reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
-                    } else {
+                    } else {/*
                         while($review_row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$review_row["Name"]."</td>";
@@ -79,7 +57,28 @@
 
                             echo "<td>".$review_row["Date"]."</td>";
                             echo "</tr>";
-                        }
+                        }*/
+                            while($review_row = $result->fetch_assoc()) {
+                                echo "<div id='container'>";
+                                echo "<h1>".$review_row["Title"]."</h1>";
+                                echo "<div id='inside-container'>";
+                                echo "<p id='name'>".$review_row["Name"]."</p>";
+                                echo "<div id='stars'>";
+                                $i = 0;
+                                while ($i < $review_row["Rating"]) {
+                                    echo "<span class='fa fa-star checked'></span>";
+                                    ++$i;
+                                }
+                                while ($i < 5) {
+                                    echo "<span class='fa fa-star'></span>";
+                                    ++$i;
+                                }
+                                echo "</div>";
+                                echo "<p id='date'>".$review_row["Date"]."</p>";
+                                echo "</div>";
+                                echo "<p id='content'>".$review_row["Content"]."</p>";
+                                echo "</div>";
+                            }
                     }
 
 
@@ -101,7 +100,7 @@
                         //do not display project reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
-                    } else {
+                    } else {/*
                         while($review_row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$review_row["Name"]."</td>";
@@ -122,6 +121,28 @@
 
                             echo "<td>".$review_row["Date"]."</td>";
                             echo "</tr>";
+                        }*/
+                        /////////
+                        while($review_row = $result->fetch_assoc()) {
+                            echo "<div id='container'>";
+                            echo "<h1>".$review_row["Title"]."</h1>";
+                            echo "<div id='inside-container'>";
+                            echo "<p id='name'>".$review_row["Name"]."</p>";
+                            echo "<div id='stars'>";
+                            $i = 0;
+                            while ($i < $review_row["Rating"]) {
+                                echo "<span class='fa fa-star checked'></span>";
+                                ++$i;
+                            }
+                            while ($i < 5) {
+                                echo "<span class='fa fa-star'></span>";
+                                ++$i;
+                            }
+                            echo "</div>";
+                            echo "<p id='date'>".$review_row["Date"]."</p>";
+                            echo "</div>";
+                            echo "<p id='content'>".$review_row["Content"]."</p>";
+                            echo "</div>";
                         }
                     }
 
@@ -143,7 +164,7 @@
                         //do not display file reviews
                     } else if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
-                    } else {
+                    } else {/*
                         while($review_row = $result->fetch_assoc()) {
                             echo "<tr>";
                             echo "<td>".$review_row["Name"]."</td>";
@@ -164,10 +185,30 @@
 
                             echo "<td>".$review_row["Date"]."</td>";
                             echo "</tr>";
+                            }*/
+                            while($review_row = $result->fetch_assoc()) {
+                                echo "<div id='container'>";
+                                echo "<h1>".$review_row["Title"]."</h1>";
+                                echo "<div id='inside-container'>";
+                                echo "<p id='name'>".$review_row["Name"]."</p>";
+                                echo "<div id='stars'>";
+                                $i = 0;
+                                while ($i < $review_row["Rating"]) {
+                                    echo "<span class='fa fa-star checked'></span>";
+                                    ++$i;
+                                }
+                                while ($i < 5) {
+                                    echo "<span class='fa fa-star'></span>";
+                                    ++$i;
+                                }
+                                echo "</div>";
+                                echo "<p id='date'>".$review_row["Date"]."</p>";
+                                echo "</div>";
+                                echo "<p id='content'>".$review_row["Content"]."</p>";
+                                echo "</div>";
                             }
                     }
                 ?>
-            </table>
         </div>
     </main>
     <script>

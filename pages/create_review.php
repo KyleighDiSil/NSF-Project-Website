@@ -3,7 +3,6 @@
 <?php require "../php-snippets/top_template.php"; ?>
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
     <main id="main">
-        <div class="seperation">
             <form id="post-review" action="../php-scripts/post_review.php" method="post">
                 <?php
                     $review_title = $_GET['title'];
@@ -12,8 +11,8 @@
                     $review_item_name = $_GET['name'];
                     $rating = $_GET['rating'];
                 ?>
-                <div class="review-wrap">
-                    <div class="seperation">
+                    <h1>Create Review</h1>
+                    <div id="selections">
                         <select name="items" id="items" onChange="getNames(this.value)">
                             <?php
                                 if($review_item == "") {
@@ -53,14 +52,10 @@
                             ?>
                         </select>
                     </div>
-                    <div class="seperation">
                         <textarea class="title-input" id="title" name="title" cols="40" rows="2" placeholder="Title"><?php echo $review_title?></textarea>
-                    </div>
-                    <div class="seperation">
                         <textarea class="content-input" id="content" name="content" cols="40" rows="8" placeholder="Text Here"><?php echo $review_content?></textarea>
-                    </div>
-                    <div class="seperation">
-                        <label for="rating">Rating: </label>
+                    <div id="stars">    
+                        <label for="rating">Rate: </label>
                         <?php
                             if($rating == "") {
                                 $i = 0;
@@ -90,13 +85,9 @@
                             }
                         ?>
                     </div>
-                    <div class="btn-wrap">
-                        <input name="confirm" class="confirm-input" type="submit" value="Confirm">
-                        <input name="cancel" class="cancel-input" type="button" value="Cancel" onclick="cancelPost()">
-                    </div>
-                </div>
+                    <input name="confirm" id="confirm-input" type="submit" value="Confirm">
+                    <input name="cancel" id="cancel-input" type="button" value="Cancel" onclick="cancelPost()">
             </form>
-        </div>
     </main>
     <script src="..\js-scripts\jquery.js" type="text/javascript"></script>
     <script>
