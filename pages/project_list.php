@@ -33,7 +33,7 @@
                             // Project Name
                             if ($ACCESS > 1 || $project_row["Availability"] < 2)
                             {
-                                echo "<td><a href='project.php?project=".$project_row["Name"]."' onclick=trackProjectClicks(".$project_row["ProjectID"].")>".$project_row["Name"]."</a></td>";
+                                echo "<td><a href='#' onclick=trackProjectClicks(".$project_row["ProjectID"].")>".$project_row["Name"]."</a></td>";
                             }
                             else
                             {
@@ -158,9 +158,14 @@
     </script>
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
     <script>
+        // function trackProjectClicks(projectID, name)
         function trackProjectClicks(projectID)
         {
-            $.post("../php-scripts/track_clicks.php", {projectID: projectID}, function(response){location.reload();});
+            $.post("../php-scripts/track_clicks.php", {projectID: projectID}, function(response){
+                window.location.href = "../pages/project.php";
+                // window.location.href = "../pages/project.php?project=" + name; // CDL=>
+                // ,".$project_row["Name"]."
+            });
         }
     </script>
-<?php require "../php-snippets/bottom_template.php"; ?>
+<?php require "../php-snippets/bottom_template.php?project="; ?>
