@@ -4,11 +4,11 @@
 <?php require "../php-snippets/top_template.php"; ?>
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
     <main id="main">
-        <div class="post-wrap">
-            <input type="text" onclick="createNewReview()" class="post-review" placeholder="Create Review">
-        </div>
         <div class="table-wrap">
+        <div id="buttons">
+            <input type="button" onclick="createNewReview()" id="post-review" value="Create Review">
             <input name="reset" class="reset-input" type="button" value="REFRESH REVIEWS" onclick="resetTable()">
+        </div>
                 <?php
                     if(empty($_GET)){
                         $item = "";
