@@ -14,12 +14,13 @@
                     }
                     else
                     {
-                        echo "<li><a href='./login.php'>Course</a></li>";
+                        echo "<li><a href='./login.php'>Reference Course</a></li>";
                         echo "<li><a href='./login.php'>Project List</a></li>";
                         echo "<li><a href='./contact.php'>Contact Us</a></li>"; // CDL=> Unauthorized users can see contact page right?
                         echo "<li><a href='./login.php'>Reviews</a></li>";
                         echo "<li><a href='./login.php'>Login</a></li>";
                     }
+                    
                 ?>
             </ul>
         </div>
