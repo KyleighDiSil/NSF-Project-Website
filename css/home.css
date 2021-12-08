@@ -1,15 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
 
-#Fig1{
+#images{
+    display: flex;
+    height: fit-content;
+    justify-content: space-around;
+}
+#triangle1{
     width: 500px;
+    height: 300px;
+    margin: 10px auto;
+}
+#triangle2{
+    width: 500px;
+    height: 400px;
     margin: 10px auto;
 }
 
-#home-image{
-    width: 500px;
-    height: 300px;
+@media screen and (max-width: 1500px) {
+    #images{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+label{
     display: flex;
-    margin: 10px auto;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
 }
 
 #announcement-bar{
@@ -68,7 +86,7 @@ h1{
     margin: 10px auto;
 }
 
-#goal-sum{
+#goal-sum, #goal-sum2{
     margin: 10px;
     font-size: 20px;
 }

@@ -35,8 +35,11 @@
                         Learning method. Provided with the right projects and guidance students will be 
                         able to enter a higher level of learning and Rigor.
                     </p>
-                    <img id="home-image" src="../images/summary.PNG"/>
-                    <p id="Fig1"><b>Fig. 1.</b> Software engineering PBL (Project Based Learning??) scaffolded via active learning activities in classroom and lab and supported by project-specific guidance from instructors during office hours (Right), increases academic rigor and produces higher level of students learning and thus success in PBL. Scaffolding and supports for PBL are provided as part of the curated course projects produced by this project.</p>
+                    <div id="images">
+                        <label for="triangle1"><img id="triangle1" src="../images/triangle1.PNG"/>Figure 1</label>
+                        <label for="triangle2"><img id="triangle2" src="../images/triangle2.PNG"/>Figure 2</label>
+                    </div>
+                    <p id="goal-sum2">&ensp;Software engineering PBL (Project Based Learning) scaffolded via active learning activities in classroom and lab and supported by project-specific guidance from instructors during office hours (Fig. 2), increases academic rigor and produces higher level of students learning and thus success in PBL. Scaffolding and supports for PBL are provided as part of the curated course projects produced by this project.</p>
                 </div>
                 <div class="section">
                     <div id="canidate-projects">
