@@ -4,42 +4,44 @@
 <?php require "../php-snippets/top_template.php"; ?>
 <?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/login.php");} ?>
     <main id="main">
-            <?php
-                include_once '../php-scripts/connect_to_database.php';
-                include_once '../php-scripts/numberConverter.php';
+        <?php
 
-                $query = "SELECT Name, Rating, Clicks FROM Course LIMIT 1;";
+            include_once '../php-scripts/connect_to_database.php';
+            include_once '../php-scripts/numberConverter.php';
 
-                if (!$result = mysqli_query($conn, $query))
+            $query = "SELECT Name, Rating, Clicks FROM Course LIMIT 1;";
+
+            if (!$result = mysqli_query($conn, $query))
+            {
+                echo "Error"; # CDL=> Should handle errors better
+            }
+            else
+            {
+                $course_row = $result->fetch_assoc();
+                
+                echo "<h1 id='title'>".$course_row["Name"]."</h1>";
+
+                echo "<div id='course-info'>";
+                # Stars!
+                echo "<a id='link' href='review.php?item=Course&name=".$course_row["Name"]."'>";
+                $i = 0;
+                while ($i < $course_row["Rating"])
                 {
-                    echo "Error"; # CDL=> Should handle errors better
+                    echo "<span class='fa fa-star checked'></span>";
+                    ++$i;
                 }
-                else
+                while ($i < 5)
                 {
-                    $course_row = $result->fetch_assoc();
-                    echo "<h1 id='title'>".$course_row["Name"]."</h1>";
-                    echo "<div id='course-info'>";    
-                    # Stars!
-                    echo "<a id='link' href='review.php?item=Course&name=".$course_row["Name"]."'>";
-                    $i = 0;
-                    while ($i < $course_row["Rating"])
-                    {
-                        echo "<span class='fa fa-star checked'></span>";
-                        ++$i;
-                    }
-                    while ($i < 5)
-                    {
-                        echo "<span class='fa fa-star'></span>";
-                        ++$i;
-                    }
-                    echo "</a>";
-
-                    // Project Clicks
-                    echo "<p id='clicks'>".thousandsCurrencyFormat($course_row["Clicks"])."</p>";
-
-                    echo "</div>";
+                    echo "<span class='fa fa-star'></span>";
+                    ++$i;
                 }
-            ?>
+                echo "</a>";
+
+                // Project Clicks
+                echo "<p id='clicks'>".thousandsCurrencyFormat($course_row["Clicks"])."</p>";
+                echo "</div>";
+            }
+        ?>
                 <div id="courseContent">
                     <h2>Course Description</h2>
                     <p id="courseDescription">
