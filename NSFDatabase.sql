@@ -26,8 +26,8 @@ CREATE TABLE Projects (
   Name          VARCHAR(20) NULL UNIQUE,
   Summary       VARCHAR(256) NOT NULL,
   Availability  VARCHAR(20) NOT NULL,
-  Rating        int NOT NULL,
-  Clicks        int DEFAULT 0,
+  Rating        INT NOT NULL,
+  Clicks        INT DEFAULT 0,
   PRIMARY KEY   (ProjectID)
 );
 /*************************************************************
@@ -38,7 +38,8 @@ CREATE TABLE Projects (
 *************************************************************/
 CREATE TABLE Course (
   CourseID    INT NOT NULL AUTO_INCREMENT,
-  Name        VARCHAR(20) NOT NULL UNIQUE,
+  Name        VARCHAR(64) NOT NULL UNIQUE,
+  Rating      INT NOT NULL,
   Clicks      INT DEFAULT 0,
   PRIMARY KEY (CourseID)
 );
@@ -50,7 +51,7 @@ CREATE TABLE Course (
 CREATE TABLE Files (
   FileID      INT NOT NULL AUTO_INCREMENT,
   Location    varchar(128) NOT NULL,
-  Clicks			int DEFAULT 0,
+  Clicks			INT DEFAULT 0,
   PRIMARY KEY (FileID)
 );
 /*************************************************************
@@ -119,7 +120,7 @@ CREATE TABLE CourseFiles (
 *************************************************************/
 CREATE TABLE ProjectFiles (
   ID          INT NOT NULL AUTO_INCREMENT,
-  ProjectID    INT NOT NULL,
+  ProjectID   INT NOT NULL,
   FileID      INT NOT NULL,
   PRIMARY KEY (ID),
   FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID),
@@ -188,14 +189,13 @@ INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, Universit
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('admin', 'user', 'admin', 'YWOJoT7TYnPXv5UqyNsB','ff96223f33f5ef21704cc44b4fc604341f08a7960836a91958030005001a3479', 4, 'Clarkson University', 'EE418');
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('admin', 'user', 'admin2', 'YWOJoT7TYnPXv5UqyNsf','ff96223f33f5ef21704cc44b4fc604341f08a7960836a91958030005001a3479', 1, 'Clarkson University', 'EE418');
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('admin', 'user', 'admin3', 'YWOJoT7TYnPXv5UqyNsh','ff96223f33f5ef21704cc44b4fc604341f08a7960836a91958030005001a3479', 1, 'Clarkson University', 'EE418');
-INSERT INTO COURSE(Name, Clicks) VALUES ("Discrete Math", 40);
-INSERT INTO COURSE(Name, Clicks) VALUES ("Intro To CS", 100);
+INSERT INTO COURSE(Name, Rating, Clicks) VALUES ("EE368: Software Engineering", 4, 40);
 INSERT INTO Reviews(Title, Content, Rating, Date)
 VALUES ("Physics", "This is so much fun", 4, 0001-01-01);
 INSERT INTO Reviews(Title, Content, Rating, Date)
 VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
 INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
-INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(2, 2);
+INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 2);
 
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Xfig", "Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS.", 0, 4, 69420);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mango", "Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.", 1, 3, 42069);
