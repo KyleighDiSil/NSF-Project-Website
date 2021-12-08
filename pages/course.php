@@ -2,7 +2,7 @@
 <?php $PAGE_NAME = "course"?>
 
 <?php require "../php-snippets/top_template.php"; ?>
-<?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/home.php");} ?>
+<?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/login.php");} ?>
     <main id="main">
         <h1 id="courseTitle">EE368: Software Engineering</h1>
         <div id="rating">
@@ -140,12 +140,12 @@
 
                     <h2>Assignments</h2>
                     <p id="assignment">
-                    &ensp;1 - <a href="http://localhost/pages/project.php?project=Xfig">Xfig Architecture Diagrams</a> <br>
-                    &ensp;2 - <a href="http://localhost/pages/project.php?project=Xfig">Requirement Book</a> <br>
-                    &ensp;3 - <a href="http://localhost/pages/project.php?project=Xfig">Design (Concept Location & Impact Analysis)</a> <br>
-                    &ensp;4 - <a href="http://localhost/pages/project.php?project=Xfig">Test Cases & Test Results</a> <br>
-                    &ensp;5 - <a href="http://localhost/pages/project.php?project=Xfig">Code Inspection </a> <br>
-                    &ensp;6 - <a href="http://localhost/pages/project.php?project=Xfig">Features</a> <br>
+                    &ensp;1 - <a href="project.php?project=Xfig">Xfig Architecture Diagrams</a> <br>
+                    &ensp;2 - <a href="project.php?project=Xfig">Requirement Book</a> <br>
+                    &ensp;3 - <a href="project.php?project=Xfig">Design (Concept Location & Impact Analysis)</a> <br>
+                    &ensp;4 - <a href="project.php?project=Xfig">Test Cases & Test Results</a> <br>
+                    &ensp;5 - <a href="project.php?project=Xfig">Code Inspection </a> <br>
+                    &ensp;6 - <a href="project.php?project=Xfig">Features</a> <br>
                     </p>
                 </div>
                 <div class="sidenav">
