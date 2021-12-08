@@ -1,22 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
 
-#Fig1{
-    width: 500px;
-    margin: 10px auto;
+#images{
+    display: flex;
+    height: fit-content;
+    justify-content: space-around;
 }
-
-#home-image{
+#triangle1{
     width: 500px;
     height: 300px;
-    display: flex;
+    margin: 10px auto;
+}
+#triangle2{
+    width: 500px;
+    height: 400px;
     margin: 10px auto;
 }
 
-#welcome{
-    position: absolute;
+@media screen and (max-width: 1500px) {
+    #images{
+        display: flex;
+        flex-direction: column;
+    }
 }
-h1{
-    margin: 10px;
+
+label{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
 }
 
 #announcement-bar{
@@ -24,6 +35,10 @@ h1{
     justify-content: center;
     margin: 10px auto;
     width: 75%;
+}
+
+h1{
+    font-size: 50px;
 }
 
 #title{
@@ -54,12 +69,16 @@ h1{
     font-size: 20px;
 }
 
-#aboutUs, #volunteers{
-    background-color: aliceblue;
-    border: 3px dotted rgb(0, 0, 0);
-    padding: 10px;
+.section{
+    padding: 20px 0px;
+    width: 100vw;
+	background-color: #FFFFFF;
+}
+
+#aboutUs, #volunteers,#canidate-projects{
+    display: block;
+    margin: 0 auto;
     width: 75%;
-    margin: 10px auto;
 }
 
 #ourGoal, #advisory, #project-management{
@@ -68,17 +87,9 @@ h1{
     margin: 10px auto;
 }
 
-#goal-sum{
+#goal-sum, #goal-sum2{
     margin: 10px;
     font-size: 20px;
-}
-
-#canidate-projects{
-    background-color: aliceblue;
-    border: 3px dotted rgb(0, 0, 0);
-    padding: 10px;
-    width: 75%;
-    margin: 10px auto;
 }
 
 #project-table, #advisory-table, #volunteer-table, #projectMange-table {
