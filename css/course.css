@@ -1,7 +1,7 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%;
-    width: 160px;
+    width: 25%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -11,6 +11,11 @@
     overflow-x: hidden;
     padding-top: 20px;
   }
+
+  #wrap-page{
+      width: calc(100% - 25%);
+      margin-left: 25%;
+  }
   
   .sidenav a {
     padding: 6px 8px 6px 16px;
@@ -18,6 +23,11 @@
     font-size: 18px;
     color: #818181;
     display: block;
+
+  }
+
+  #course-title{
+      margin-top: 20px;
   }
   
   .sidenav a:hover {
