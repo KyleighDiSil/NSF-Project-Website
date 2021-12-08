@@ -1,9 +1,18 @@
 h1{
-    margin: 20px;
+    margin: 20px 0 0 50px;
 }
+hr{margin-top: 5px;
+    margin-right: 50px;
+}
+
+#sign-out{
+    font-style: italic;
+    color: blue;
+    font-size: 25px;
+}
+
 #account-info{
     display: flex;
-    flex-direction: column;
     margin: 10px;
 }
 @media  screen and (min-width:800px) {
@@ -17,17 +26,21 @@ form{
     padding: 10px;
 }
 #personal-info{
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+    border: 2px solid rgb(12, 0, 46);
 }
 
 #update-pass{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: whitesmoke;
-    border:2px solid grey;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+    margin-left: 10px;
+	align-items: center;
+    border: 2px solid rgb(12, 0, 46);
 }
 
 #update-pass h1{
@@ -40,25 +53,31 @@ form{
 }
 
 .form-input{
-    border: none;
-    padding: 5px;
-    width: 100%;
-    max-width: 600px;
+    border-radius: 5px;
+	background-color: #eee;
+	border: none;
+	padding: 10px;
+	width: 100%;
 }
 .btn-input{
-    margin-top: 10px;
+	border-radius: 20px;
     width: 300px;
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: bold;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+    margin: 0 auto;
+    margin-top: 15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
-
-#cancel:hover, #save:hover{
-    background-color: rgb(115, 115, 230);
-    cursor: pointer;
-}
-#change:hover{
-    background-color: #ffa87f;
+ 
+#cancel:hover, #save:hover, #change:hover{
+    background-color: #ff2600;
+	border: 1px solid rgb(255, 255, 255);
+	cursor: pointer;
 }
 
 label{
@@ -67,24 +86,36 @@ label{
     font-weight: bold;
 }
 
-#userTable{
-    margin: 20px auto;
-}
-
 caption{
     font-size: large;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-th{
-    text-align: center;
-    padding: 5px;
+#userTable{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 75%;
 }
 
-td{
-    text-align: center;
-    padding: 5px;
+#userTable th, #userTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+} 
+#userTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(12, 0, 46);
+    color: white;
+}
+
+#userTable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#userTable tr:hover{
+    background-color: #ddd;
 }
 
 #submit-container{
@@ -99,8 +130,12 @@ td{
     margin-bottom: 20px;
 }
 
+#delete{
+    margin-left: 10px;
+}
+
 #approve:hover{
-    background-color: rgb(138, 253, 138);
+    background-color: green;
     cursor: pointer;
 }
 

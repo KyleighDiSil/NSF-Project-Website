@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+h1
+{
+    padding-bottom: 10px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 85%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#inside-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1{
+    text-align: center;
+}
+
+#date, #name{
+    padding-bottom: 10px;
+}
+
+#content{
+    margin: 10px;
+    text-align: center;
+}
+
+#thumbnail {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  .fullCard {
+    width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+  }
+
+
+
+
+.table-wrap{
+    background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    padding: 20px;
+}
+
+.checked
+{
+    color: orange;
+}
+
+#post-review {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    width: 300px;
+	transition: transform 80ms ease-in;
+}
+
+#post-review:hover {
+    background-color: #ff2600;
+    cursor: pointer;
+} 
+
+.reset-input {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    width: 300px;
+	transition: transform 80ms ease-in;
+}
+
+.reset-input:hover{
+    background-color: #ff2600;
+    cursor: pointer;
+}

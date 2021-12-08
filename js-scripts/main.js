@@ -9,10 +9,21 @@
             $("userTable").append("<tr><td>" + userTable.Rows[i].firstName +"</td><td>" + etc.)
         }
     }
+
+    var accountTable = document.getElementById('userTable');
+    var row = accountTable.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "New Cell";
+    cell2.innerHTML = "New Cell 2";
 */
-var accountTable = document.getElementById('userTable');
-var row = accountTable.insertRow(0);
-var cell1 = row.insertCell(0);
-var cell2 = row.insertCell(1);
-cell1.innerHTML = "New Cell";
-cell2.innerHTML = "New Cell 2";
+
+function invalidLogin(){
+    document.getElementById('password').setAttribute("class", "wrongInfo");
+    document.getElementById('username').setAttribute("class", "wrongInfo");
+    document.getElementById('invalidLogin').style.display = "";
+}
+
+function successful_save(){
+    alert('Account changes were updated.');
+}

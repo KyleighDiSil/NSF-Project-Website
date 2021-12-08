@@ -1,11 +1,12 @@
-<!--
-Filename     : connect_to_database.php
-Author(s)    :
-Date Created : 21/10/28
-Description  : A php file to connect to the database for this website
--->
-
 <?php
+/**
+ * Filename    : connect_to_database.php
+ *
+ * Author(s)   : Chris Lloyd, Owen Casciotti, Kyleigh DiSilvestro,
+ *             : Tim Guyer, Avery Hawn, Derryk Taylor
+ *
+ * Description : A php file to connect to the database for this website.
+ */
   $dbServerName = "localhost";
   $dbUsername = "root";
   $dbPassword = "";

@@ -3,15 +3,47 @@
     margin: 20px;
 }
 
-#announcement-container{
+.announcement-container{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 20 auto;
     width: 85%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 4px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#search-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+
+#search-bar {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#search-icon {
+    z-index: +1;
+    margin-top: 14px;
+    padding-left: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#delete-icon {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #FF4B2B;
+}
+
+#delete-icon:hover {
+    color: #ff2600;
 }
 
 #title{
