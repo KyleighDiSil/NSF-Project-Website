@@ -53,7 +53,7 @@
                     development effort from a conceptual idea of new features through integration and testing of the entire 
                     feature working on an existed product. This will require them to independently: 
                 </p>
-                    <ol type="A">
+                    <ol type="a">
                         <li>Investigate appropriate technologies</li>
                         <li>Indentify relevant risk factors</li>
                         <li>Address issues associated with software quality assurance</li>
@@ -76,28 +76,35 @@
                     Phone Number: (315)268-6510<br>
                     Email Address: yuliu@clarkson.edu<br>
                     Student Hours: Appointment by Email at anytime<br>
-                    Will be virtually via Zoom in Spring 2021.<br><br>
+                    <ul>
+                        <li>Will be virtually via Zoom in Spring 2021.</li>
+                    </ul>
                 </p>
                 
                 <h3>Instructor Participation</h3>
                 <p class="section">
                     During this course, as your instructor, you can expect me to<br>
-                    Respond to emails and voicemails within 12 hours<br>
-                    Grade activities and assessments within 7 days<br>
-                    Be an active participant on the discussion board<br><br>
+
+                    <ul>
+                        <li>Respond to emails and voicemails within 12 hours</li>
+                        <li>Grade activities and assessments within 7 days</li>
+                        <li>Be an active participant on the discussion board</li>
+                    </ul>
                 </p>
                 
                 <h3>Delivery Method</h3>
                 <p class="section">    
-                    Online: Synchronous Online by Zoom (<a class="link" href="https://clarkson.zoom.us/j/8464946103">https://clarkson.zoom.us/j/8464946103</a>) (Note: few students have 
+                    <b>Online: Synchronous Online by Zoom (<a class="link" href="https://clarkson.zoom.us/j/8464946103">https://clarkson.zoom.us/j/8464946103</a>) (Note: few students have 
                     schedule conflicting with other courses due to the COVID-19 measures in campus and they have the permission 
-                    to attend this course in async mode. Their presentation can be recorded and played by the team leader.)<br><br>
+                    to attend this course in async mode. Their presentation can be recorded and played by the team leader.)</b><br><br>
                 </p>
 
                 <h3>Instructional Materials</h3>
                 <p class="section">
-                    Textbook(s)<br>
-                    Software Engineering: The Current Practice, Vaclav Rajlich, CRC Press<br><br>
+                    <b>Textbook(s)</b><br>
+                    <ul>
+                        <li>Software Engineering: The Current Practice, Vaclav Rajlich, CRC Press</li>
+                    </ul>
                 </p>
                 
                 <h3>Technology</h3>
@@ -132,36 +139,42 @@
                     from the instructor if needed.<br><br>
                 </p>
 
-                <h3>Course Policies<br>Etiquette Expectations & Learner Interaction</h3>
-                <p class="section">
-                    Educational institutions promote the advance of knowledge through positive and constructive debate–both 
-                    inside and outside the classroom. Please visit and follow: <a class="link" href="https://intranet.clarkson.edu/administrative/tlc/learner-support/netiquette-and-electronic-learner-interaction-guidelines/">Netiquette and Electronic Learner Interaction Guidelines.</a> <br>
-                </p>
+                <h3>Course Policies<br></h3>
+                <div style="margin: 10px 0 0 3ch;">
+                    <h4>Etiquette Expectations & Learner Interaction</h4>
+                    <p class="section">
+                        Educational institutions promote the advance of knowledge through positive and constructive debate–both 
+                        inside and outside the classroom. Please visit and follow: <a class="link" href="https://intranet.clarkson.edu/administrative/tlc/learner-support/netiquette-and-electronic-learner-interaction-guidelines/">Netiquette and Electronic Learner Interaction Guidelines.</a> <br>
+                    </p>
 
-                <h3>Late Work</h3>
-                <p class="section">
-                    Late submission will not be graded unless the instructor has been notified with an acceptable reason.<br>
-                </p>
+                    <h4>Late Work</h4>
+                    <p class="section">
+                        Late submission will not be graded unless the instructor has been notified with an acceptable reason.<br>
+                    </p>
 
-                <h3>Attendance</h3>
-                <p class="section">
-                    Attendance is important to the success of participating this course. An acceptable reason needs to be emailed 
-                    to the instructor if you will be absent from the class. Maximum 5 points penalty may be applied through the attendance 
-                    checking in the semester.<br>
-                </p>
+                    <h4>Attendance</h4>
+                    <p class="section">
+                        Attendance is important to the success of participating this course. An acceptable reason needs to be emailed 
+                        to the instructor if you will be absent from the class. Maximum 5 points penalty may be applied through the attendance 
+                        checking in the semester.<br>
+                    </p>
 
-                <h3>Recorded Lectures</h3>
-                <p class="section">
-                    Regular lectures and presentations will be recorded, and recorded lectures will be uploaded to the moodle
-                    for your access. Others will NOT be recorded.<br><br>
-                </p>
+                    <h4>Recorded Lectures</h4>
+                    <p class="section">
+                        Regular lectures and presentations will be recorded, and recorded lectures will be uploaded to the moodle
+                        for your access. Others will NOT be recorded.<br><br>
+                    </p>
+                </div>
+                
 
                 <h3>Academic Unit Information/Policies</h3>
                 <p class="section">
                     Department of Electrical and Computer Engineering, Department Office, CAMP 156<br><br>
                 </p>
 
-                <h3>Institutional Policies<br><a class="link" href="https://www.clarkson.edu/student-administrative-services-sas/clarkson-regulations">Institutional Policies & Regulations</a><br>Academic Integrity</h3>
+                <h3>Institutional Policies</h3><br>
+                <h4><a class="link" href="https://www.clarkson.edu/student-administrative-services-sas/clarkson-regulations">Institutional Policies & Regulations</a></h4><br>
+                <h4>Academic Integrity</h4>
                 <p class="section">
                     Academic Integrity, based on the values of honesty, trust, fairness, respect, and 
                     responsibility, is a fundamental principle of scholarship in higher education. Clarkson’s Academic 
@@ -178,7 +191,10 @@
                     Please refer to <b>Clarkson Library’s <a class="link" href="https://sites.clarkson.edu/library/plagiarism/">Guide to Plagiarism**</a></b>
                     and the <a class="link" href="https://sites.clarkson.edu/library/citing-sources/">**guide to Citing Sources**</a> for assistance on avoiding 
                     plagiarism and properly citing sources.<br>
-                    <b>Students with Disabilities Requesting Accommodation(s)</b><br>
+                </p><br>
+
+                <h4>Students with Disabilities Requesting Accommodation(s)</h4>
+                <p class="section">
                     The University strives to make all facilities and programs accessible to students with permanent, ongoing, and 
                     temporary disabilities by providing appropriate and reasonable academic accommodations, as necessary. Disabilities that 
                     may benefit from reasonable accommodations include, but are not limited to, broken wrist, ADHD, surgery recovery, Learning 
@@ -187,8 +203,8 @@
                     <a class="link" href="https://www.clarkson.edu/policies-and-laws">Students with Disabilities Policy</a> > <a class="link" href="https://www.clarkson.edu/accessibility-services">Office of Accessibility Services Website</a> <br><br>
                 </p>
 
-                <h3>Other Policies of Note:<br> Student Regulation Requirements for Excused and Extended Absence </h3>
-                <p class="section">
+                <h3>Other Policies of Note:<br><br> Student Regulation Requirements for Excused and Extended Absence </h3>
+                <p class="section" style="margin-left: 3ch;">
                     <a class="link" href="https://www.clarkson.edu/student-administrative-services-sas/clarkson-regulations">Undergraduate: III-F. Attendance</a> > <a class="link" href="https://www.clarkson.edu/student-administrative-services-sas/clarkson-regulations">Graduate – II-F. Attendance</a> <br>
                     <a class="link" href="https://intranet.clarkson.edu/student-life/sas/grading-system/">Grading System</a><br>
                     <a class="link" href="https://www.clarkson.edu/diversity-and-inclusion-policies">Discrimination & Harassment</a><br>
