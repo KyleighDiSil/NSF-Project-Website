@@ -34,7 +34,7 @@
                     <p id="length"  class="invalid">Minimum <b>8 characters</b></p>
                     <p id="match"   class="invalid">Passwords <b>match</b></p>
                 </div>
-
+                <p id="creationFailure" style="display: none;">Error Creating Account! Please Try again</p>
                 <input type="submit" id="submit" value="Create Account" disabled>
             </form>
         </div>
@@ -169,5 +169,14 @@
                 submit.disabled = false;
             }
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            if(window.location.href.indexOf("#CreationFailure") > -1) {
+            $('#creationFailure').show();
+            } else {
+            $('#creationFailure').hide();
+            }
+        });
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>

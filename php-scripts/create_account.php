@@ -53,27 +53,28 @@ Description  : A php file to authenticate a user
     // Fail
     header("Location: ../pages/create_account.php#CreationFailure");
   }
-
-  // Random string generation to augement the password complexity
-  $salt = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(20/strlen($x)) )),1,20);
-
-  // Take half of the string to put in front of password and the other for behind the password
-  $Split = str_split($salt, 10);
-  $Salted = $Split[0] . $_POST["password"] . $Split[1];
-
-  // Hashing the password + salt for secure password storage
-  $Hashed = hash('sha256', $Salted);
-  
-  // SQL Query to insert new user into database with pending statud
-  $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', -1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
-  if (!$result = mysqli_query($conn, $SQL))
-  {
-    echo (mysqli_error($conn));
-  }
   else
   {
-    #addGiteaUser($_POST['firstName'], $_POST['lastName'], $_POST['email'], false);
-    header("Location: ../index.php#AccountCreated");
-  }
+    // Random string generation to augement the password complexity
+    $salt = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(20/strlen($x)) )),1,20);
 
+    // Take half of the string to put in front of password and the other for behind the password
+    $Split = str_split($salt, 10);
+    $Salted = $Split[0] . $_POST["password"] . $Split[1];
+
+    // Hashing the password + salt for secure password storage
+    $Hashed = hash('sha256', $Salted);
+
+    // SQL Query to insert new user into database with pending statud
+    $SQL = "INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ( '" .$_POST['firstName']. "', '" .$_POST['lastName']. "', '" .$_POST['email']. "', '" .$salt. "', '" .$Hashed.  "', -1, '" .$_POST['university']. "', '" .$_POST['course']. "');";
+    if (!$result = mysqli_query($conn, $SQL))
+    {
+      echo (mysqli_error($conn));
+    }
+    else
+    {
+      #addGiteaUser($_POST['firstName'], $_POST['lastName'], $_POST['email'], false);
+      header("Location: ../index.php#AccountCreated");
+    }
+  }
 ?>

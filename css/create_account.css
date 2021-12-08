@@ -117,3 +117,8 @@ input {
 .input_error {
 	border: 2px solid #FF4B2B;
 }
+
+#creationFailure{
+	padding-bottom: 5px;
+	color: red;
+}
