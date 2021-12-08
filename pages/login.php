@@ -59,6 +59,15 @@
             return /\S+@\S+\.\S+/.test(email)
         }
     </script>
+    <script>
+        $(document).ready(function () {
+            if(window.location.href.indexOf("#LoginFailure") > -1) {
+            $('#invalidLogin').show();
+            } else {
+            $('#invalidLogin').hide();
+            }
+        });
+    </script>
 <?php require "../php-snippets/bottom_template.php"; ?>
 
 
