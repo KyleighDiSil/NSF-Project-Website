@@ -40,7 +40,7 @@
             const email = document.querySelector('#username');
             const password = document.querySelector('#password');
             const button = document.querySelector('#submit');
-            console.log("A");
+
             if (!emailIsValid(email.value))
             {
                 button.disabled = true;
