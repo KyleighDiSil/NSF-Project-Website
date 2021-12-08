@@ -13,7 +13,7 @@
   }
 
   #wrap-page{
-      width: calc(100% - 25%);
+      width: 75%;
       margin-left: 25%;
   }
   
@@ -25,51 +25,62 @@
     display: block;
 
   }
-
-  #course-title{
-      margin-top: 20px;
-  }
   
-  .sidenav a:hover {
+.sidenav a:hover {
     color:aliceblue;
-  }
-
-#courseTitle{
-    margin-left: 165px;
-    text-align: center;
 }
 
-h2 {
-    margin-left: 165px;
+a{
+    color: inherit;
 }
 
-#courseDescription{
-    margin-left: 180px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+.checked{
+    color: orange;
 }
 
-#syllabus{
-    margin-left: 180px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+h1{text-align: center;}
+
+#course-info{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
 
-#lecture{
-    margin-left: 180px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+#clicks{
+    text-indent: 5px;
 }
 
-#assignment{
-    margin-left: 180px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+#summary, #syllabus-container, #assignment-container, #lecture-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20 auto;
+    width: 85%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-#rating{
-    margin-left: 160px;
-    text-align: center;
+#summary p{
+    text-indent: 3ch;
+    margin-bottom: 1em;
+    line-height: 29px;
 }
 
-h1, #course-info{text-align: center;}
+#syllabus-container p{
+    line-height: 29px;
+}
+
+ol, ul{
+    margin-left: calc(10px + 3ch);
+    line-height: 29px;
+    margin-bottom: 1em;
+}
+
+#title-container{
+    margin-top: 20px;
+}
+
+.link{
+    color: blue;
+}
