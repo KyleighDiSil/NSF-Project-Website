@@ -2,7 +2,6 @@
 <?php $PAGE_NAME = "contact"?>
 
 <?php require "../php-snippets/top_template.php"; ?>
-<?php if (!isset($_SESSION["loggedin"]) || !$_SESSION["loggedin"]) {header("Location: ../pages/login.php");} ?>
     <main id="main">
         <h1 style="text-align:center">Contact Us</h1>
 
@@ -29,7 +28,7 @@
                 <td>co-PI; software engineering education</td>
                 <td>Development of course projects and reference course, teaching with developed materials</td>
                 <td><b>Email:</b><br>yuliu@clarkson.edu<br>
-                    <b>Phone:</b><br>315/268-6510<br>         
+                    <b>Phone:</b><br>315/268-6510<br>
             </tr>
             <tr>
                 <td>Jan E Dewaters</td>
