@@ -248,7 +248,7 @@
             </div>
         </div>
         <div class="sidenav">
-                <a class="link" href="../index.php"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
+                <a class="link" id="logo-link" href="../index.php"><img id="logo" src="../images/NSF_logo.png" alt="logo"></a>
                 <a class="link" href="#title" id="course-title">Course Title</a>
                 <a class="link" href="#summary">Course Description</a>
                 <a class="link" href="#syllabus-container">Syllabus</a>

@@ -17,17 +17,24 @@
       margin-left: 25%;
   }
   
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
+.sidenav a {
+    padding: 6px 8px 6px 20px;
     text-decoration: none;
-    font-size: 18px;
-    color: #818181;
+    color: aliceblue;
     display: block;
+}
 
-  }
+#course-title{
+    margin-top: 20px;
+}
   
 .sidenav a:hover {
-    color:aliceblue;
+    background: linear-gradient(to left, #36def4, #36def400);
+}
+
+#logo-link{width: fit-content;}
+#logo-link:hover{
+    background: rgb(12, 0, 46);
 }
 
 a{
