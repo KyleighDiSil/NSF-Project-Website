@@ -187,19 +187,10 @@ CREATE TABLE FileReviews (
 -- Insert Statements
 -- Password is Admin123
 INSERT INTO Users (FirstName, LastName, Email, Salt, Password, Access, University, CourseTitle) VALUES ('Admin', 'User', 'nsfwebmaster@clarkson.edu', 'Ayh90ng51EIQwUrLYkXP', 'f7cef2767e60526d83d136cea982e3bcf77fc8f2deb870981d8a0d16b25a9cb7', 4, 'Clarkson University', 'EE418');
-
-INSERT INTO COURSE(Name, Clicks) VALUES ("Discrete Math", 40);
-INSERT INTO COURSE(Name, Clicks) VALUES ("Intro To CS", 100);
-INSERT INTO Reviews(Title, Content, Rating, Date)
-VALUES ("Physics", "This is so much fun", 4, 0001-01-01);
-INSERT INTO Reviews(Title, Content, Rating, Date)
-VALUES ("Chem", "This is not fun at all", 1, 0002-01-01);
-INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 1);
-INSERT INTO CourseReviews(CourseID, ReviewID) VALUES(1, 2);
-INSERT INTO COURSE(Name, Rating, Clicks) VALUES ("EE368: Software Engineering", 4, 40);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Xfig", "Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS.", 0, 4, 69420);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mango", "Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.", 1, 3, 42069);
-INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WordPress", "Open-source software for creating website, blog, or app.", 2, 0, 0);
+INSERT INTO COURSE(Name, Rating, Clicks) VALUES ("EE368: Software Engineering", 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Xfig", "Vector graphics editor on UNIX like platforms, figure libraries and supporting JPG, PNG, EPS.", 0, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mango", "Web-based (Tomcat, Ajax) platform for sensor and M2M control, data acquisition and visualization.", 1, 0, 0);
+INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WordPress", "Open-source software for creating website, blog, or app.", 3, 0, 0);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("MuseScore", "Music notation and writing software.", 3, 0, 0);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("VSCode", "Microsoft's open-source code editor.", 3, 0, 0);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Hunt", "Virtual scavenger hunt mobile app where players can join a game, select a team and solve hints to acquire treasure. The team with the most points wins.", 3, 0, 0);
@@ -210,16 +201,16 @@ INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Mozi
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("WinMerge", "Text file merging and comparison tool for Windows used in software course.", 3, 0, 0);
 INSERT INTO Projects (Name, Summary, Availability, Rating, Clicks) VALUES ("Moodle", "Platform for educators/learners to create personalized learning environments.", 3, 0, 0);
 
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-vdx.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Undo-Shortcut-Button.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Undo_redo.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Toggle-Unit-Shortcut-Button.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-send-to-back.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-rotation.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-quick-coloring.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-free-selection.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Default-depth-value.docx", 420);
-INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Advanced.docx", 420);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-vdx.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Undo-Shortcut-Button.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Undo_redo.docx", 400);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Toggle-Unit-Shortcut-Button.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-send-to-back.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-rotation.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-quick-coloring.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-free-selection.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Default-depth-value.docx", 0);
+INSERT INTO FILES (Location, Clicks) VALUES ("../files/feature-description-Advanced.docx", 0);
 
 INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,1,"Export to VDX", "Exporting to VDX Format", "http://128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Export-to-VDX");
 INSERT INTO Feature (ProjectID, FileID, Name, Summary, GitLink) VALUES (1,2,"Undo Shortcut", "Shortcut Button for Undo", "http://128.153.220.245:42068/NSF-SE-Repositories/XFig/src/branch/Undo-Shortcut");
