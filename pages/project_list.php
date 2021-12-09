@@ -167,4 +167,4 @@
             });
         }
     </script>
-<?php require "../php-snippets/bottom_template.php?project="; ?>
+<?php require "../php-snippets/bottom_template.php"; ?>
