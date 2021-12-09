@@ -22,6 +22,11 @@ h1
     justify-content: space-evenly;
 }
 
+#name, #stars, #date{
+    width: calc(100% / 3);
+    text-align: center;
+}
+
 h1{
     text-align: center;
 }
