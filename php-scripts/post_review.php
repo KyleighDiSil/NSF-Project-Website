@@ -38,7 +38,8 @@
                     if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
-                        header("Location: ../pages/review.php?item=&name=");
+                        // Update ratings for project
+                        header("Location: ../php-scripts/update_reviews.php?type=project&id=$project_ID");
                     }
                 }
             } else {
@@ -58,7 +59,8 @@
                     if (!$result = mysqli_query($conn, $query)) {
                         echo "Error";
                     } else {
-                        header("Location: ../pages/review.php?item=&name=");
+                        // Update ratings for course
+                        header("Location: ../php-scripts/update_reviews.php?type=course&id=$course_ID");
                     }
                 }
             }
