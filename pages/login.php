@@ -12,7 +12,7 @@
                     <i class="fas fa-eye-slash" id="togglePassword" onclick="showPassword()"></i>
                 </div>
                 <p id="invalidLogin" style="display: none;">Wrong Email or Password</p>
-                <p class="forgotPass"><a href="" class="forgotPass">Forgot Password?</a></p>
+                <p class="forgotPass"><a href="" class="forgotPass" onclick="forgotPassword()">Forgot Password?</a></p>
                 <input type="submit" id="submit" value="Login" disabled>
                 <p id="makeAccount">Or <a href="./create_account.php">Create Account</a></p>
             </form>
@@ -67,6 +67,11 @@
             $('#invalidLogin').hide();
             }
         });
+    </script>
+    <script>
+        function forgotPassword() {
+            alert("Send the webmaster an email at nsfwebmaster@clarkson.edu to get your password reset");
+        }
     </script>
 <?php require "../php-snippets/bottom_template.php"; ?>
 
