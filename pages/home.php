@@ -4,8 +4,16 @@
 <?php require "../php-snippets/top_template.php"; ?>
     <main id="main">
                 <div id="announcement-bar">
-                    <a href="announcements.php" id="bar-title-link"><div id="bar-title">Announcements</div></a>
                     <?php
+
+                        if ($ACCESS)
+                        {
+                            echo "<a href='announcements.php' id='bar-title-link'><div id='bar-title'>Announcements</div></a>";
+                        }
+                        else
+                        {
+                            echo "<a href='login.php' id='bar-title-link'><div id='bar-title'>Announcements</div></a>";
+                        }
                         // Connect to the database
                         include_once '../php-scripts/connect_to_database.php';
 
@@ -17,7 +25,14 @@
                         else
                         {
                             $row = mysqli_fetch_assoc($result);
-                            echo "<a href='announcements.php' id='title-link'>".$row["Title"]."<div id='title'></div></a>";
+                            if ($ACCESS)
+                            {
+                                echo "<a href='announcements.php' id='title-link'>".$row["Title"]."<div id='title'></div></a>";
+                            }
+                            else
+                            {
+                                echo "<a href='login.php' id='title-link'>".$row["Title"]."<div id='title'></div></a>";
+                            }
                         }
                     ?>
                 </div>
